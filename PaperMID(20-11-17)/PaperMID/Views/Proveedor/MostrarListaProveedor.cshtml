@@ -1,0 +1,46 @@
+﻿@using System.Data;
+@model DataTable
+
+<div class="content">
+    <div class="row">
+        <p></p>
+    </div>
+    <div class="row">
+        <p></p>
+    </div>
+    <div class="container-fluid">
+        <div class="col-md-11">
+            <div class="card">
+                <div class="header">
+                    <h4 class="title">Mostrar Proveedor</h4>
+                </div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Nombre del Proveedor</th>
+                            <th>Teléfono</th>
+                            <th>Correo Electrónico</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (DataRow row in Model.Rows)
+            {
+                            <tr id="fila_@row["IdProveedor"]">
+                                <td>@row["IdProveedor"]</td>
+                                <td>@row["NombreProv"]</td>
+                                <td>@row["TelefonoProv"]</td>
+                                <td>@row["CorreoProv"]</td>
+                                <td>@Html.ActionLink("Editar", "Actualizar_Proveedor", "Proveedor", new { id = @row["IdProveedor"], @class = "btn btn-info btn-fill pull-right" }, null)</td>
+                                <td>@Html.ActionLink("Eliminar", "EliminarProveedor", new { id = @row["IdProveedor"], @class = "btn btn-info btn-fill pull-right" }, null)</td>
+
+                            </tr>
+
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,39 @@
+﻿@model PaperMID.BO.PaisBO
+
+@{
+    ViewBag.Title = "ActualizarPais";
+    Layout = "~/Views/Master/_LayoutAdministrador.cshtml";
+}
+<div class="content">
+    <div class="row">
+        <p></p>
+    </div>
+    <div class="row">
+        <p></p>
+    </div>
+    <div class="container-fluid">
+        <div class="col-md-11">
+            <div class="card">
+                <h4 class="title">Actualizar Pais</h4>
+                @using (Html.BeginForm("ActuaDatosPais", "Pais", FormMethod.Post))
+                {
+                    <table class="table table-striped">
+                        <tr>
+                            <td>Código</td>
+                            <td>@Html.TextBoxFor(x => x.IdPais)</td>
+                        </tr>
+                        <tr>
+                            <td>Nombre del Pais</td>
+                            <td>@Html.TextBoxFor(x => x.NombrePais)</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><button class="btn-success" type="submit">Actualizar</button></td>
+                        </tr>
+                    </table>
+
+                }
+            </div>
+        </div>
+    </div>
+</div>
+

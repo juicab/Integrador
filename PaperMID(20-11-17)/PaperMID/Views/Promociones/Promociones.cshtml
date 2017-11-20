@@ -1,0 +1,87 @@
+﻿@model PaperMID.BO.PromocionesBO
+
+@{
+    ViewBag.Title = "Promociones";
+    Layout = "~/Views/Master/_LayoutAdministrador.cshtml";
+}
+<div class="content">
+    <div class="row">
+        <p></p>
+    </div>
+    <div class="row">
+        <p></p>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            @using (Html.BeginForm("Agg_Promocion", "Promociones", FormMethod.Post))
+            {
+                <div class="col-md-11">
+                    <div class="card">
+                        <div class="header">
+                            <h4 class="title">Promociones</h4>
+                        </div>
+                        <div class="content">
+                            <form>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label>Código</label>
+                                            <input type="text" disabled class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label>Nombre Promoci&oacute;n</label>
+                                            @Html.TextBoxFor(x => x.NombrePromo, new { @class = "form-control" })
+                                        </div>
+                                    </div>
+                                    @{ Html.RenderAction("ComboProvedorPromo", "Promociones");}
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <div class="form-group">
+                                            <label>Descripcion Promoci&oacute;n</label>
+                                            @Html.TextBoxFor(x => x.DescripcionPromo, new { @class = "form-control" })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group ">
+                                            <label>Fecha Inicio De La Promoción</label>
+                                            @Html.TextBoxFor(x => x.FechaInicioPromo, new { @class = "datepicker form-control", @type = "text" })
+                                        </div>
+                                    </div>
+                                    <script>
+                                        $('.datepicker').datepicker({
+                                            weekStart: 1
+                                        });
+                                    </script>
+                                    <div class="col-md-4">
+                                        <div class="form-group ">
+                                            <label>Fecha Final De La Promoción</label>
+                                            @Html.TextBoxFor(x => x.FechaFinPromo, new { @class = "datepicker form-control", @type = "text" })
+                                        </div>
+                                    </div>
+                                    <script>
+                                        $('.datepicker').datepicker({
+                                            weekStart: 1
+                                        });
+                                    </script>
+                                </div>
+
+                                <div class="=row">
+                                    <button type="submit" class="btn btn-info btn-fill pull-right btn-round">Guardar</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <button type="submit" class="btn btn-info btn-fill pull-right btn-round">Nuevo</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                </div>
+                                <div class="clearfix"></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                                        }
+
+        </div>
+    </div>
+</div>
+

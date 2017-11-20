@@ -1,0 +1,9 @@
+﻿@model PaperMID.BO.EstadoBO
+
+<div class="col-md-3">
+    <div class="form-group">
+        <label>Pais</label>
+        @Html.DropDownListFor(x => x.IdPais1, new SelectList(Model.paises, "IdPais", "NombrePais"), new { @class = "form-control" })
+
+    </div>
+</div>

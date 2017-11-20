@@ -1,0 +1,60 @@
+﻿@model PaperMID.BO.TipoUsuarioBO
+
+@{
+    ViewBag.Title = "TipoUsuario";
+    Layout = "~/Views/Master/_LayoutAdministrador.cshtml";
+}
+<div class="content">
+    <div class="row">
+        <p></p>
+    </div>
+    <div class="row">
+        <p></p>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            @using (Html.BeginForm("AgregarTipoUsuario", "TipoUsuario", FormMethod.Post))
+            {
+                <div class="col-md-11">
+                    <div class="card">
+                        <div class="header">
+                            <h4 class="title">Tipo Usuario</h4>
+
+                        </div>
+                        <div class="content">
+                            <form>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label>Código</label>
+                                            <input type="text" disabled class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label>Tipo De Usuario</label>
+                                            @Html.TextBoxFor(x => x.TipoUsu, new { @class = "form-control" })
+                                        </div>
+
+                                    </div>
+
+                                    <div>
+
+                                    </div>
+                                </div>
+                                <div class="=row">
+                                    <button type="submit" class="btn btn-info btn-fill pull-right">Guardar</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <button type="submit" class="btn btn-info btn-fill pull-right">Nuevo</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                </div>
+                                <div class="clearfix"></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+</div>
+@{ Html.RenderAction("MostrarTUser", "TipoUsuario");}
+

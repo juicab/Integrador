@@ -1,0 +1,48 @@
+﻿@model PaperMID.BO.ProveedorBO
+
+@{
+    ViewBag.Title = "Actualizar_Proveedor";
+    Layout = "~/Views/Master/_LayoutAdministrador.cshtml";
+}
+
+<div class="content">
+    <div class="row">
+        <p></p>
+    </div>
+    <div class="row">
+        <p></p>
+    </div>
+    <div class="container-fluid">
+        <div class="col-md-11">
+            <div class="card">
+                <h4 class="title">Actualizar Provedor</h4>
+                @using (Html.BeginForm("ActualizarDatos_Proveedor", "Proveedor", FormMethod.Post))
+                {
+                    <table class="table table-striped">
+                        <tr>
+                            <td>Código</td>
+                            <td>@Html.TextBoxFor(x => x.idProveedor)</td>
+                        </tr>
+                        <tr>
+                            <td>Nombre del Proveedor</td>
+                            <td>@Html.TextBoxFor(x => x.NombreProv)</td>
+                        </tr>
+                        <tr>
+                            <td>Teléfono</td>
+                            <td>@Html.TextBoxFor(x => x.TelefonoProv)</td>
+                        </tr>
+                        <tr>
+                            <td>Correo Electrónico</td>
+                            <td>@Html.TextBoxFor(x => x.CorreoProv)</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><button class="btn-success" type="submit">Actualizar</button></td>
+                        </tr>
+                    </table>
+
+                }
+            </div>
+        </div>
+    </div>
+</div>
+

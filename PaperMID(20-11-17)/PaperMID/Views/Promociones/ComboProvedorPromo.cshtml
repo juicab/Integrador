@@ -1,0 +1,10 @@
+﻿@model PaperMID.BO.PromocionesBO
+
+<div class="col-md-3">
+    <div class="form-group">
+        <label>Proveedor</label>
+        @Html.DropDownListFor(x => x.IdProve, new SelectList(Model.Proveedores, "IdProveedor", "NombreProv"), new { @class = "form-control" })
+
+    </div>
+</div>
+

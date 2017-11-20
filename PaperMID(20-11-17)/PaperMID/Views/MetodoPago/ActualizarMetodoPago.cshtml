@@ -1,0 +1,39 @@
+﻿@model PaperMID.BO.MetodoPagoBO
+
+@{
+    ViewBag.Title = "ActualizarMetodoPago";
+    Layout = "~/Views/Master/_LayoutAdministrador.cshtml";
+}
+<div class="content">
+    <div class="row">
+        <p></p>
+    </div>
+    <div class="row">
+        <p></p>
+    </div>
+    <div class="container-fluid">
+        <div class="col-md-11">
+            <div class="card">
+                <h4 class="title">Actualizar Método de Pago</h4>
+                @using (Html.BeginForm("ActualizarDatosMetPag", "MetodoPago", FormMethod.Post))
+                {
+                    <table class="table table-striped">
+                        <tr>
+                            <td>Código</td>
+                            <td>@Html.TextBoxFor(x => x.IdMetodoPago)</td>
+                        </tr>
+                        <tr>
+                            <td>Tipo De Producto</td>
+                            <td>@Html.TextBoxFor(x => x.TipoPago)</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><button class="btn-success" type="submit">Actualizar</button></td>
+                        </tr>
+                    </table>
+
+                }
+            </div>
+        </div>
+    </div>
+</div>
+

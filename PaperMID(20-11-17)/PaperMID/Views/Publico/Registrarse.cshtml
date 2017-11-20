@@ -1,0 +1,149 @@
+﻿@model PaperMID.BO.UsuarioBO
+
+@{
+    ViewBag.Title = "Registrarse";
+    Layout = "~/Views/Master/_LayoutPublico.cshtml";
+}
+<div class="wrapper">
+    <div class="header header-filter" style="background-image: url('../Style/assets/img/photo-1423655156442-ccc11daa4e99.jpg'); height:0px; ">
+    </div>
+    <div class="main main-raised">
+        <div class="">
+            <div class="container">
+                <div class="row">
+                    <h2 class="text-center">Registrarse</h2>
+                    <br /><br />
+                    @using (Html.BeginForm("Agregar", "Usuario", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                    {
+                        @Html.AntiForgeryToken()
+
+                        <div class="col-md-8 col-md-offset-2">
+                            <div class="col-sm-12">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">Nombre</label>
+                                            <input class = "form-control" type = "text" name="NombreUsu"   />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">Apellido Paterno</label>
+                                            <input class="form-control" type="text" name="ApellidoPaternoUsu" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">Apellido Materno</label>
+                                            <input class="form-control" type="text" name="ApellidoMaternoUsu" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="form-group ">
+                                            <input class="datepicker form-control" type="text" name="FechaNacimientoUsu" placeholder = "Fecha de Nacimiento" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">Télefono</label>
+                                            <input class="form-control" type="text" name="TelefonoUsu" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">Correo</label>
+                                            <input class="form-control" type="email" name="CorreoUsu" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">Usuario</label>
+                                            <input class="form-control" type="text" name="Usuario" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">Contraseña</label>
+                                            <input class="form-control" type="password" name="ContraseñaUsu" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">Confirmar Contraseña</label>
+                                            <input class="form-control" type="password" name="ConfirmarContraseñaUsu" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="footer text-center">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                @{ Html.RenderAction("DireccionRegistro", "Publico");}
+                                <br />
+                                <output id="ContenedorImg">@*Elemento dondé se cargará la nueva imagen*@      
+                                    <img src="~/Style/assets/img/PreviewProfile.png" class="PreviewImagen" />
+                                </output>
+                                <br />
+                                <div class="file-loading">
+                                    <input type="file"  id = "files" name="ImagenUsu" />
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <button type="submit" class="btn btn-info btn-fill pull-right btn-round">Guardar</button>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    }
+                  </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .PreviewImagen {
+        height: 300px;
+        width: 300px;
+        margin: 10px 5px 0 0;
+    }
+</style>@*CSS para la Preview de la imagen*@
+
+<script type="text/javascript">
+    function archivo(evt) {
+    var files = evt.target.files; // FileList object
+    // Obtenemos la imagen del campo "file".
+    for (var i = 0, f; f = files[i]; i++) {
+    //Solo admitimos imágenes.
+    if (!f.type.match('image.*')) { continue; }
+
+    var reader = new FileReader();
+
+    reader.onload = (function(theFile) {
+    return function(e) {
+    // Insertamos la imagen
+        document.getElementById("ContenedorImg").innerHTML = ['<img class="PreviewImagen" src="', e.target.result, '" title="', escape(theFile.name), '"/>'].join('');
+    };
+    })(f);
+
+
+    reader.readAsDataURL(f);
+    }
+    }
+
+    document.getElementById('files').addEventListener('change', archivo, false);
+</script> @*Script para la Preview de la imagen*@
+<script type="text/javascript">
+ $('.datepicker').datepicker({
+weekStart: 1
+});
+</script>@*Script para cargar el datepicker*@
+
+

@@ -1,0 +1,41 @@
+﻿@model PaperMID.BO.MunicipioBO
+
+@{
+    ViewBag.Title = "ActualizarMunicipio";
+    Layout = "~/Views/Master/_LayoutAdministrador.cshtml";
+}
+
+<div class="content">
+    <div class="row">
+        <p></p>
+    </div>
+    <div class="row">
+        <p></p>
+    </div>
+    <div class="container-fluid">
+        <div class="col-md-11">
+            <div class="card">
+                <h4 class="title">Actualizar Estado</h4>
+                @using (Html.BeginForm("ActuaDatosMuni", "Municipio", FormMethod.Post))
+                {
+                    <table class="table table-striped">
+                        <tr>
+                            <td>Código</td>
+                            <td>@Html.TextBoxFor(x => x.IdMunicipio)</td>
+                        </tr>
+                        <tr>
+                            <td>Nombre del Pais</td>
+                            <td>@Html.TextBoxFor(x => x.NombreMuni)</td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2"><button class="btn-success" type="submit">Actualizar</button></td>
+                        </tr>
+                    </table>
+
+                }
+            </div>
+        </div>
+    </div>
+</div>
+

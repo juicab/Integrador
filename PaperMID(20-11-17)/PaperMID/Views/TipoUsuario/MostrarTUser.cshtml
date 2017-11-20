@@ -1,0 +1,42 @@
+﻿@using System.Data;
+@model DataTable
+
+<div class="content">
+    <div class="row">
+        <p></p>
+    </div>
+    <div class="row">
+        <p></p>
+    </div>
+    <div class="container-fluid">
+        <div class="col-md-11">
+            <div class="card">
+                <div class="header">
+                    <h4 class="title">Mostrar Tipos de Usuario</h4>
+                </div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Tipo De Usuario</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (DataRow row in Model.Rows)
+            {
+                            <tr id="fila_@row["IdTipoUsuario"]">
+                                <td>@row["IdTipoUsuario"]</td>
+                                <td>@row["TipoUsu"]</td>
+                                <td>@Html.ActionLink("Editar", "ActualizarTipoUsuario", "TipoUsuario", new { id = @row["IdTipoUsuario"], @class = "btn btn-info btn-fill pull-right" }, null)</td>
+                                <td>@Html.ActionLink("Eliminar", "Eliminar_TUser", new { id = @row["IdTipoUsuario"], @class = "btn btn-info btn-fill pull-right" }, null)</td>
+
+                            </tr>
+
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+

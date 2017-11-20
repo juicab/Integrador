@@ -1,0 +1,416 @@
+C:\Users\Jesús Huchim\Desktop\PaperMID\PaperMID\bin\ApplicationInsights.config
+C:\Users\Jesús Huchim\Desktop\PaperMID\PaperMID\bin\roslyn\csc.exe
+C:\Users\Jesús Huchim\Desktop\PaperMID\PaperMID\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Jesús Huchim\Desktop\PaperMID\PaperMID\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Jesús Huchim\Desktop\PaperMID\PaperMID\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Jesús Huchim\Desktop\PaperMID\PaperMID\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Jesús Huchim\Desktop\PaperMID\PaperMID\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Jesús Huchim\Desktop\PaperMID\PaperMID\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Jesús Huchim\Desktop\PaperMID\PaperMID\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Jesús Huchim\Desktop\PaperMID\PaperMID\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Jesús Huchim\Desktop\PaperMID\PaperMID\bin\roslyn\vbc.exe
+C:\Users\Jesús Huchim\Desktop\PaperMID\PaperMID\bin\roslyn\VBCSCompiler.exe
+C:\Users\Jesús Huchim\Desktop\PaperMID\PaperMID\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Jesús Huchim\Desktop\PaperMID\PaperMID\bin\PaperMID.dll.config
+C:\Users\Jesús Huchim\Desktop\PaperMID\PaperMID\bin\PaperMID.dll
+C:\Users\Jesús Huchim\Desktop\PaperMID\PaperMID\bin\PaperMID.pdb
+C:\Users\Jesús Huchim\Desktop\PaperMID\PaperMID\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Jesús Huchim\Desktop\PaperMID\PaperMID\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Jesús Huchim\Desktop\PaperMID\PaperMID\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Jesús Huchim\Desktop\PaperMID\PaperMID\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Jesús Huchim\Desktop\PaperMID\PaperMID\bin\Microsoft.AI.Web.dll
+C:\Users\Jesús Huchim\Desktop\PaperMID\PaperMID\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Jesús Huchim\Desktop\PaperMID\PaperMID\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Jesús Huchim\Desktop\PaperMID\PaperMID\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Jesús Huchim\Desktop\PaperMID\PaperMID\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Jesús Huchim\Desktop\PaperMID\PaperMID\bin\System.Web.Helpers.dll
+C:\Users\Jesús Huchim\Desktop\PaperMID\PaperMID\bin\System.Web.Mvc.dll
+C:\Users\Jesús Huchim\Desktop\PaperMID\PaperMID\bin\System.Web.Razor.dll
+C:\Users\Jesús Huchim\Desktop\PaperMID\PaperMID\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Jesús Huchim\Desktop\PaperMID\PaperMID\bin\System.Web.Webpages.dll
+C:\Users\Jesús Huchim\Desktop\PaperMID\PaperMID\bin\System.Web.Webpages.Razor.dll
+C:\Users\Jesús Huchim\Desktop\PaperMID\PaperMID\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Jesús Huchim\Desktop\PaperMID\PaperMID\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Jesús Huchim\Desktop\PaperMID\PaperMID\bin\Microsoft.AI.Web.xml
+C:\Users\Jesús Huchim\Desktop\PaperMID\PaperMID\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Jesús Huchim\Desktop\PaperMID\PaperMID\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Jesús Huchim\Desktop\PaperMID\PaperMID\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Jesús Huchim\Desktop\PaperMID\PaperMID\bin\System.Web.Razor.xml
+C:\Users\Jesús Huchim\Desktop\PaperMID\PaperMID\bin\System.Web.Webpages.xml
+C:\Users\Jesús Huchim\Desktop\PaperMID\PaperMID\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Jesús Huchim\Desktop\PaperMID\PaperMID\bin\System.Web.Webpages.Razor.xml
+C:\Users\Jesús Huchim\Desktop\PaperMID\PaperMID\bin\System.Web.Helpers.xml
+C:\Users\Jesús Huchim\Desktop\PaperMID\PaperMID\bin\System.Web.Mvc.xml
+C:\Users\Jesús Huchim\Desktop\PaperMID\PaperMID\bin\es\System.Web.Razor.resources.dll
+C:\Users\Jesús Huchim\Desktop\PaperMID\PaperMID\bin\es\System.Web.Webpages.resources.dll
+C:\Users\Jesús Huchim\Desktop\PaperMID\PaperMID\bin\es\System.Web.Webpages.Deployment.resources.dll
+C:\Users\Jesús Huchim\Desktop\PaperMID\PaperMID\bin\es\System.Web.Webpages.Razor.resources.dll
+C:\Users\Jesús Huchim\Desktop\PaperMID\PaperMID\bin\es\System.Web.Helpers.resources.dll
+C:\Users\Jesús Huchim\Desktop\PaperMID\PaperMID\bin\es\System.Web.Mvc.resources.dll
+C:\Users\Jesús Huchim\Desktop\PaperMID\PaperMID\obj\Debug\PaperMID.dll
+C:\Users\Jesús Huchim\Desktop\PaperMID\PaperMID\obj\Debug\PaperMID.pdb
+C:\Users\Jesús Huchim\Desktop\PaperMID\PaperMID\obj\Debug\PaperMID.csprojResolveAssemblyReference.cache
+X:\Documentos\Proyecto\PaperMID\PaperMID\bin\ApplicationInsights.config
+X:\Documentos\Proyecto\PaperMID\PaperMID\bin\roslyn\csc.exe
+X:\Documentos\Proyecto\PaperMID\PaperMID\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+X:\Documentos\Proyecto\PaperMID\PaperMID\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+X:\Documentos\Proyecto\PaperMID\PaperMID\bin\roslyn\Microsoft.CodeAnalysis.dll
+X:\Documentos\Proyecto\PaperMID\PaperMID\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+X:\Documentos\Proyecto\PaperMID\PaperMID\bin\roslyn\Microsoft.CSharp.Core.targets
+X:\Documentos\Proyecto\PaperMID\PaperMID\bin\roslyn\Microsoft.VisualBasic.Core.targets
+X:\Documentos\Proyecto\PaperMID\PaperMID\bin\roslyn\System.Collections.Immutable.dll
+X:\Documentos\Proyecto\PaperMID\PaperMID\bin\roslyn\System.Reflection.Metadata.dll
+X:\Documentos\Proyecto\PaperMID\PaperMID\bin\roslyn\vbc.exe
+X:\Documentos\Proyecto\PaperMID\PaperMID\bin\roslyn\VBCSCompiler.exe
+X:\Documentos\Proyecto\PaperMID\PaperMID\bin\roslyn\VBCSCompiler.exe.config
+X:\Documentos\Proyecto\PaperMID\PaperMID\bin\PaperMID.dll.config
+X:\Documentos\Proyecto\PaperMID\PaperMID\bin\PaperMID.dll
+X:\Documentos\Proyecto\PaperMID\PaperMID\bin\PaperMID.pdb
+X:\Documentos\Proyecto\PaperMID\PaperMID\bin\Microsoft.AI.Agent.Intercept.dll
+X:\Documentos\Proyecto\PaperMID\PaperMID\bin\Microsoft.AI.DependencyCollector.dll
+X:\Documentos\Proyecto\PaperMID\PaperMID\bin\Microsoft.AI.PerfCounterCollector.dll
+X:\Documentos\Proyecto\PaperMID\PaperMID\bin\Microsoft.AI.ServerTelemetryChannel.dll
+X:\Documentos\Proyecto\PaperMID\PaperMID\bin\Microsoft.AI.Web.dll
+X:\Documentos\Proyecto\PaperMID\PaperMID\bin\Microsoft.AI.WindowsServer.dll
+X:\Documentos\Proyecto\PaperMID\PaperMID\bin\Microsoft.ApplicationInsights.dll
+X:\Documentos\Proyecto\PaperMID\PaperMID\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+X:\Documentos\Proyecto\PaperMID\PaperMID\bin\Microsoft.Web.Infrastructure.dll
+X:\Documentos\Proyecto\PaperMID\PaperMID\bin\System.Web.Helpers.dll
+X:\Documentos\Proyecto\PaperMID\PaperMID\bin\System.Web.Mvc.dll
+X:\Documentos\Proyecto\PaperMID\PaperMID\bin\System.Web.Razor.dll
+X:\Documentos\Proyecto\PaperMID\PaperMID\bin\System.Web.Webpages.Deployment.dll
+X:\Documentos\Proyecto\PaperMID\PaperMID\bin\System.Web.Webpages.dll
+X:\Documentos\Proyecto\PaperMID\PaperMID\bin\System.Web.Webpages.Razor.dll
+X:\Documentos\Proyecto\PaperMID\PaperMID\bin\Microsoft.AI.DependencyCollector.xml
+X:\Documentos\Proyecto\PaperMID\PaperMID\bin\Microsoft.AI.ServerTelemetryChannel.xml
+X:\Documentos\Proyecto\PaperMID\PaperMID\bin\Microsoft.AI.Web.xml
+X:\Documentos\Proyecto\PaperMID\PaperMID\bin\Microsoft.AI.WindowsServer.xml
+X:\Documentos\Proyecto\PaperMID\PaperMID\bin\Microsoft.ApplicationInsights.xml
+X:\Documentos\Proyecto\PaperMID\PaperMID\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+X:\Documentos\Proyecto\PaperMID\PaperMID\bin\System.Web.Razor.xml
+X:\Documentos\Proyecto\PaperMID\PaperMID\bin\System.Web.Webpages.xml
+X:\Documentos\Proyecto\PaperMID\PaperMID\bin\System.Web.Webpages.Deployment.xml
+X:\Documentos\Proyecto\PaperMID\PaperMID\bin\System.Web.Webpages.Razor.xml
+X:\Documentos\Proyecto\PaperMID\PaperMID\bin\System.Web.Helpers.xml
+X:\Documentos\Proyecto\PaperMID\PaperMID\bin\System.Web.Mvc.xml
+X:\Documentos\Proyecto\PaperMID\PaperMID\bin\es\System.Web.Razor.resources.dll
+X:\Documentos\Proyecto\PaperMID\PaperMID\bin\es\System.Web.Webpages.resources.dll
+X:\Documentos\Proyecto\PaperMID\PaperMID\bin\es\System.Web.Webpages.Deployment.resources.dll
+X:\Documentos\Proyecto\PaperMID\PaperMID\bin\es\System.Web.Webpages.Razor.resources.dll
+X:\Documentos\Proyecto\PaperMID\PaperMID\bin\es\System.Web.Helpers.resources.dll
+X:\Documentos\Proyecto\PaperMID\PaperMID\bin\es\System.Web.Mvc.resources.dll
+X:\Documentos\Proyecto\PaperMID\PaperMID\obj\Debug\PaperMID.dll
+X:\Documentos\Proyecto\PaperMID\PaperMID\obj\Debug\PaperMID.pdb
+X:\Documentos\Proyecto\PaperMID\PaperMID\obj\Debug\PaperMID.csprojResolveAssemblyReference.cache
+C:\Users\Jesus Uicab\Documents\PaperMID\PaperMID\PaperMID\bin\ApplicationInsights.config
+C:\Users\Jesus Uicab\Documents\PaperMID\PaperMID\PaperMID\bin\roslyn\csc.exe
+C:\Users\Jesus Uicab\Documents\PaperMID\PaperMID\PaperMID\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Jesus Uicab\Documents\PaperMID\PaperMID\PaperMID\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Jesus Uicab\Documents\PaperMID\PaperMID\PaperMID\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Jesus Uicab\Documents\PaperMID\PaperMID\PaperMID\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Jesus Uicab\Documents\PaperMID\PaperMID\PaperMID\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Jesus Uicab\Documents\PaperMID\PaperMID\PaperMID\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Jesus Uicab\Documents\PaperMID\PaperMID\PaperMID\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Jesus Uicab\Documents\PaperMID\PaperMID\PaperMID\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Jesus Uicab\Documents\PaperMID\PaperMID\PaperMID\bin\roslyn\vbc.exe
+C:\Users\Jesus Uicab\Documents\PaperMID\PaperMID\PaperMID\bin\roslyn\VBCSCompiler.exe
+C:\Users\Jesus Uicab\Documents\PaperMID\PaperMID\PaperMID\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Jesus Uicab\Documents\PaperMID\PaperMID\PaperMID\bin\PaperMID.dll.config
+C:\Users\Jesus Uicab\Documents\PaperMID\PaperMID\PaperMID\bin\PaperMID.dll
+C:\Users\Jesus Uicab\Documents\PaperMID\PaperMID\PaperMID\bin\PaperMID.pdb
+C:\Users\Jesus Uicab\Documents\PaperMID\PaperMID\PaperMID\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Jesus Uicab\Documents\PaperMID\PaperMID\PaperMID\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Jesus Uicab\Documents\PaperMID\PaperMID\PaperMID\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Jesus Uicab\Documents\PaperMID\PaperMID\PaperMID\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Jesus Uicab\Documents\PaperMID\PaperMID\PaperMID\bin\Microsoft.AI.Web.dll
+C:\Users\Jesus Uicab\Documents\PaperMID\PaperMID\PaperMID\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Jesus Uicab\Documents\PaperMID\PaperMID\PaperMID\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Jesus Uicab\Documents\PaperMID\PaperMID\PaperMID\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Jesus Uicab\Documents\PaperMID\PaperMID\PaperMID\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Jesus Uicab\Documents\PaperMID\PaperMID\PaperMID\bin\System.Web.Helpers.dll
+C:\Users\Jesus Uicab\Documents\PaperMID\PaperMID\PaperMID\bin\System.Web.Mvc.dll
+C:\Users\Jesus Uicab\Documents\PaperMID\PaperMID\PaperMID\bin\System.Web.Razor.dll
+C:\Users\Jesus Uicab\Documents\PaperMID\PaperMID\PaperMID\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Jesus Uicab\Documents\PaperMID\PaperMID\PaperMID\bin\System.Web.Webpages.dll
+C:\Users\Jesus Uicab\Documents\PaperMID\PaperMID\PaperMID\bin\System.Web.Webpages.Razor.dll
+C:\Users\Jesus Uicab\Documents\PaperMID\PaperMID\PaperMID\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Jesus Uicab\Documents\PaperMID\PaperMID\PaperMID\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Jesus Uicab\Documents\PaperMID\PaperMID\PaperMID\bin\Microsoft.AI.Web.xml
+C:\Users\Jesus Uicab\Documents\PaperMID\PaperMID\PaperMID\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Jesus Uicab\Documents\PaperMID\PaperMID\PaperMID\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Jesus Uicab\Documents\PaperMID\PaperMID\PaperMID\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Jesus Uicab\Documents\PaperMID\PaperMID\PaperMID\bin\System.Web.Razor.xml
+C:\Users\Jesus Uicab\Documents\PaperMID\PaperMID\PaperMID\bin\System.Web.Webpages.xml
+C:\Users\Jesus Uicab\Documents\PaperMID\PaperMID\PaperMID\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Jesus Uicab\Documents\PaperMID\PaperMID\PaperMID\bin\System.Web.Webpages.Razor.xml
+C:\Users\Jesus Uicab\Documents\PaperMID\PaperMID\PaperMID\bin\System.Web.Helpers.xml
+C:\Users\Jesus Uicab\Documents\PaperMID\PaperMID\PaperMID\bin\System.Web.Mvc.xml
+C:\Users\Jesus Uicab\Documents\PaperMID\PaperMID\PaperMID\bin\es\System.Web.Razor.resources.dll
+C:\Users\Jesus Uicab\Documents\PaperMID\PaperMID\PaperMID\bin\es\System.Web.Webpages.resources.dll
+C:\Users\Jesus Uicab\Documents\PaperMID\PaperMID\PaperMID\bin\es\System.Web.Webpages.Deployment.resources.dll
+C:\Users\Jesus Uicab\Documents\PaperMID\PaperMID\PaperMID\bin\es\System.Web.Webpages.Razor.resources.dll
+C:\Users\Jesus Uicab\Documents\PaperMID\PaperMID\PaperMID\bin\es\System.Web.Helpers.resources.dll
+C:\Users\Jesus Uicab\Documents\PaperMID\PaperMID\PaperMID\bin\es\System.Web.Mvc.resources.dll
+C:\Users\Jesus Uicab\Documents\PaperMID\PaperMID\PaperMID\obj\Debug\PaperMID.csprojResolveAssemblyReference.cache
+C:\Users\Jesus Uicab\Documents\PaperMID\PaperMID\PaperMID\obj\Debug\PaperMID.dll
+C:\Users\Jesus Uicab\Documents\PaperMID\PaperMID\PaperMID\obj\Debug\PaperMID.pdb
+C:\Users\José Lugo\Documents\PaperMID\PaperMID\PaperMID\bin\ApplicationInsights.config
+C:\Users\José Lugo\Documents\PaperMID\PaperMID\PaperMID\bin\roslyn\csc.exe
+C:\Users\José Lugo\Documents\PaperMID\PaperMID\PaperMID\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\José Lugo\Documents\PaperMID\PaperMID\PaperMID\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\José Lugo\Documents\PaperMID\PaperMID\PaperMID\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\José Lugo\Documents\PaperMID\PaperMID\PaperMID\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\José Lugo\Documents\PaperMID\PaperMID\PaperMID\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\José Lugo\Documents\PaperMID\PaperMID\PaperMID\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\José Lugo\Documents\PaperMID\PaperMID\PaperMID\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\José Lugo\Documents\PaperMID\PaperMID\PaperMID\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\José Lugo\Documents\PaperMID\PaperMID\PaperMID\bin\roslyn\vbc.exe
+C:\Users\José Lugo\Documents\PaperMID\PaperMID\PaperMID\bin\roslyn\VBCSCompiler.exe
+C:\Users\José Lugo\Documents\PaperMID\PaperMID\PaperMID\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\José Lugo\Documents\PaperMID\PaperMID\PaperMID\bin\PaperMID.dll.config
+C:\Users\José Lugo\Documents\PaperMID\PaperMID\PaperMID\bin\PaperMID.dll
+C:\Users\José Lugo\Documents\PaperMID\PaperMID\PaperMID\bin\PaperMID.pdb
+C:\Users\José Lugo\Documents\PaperMID\PaperMID\PaperMID\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\José Lugo\Documents\PaperMID\PaperMID\PaperMID\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\José Lugo\Documents\PaperMID\PaperMID\PaperMID\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\José Lugo\Documents\PaperMID\PaperMID\PaperMID\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\José Lugo\Documents\PaperMID\PaperMID\PaperMID\bin\Microsoft.AI.Web.dll
+C:\Users\José Lugo\Documents\PaperMID\PaperMID\PaperMID\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\José Lugo\Documents\PaperMID\PaperMID\PaperMID\bin\Microsoft.ApplicationInsights.dll
+C:\Users\José Lugo\Documents\PaperMID\PaperMID\PaperMID\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\José Lugo\Documents\PaperMID\PaperMID\PaperMID\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\José Lugo\Documents\PaperMID\PaperMID\PaperMID\bin\System.Web.Helpers.dll
+C:\Users\José Lugo\Documents\PaperMID\PaperMID\PaperMID\bin\System.Web.Mvc.dll
+C:\Users\José Lugo\Documents\PaperMID\PaperMID\PaperMID\bin\System.Web.Razor.dll
+C:\Users\José Lugo\Documents\PaperMID\PaperMID\PaperMID\bin\System.Web.Webpages.Deployment.dll
+C:\Users\José Lugo\Documents\PaperMID\PaperMID\PaperMID\bin\System.Web.Webpages.dll
+C:\Users\José Lugo\Documents\PaperMID\PaperMID\PaperMID\bin\System.Web.Webpages.Razor.dll
+C:\Users\José Lugo\Documents\PaperMID\PaperMID\PaperMID\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\José Lugo\Documents\PaperMID\PaperMID\PaperMID\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\José Lugo\Documents\PaperMID\PaperMID\PaperMID\bin\Microsoft.AI.Web.xml
+C:\Users\José Lugo\Documents\PaperMID\PaperMID\PaperMID\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\José Lugo\Documents\PaperMID\PaperMID\PaperMID\bin\Microsoft.ApplicationInsights.xml
+C:\Users\José Lugo\Documents\PaperMID\PaperMID\PaperMID\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\José Lugo\Documents\PaperMID\PaperMID\PaperMID\bin\System.Web.Razor.xml
+C:\Users\José Lugo\Documents\PaperMID\PaperMID\PaperMID\bin\System.Web.Webpages.xml
+C:\Users\José Lugo\Documents\PaperMID\PaperMID\PaperMID\bin\System.Web.Webpages.Deployment.xml
+C:\Users\José Lugo\Documents\PaperMID\PaperMID\PaperMID\bin\System.Web.Webpages.Razor.xml
+C:\Users\José Lugo\Documents\PaperMID\PaperMID\PaperMID\bin\System.Web.Helpers.xml
+C:\Users\José Lugo\Documents\PaperMID\PaperMID\PaperMID\bin\System.Web.Mvc.xml
+C:\Users\José Lugo\Documents\PaperMID\PaperMID\PaperMID\bin\es\System.Web.Razor.resources.dll
+C:\Users\José Lugo\Documents\PaperMID\PaperMID\PaperMID\bin\es\System.Web.Webpages.resources.dll
+C:\Users\José Lugo\Documents\PaperMID\PaperMID\PaperMID\bin\es\System.Web.Webpages.Deployment.resources.dll
+C:\Users\José Lugo\Documents\PaperMID\PaperMID\PaperMID\bin\es\System.Web.Webpages.Razor.resources.dll
+C:\Users\José Lugo\Documents\PaperMID\PaperMID\PaperMID\bin\es\System.Web.Helpers.resources.dll
+C:\Users\José Lugo\Documents\PaperMID\PaperMID\PaperMID\bin\es\System.Web.Mvc.resources.dll
+C:\Users\José Lugo\Documents\PaperMID\PaperMID\PaperMID\obj\Debug\PaperMID.csprojResolveAssemblyReference.cache
+C:\Users\José Lugo\Documents\PaperMID\PaperMID\PaperMID\obj\Debug\PaperMID.dll
+C:\Users\José Lugo\Documents\PaperMID\PaperMID\PaperMID\obj\Debug\PaperMID.pdb
+C:\Users\Jesus Uicab\Desktop\PaperMID\PaperMID\bin\ApplicationInsights.config
+C:\Users\Jesus Uicab\Desktop\PaperMID\PaperMID\bin\roslyn\csc.exe
+C:\Users\Jesus Uicab\Desktop\PaperMID\PaperMID\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Jesus Uicab\Desktop\PaperMID\PaperMID\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Jesus Uicab\Desktop\PaperMID\PaperMID\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Jesus Uicab\Desktop\PaperMID\PaperMID\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Jesus Uicab\Desktop\PaperMID\PaperMID\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Jesus Uicab\Desktop\PaperMID\PaperMID\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Jesus Uicab\Desktop\PaperMID\PaperMID\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Jesus Uicab\Desktop\PaperMID\PaperMID\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Jesus Uicab\Desktop\PaperMID\PaperMID\bin\roslyn\vbc.exe
+C:\Users\Jesus Uicab\Desktop\PaperMID\PaperMID\bin\roslyn\VBCSCompiler.exe
+C:\Users\Jesus Uicab\Desktop\PaperMID\PaperMID\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Jesus Uicab\Desktop\PaperMID\PaperMID\bin\PaperMID.dll.config
+C:\Users\Jesus Uicab\Desktop\PaperMID\PaperMID\bin\PaperMID.dll
+C:\Users\Jesus Uicab\Desktop\PaperMID\PaperMID\bin\PaperMID.pdb
+C:\Users\Jesus Uicab\Desktop\PaperMID\PaperMID\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Jesus Uicab\Desktop\PaperMID\PaperMID\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Jesus Uicab\Desktop\PaperMID\PaperMID\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Jesus Uicab\Desktop\PaperMID\PaperMID\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Jesus Uicab\Desktop\PaperMID\PaperMID\bin\Microsoft.AI.Web.dll
+C:\Users\Jesus Uicab\Desktop\PaperMID\PaperMID\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Jesus Uicab\Desktop\PaperMID\PaperMID\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Jesus Uicab\Desktop\PaperMID\PaperMID\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Jesus Uicab\Desktop\PaperMID\PaperMID\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Jesus Uicab\Desktop\PaperMID\PaperMID\bin\System.Web.Helpers.dll
+C:\Users\Jesus Uicab\Desktop\PaperMID\PaperMID\bin\System.Web.Mvc.dll
+C:\Users\Jesus Uicab\Desktop\PaperMID\PaperMID\bin\System.Web.Razor.dll
+C:\Users\Jesus Uicab\Desktop\PaperMID\PaperMID\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Jesus Uicab\Desktop\PaperMID\PaperMID\bin\System.Web.Webpages.dll
+C:\Users\Jesus Uicab\Desktop\PaperMID\PaperMID\bin\System.Web.Webpages.Razor.dll
+C:\Users\Jesus Uicab\Desktop\PaperMID\PaperMID\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Jesus Uicab\Desktop\PaperMID\PaperMID\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Jesus Uicab\Desktop\PaperMID\PaperMID\bin\Microsoft.AI.Web.xml
+C:\Users\Jesus Uicab\Desktop\PaperMID\PaperMID\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Jesus Uicab\Desktop\PaperMID\PaperMID\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Jesus Uicab\Desktop\PaperMID\PaperMID\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Jesus Uicab\Desktop\PaperMID\PaperMID\bin\System.Web.Razor.xml
+C:\Users\Jesus Uicab\Desktop\PaperMID\PaperMID\bin\System.Web.Webpages.xml
+C:\Users\Jesus Uicab\Desktop\PaperMID\PaperMID\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Jesus Uicab\Desktop\PaperMID\PaperMID\bin\System.Web.Webpages.Razor.xml
+C:\Users\Jesus Uicab\Desktop\PaperMID\PaperMID\bin\System.Web.Helpers.xml
+C:\Users\Jesus Uicab\Desktop\PaperMID\PaperMID\bin\System.Web.Mvc.xml
+C:\Users\Jesus Uicab\Desktop\PaperMID\PaperMID\bin\es\System.Web.Razor.resources.dll
+C:\Users\Jesus Uicab\Desktop\PaperMID\PaperMID\bin\es\System.Web.Webpages.resources.dll
+C:\Users\Jesus Uicab\Desktop\PaperMID\PaperMID\bin\es\System.Web.Webpages.Deployment.resources.dll
+C:\Users\Jesus Uicab\Desktop\PaperMID\PaperMID\bin\es\System.Web.Webpages.Razor.resources.dll
+C:\Users\Jesus Uicab\Desktop\PaperMID\PaperMID\bin\es\System.Web.Helpers.resources.dll
+C:\Users\Jesus Uicab\Desktop\PaperMID\PaperMID\bin\es\System.Web.Mvc.resources.dll
+C:\Users\Jesus Uicab\Desktop\PaperMID\PaperMID\obj\Debug\PaperMID.csprojResolveAssemblyReference.cache
+C:\Users\Jesus Uicab\Desktop\PaperMID\PaperMID\obj\Debug\PaperMID.dll
+C:\Users\Jesus Uicab\Desktop\PaperMID\PaperMID\obj\Debug\PaperMID.pdb
+C:\Users\Jesus Uicab\Desktop\PaperMID(13-11-17)\PaperMID\bin\ApplicationInsights.config
+C:\Users\Jesus Uicab\Desktop\PaperMID(13-11-17)\PaperMID\bin\roslyn\csc.exe
+C:\Users\Jesus Uicab\Desktop\PaperMID(13-11-17)\PaperMID\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Jesus Uicab\Desktop\PaperMID(13-11-17)\PaperMID\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Jesus Uicab\Desktop\PaperMID(13-11-17)\PaperMID\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Jesus Uicab\Desktop\PaperMID(13-11-17)\PaperMID\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Jesus Uicab\Desktop\PaperMID(13-11-17)\PaperMID\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Jesus Uicab\Desktop\PaperMID(13-11-17)\PaperMID\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Jesus Uicab\Desktop\PaperMID(13-11-17)\PaperMID\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Jesus Uicab\Desktop\PaperMID(13-11-17)\PaperMID\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Jesus Uicab\Desktop\PaperMID(13-11-17)\PaperMID\bin\roslyn\vbc.exe
+C:\Users\Jesus Uicab\Desktop\PaperMID(13-11-17)\PaperMID\bin\roslyn\VBCSCompiler.exe
+C:\Users\Jesus Uicab\Desktop\PaperMID(13-11-17)\PaperMID\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Jesus Uicab\Desktop\PaperMID(13-11-17)\PaperMID\bin\PaperMID.dll.config
+C:\Users\Jesus Uicab\Desktop\PaperMID(13-11-17)\PaperMID\bin\PaperMID.dll
+C:\Users\Jesus Uicab\Desktop\PaperMID(13-11-17)\PaperMID\bin\PaperMID.pdb
+C:\Users\Jesus Uicab\Desktop\PaperMID(13-11-17)\PaperMID\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Jesus Uicab\Desktop\PaperMID(13-11-17)\PaperMID\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Jesus Uicab\Desktop\PaperMID(13-11-17)\PaperMID\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Jesus Uicab\Desktop\PaperMID(13-11-17)\PaperMID\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Jesus Uicab\Desktop\PaperMID(13-11-17)\PaperMID\bin\Microsoft.AI.Web.dll
+C:\Users\Jesus Uicab\Desktop\PaperMID(13-11-17)\PaperMID\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Jesus Uicab\Desktop\PaperMID(13-11-17)\PaperMID\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Jesus Uicab\Desktop\PaperMID(13-11-17)\PaperMID\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Jesus Uicab\Desktop\PaperMID(13-11-17)\PaperMID\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Jesus Uicab\Desktop\PaperMID(13-11-17)\PaperMID\bin\System.Web.Helpers.dll
+C:\Users\Jesus Uicab\Desktop\PaperMID(13-11-17)\PaperMID\bin\System.Web.Mvc.dll
+C:\Users\Jesus Uicab\Desktop\PaperMID(13-11-17)\PaperMID\bin\System.Web.Razor.dll
+C:\Users\Jesus Uicab\Desktop\PaperMID(13-11-17)\PaperMID\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Jesus Uicab\Desktop\PaperMID(13-11-17)\PaperMID\bin\System.Web.Webpages.dll
+C:\Users\Jesus Uicab\Desktop\PaperMID(13-11-17)\PaperMID\bin\System.Web.Webpages.Razor.dll
+C:\Users\Jesus Uicab\Desktop\PaperMID(13-11-17)\PaperMID\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Jesus Uicab\Desktop\PaperMID(13-11-17)\PaperMID\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Jesus Uicab\Desktop\PaperMID(13-11-17)\PaperMID\bin\Microsoft.AI.Web.xml
+C:\Users\Jesus Uicab\Desktop\PaperMID(13-11-17)\PaperMID\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Jesus Uicab\Desktop\PaperMID(13-11-17)\PaperMID\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Jesus Uicab\Desktop\PaperMID(13-11-17)\PaperMID\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Jesus Uicab\Desktop\PaperMID(13-11-17)\PaperMID\bin\System.Web.Razor.xml
+C:\Users\Jesus Uicab\Desktop\PaperMID(13-11-17)\PaperMID\bin\System.Web.Webpages.xml
+C:\Users\Jesus Uicab\Desktop\PaperMID(13-11-17)\PaperMID\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Jesus Uicab\Desktop\PaperMID(13-11-17)\PaperMID\bin\System.Web.Webpages.Razor.xml
+C:\Users\Jesus Uicab\Desktop\PaperMID(13-11-17)\PaperMID\bin\System.Web.Helpers.xml
+C:\Users\Jesus Uicab\Desktop\PaperMID(13-11-17)\PaperMID\bin\System.Web.Mvc.xml
+C:\Users\Jesus Uicab\Desktop\PaperMID(13-11-17)\PaperMID\bin\es\System.Web.Razor.resources.dll
+C:\Users\Jesus Uicab\Desktop\PaperMID(13-11-17)\PaperMID\bin\es\System.Web.Webpages.resources.dll
+C:\Users\Jesus Uicab\Desktop\PaperMID(13-11-17)\PaperMID\bin\es\System.Web.Webpages.Deployment.resources.dll
+C:\Users\Jesus Uicab\Desktop\PaperMID(13-11-17)\PaperMID\bin\es\System.Web.Webpages.Razor.resources.dll
+C:\Users\Jesus Uicab\Desktop\PaperMID(13-11-17)\PaperMID\bin\es\System.Web.Helpers.resources.dll
+C:\Users\Jesus Uicab\Desktop\PaperMID(13-11-17)\PaperMID\bin\es\System.Web.Mvc.resources.dll
+C:\Users\Jesus Uicab\Desktop\PaperMID(13-11-17)\PaperMID\obj\Debug\PaperMID.csprojResolveAssemblyReference.cache
+C:\Users\Jesus Uicab\Desktop\PaperMID(13-11-17)\PaperMID\obj\Debug\PaperMID.dll
+C:\Users\Jesus Uicab\Desktop\PaperMID(13-11-17)\PaperMID\obj\Debug\PaperMID.pdb
+C:\Users\Jesús Huchim\Desktop\PaperMID(16-11-17)\PaperMID\bin\ApplicationInsights.config
+C:\Users\Jesús Huchim\Desktop\PaperMID(16-11-17)\PaperMID\bin\roslyn\csc.exe
+C:\Users\Jesús Huchim\Desktop\PaperMID(16-11-17)\PaperMID\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Jesús Huchim\Desktop\PaperMID(16-11-17)\PaperMID\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Jesús Huchim\Desktop\PaperMID(16-11-17)\PaperMID\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Jesús Huchim\Desktop\PaperMID(16-11-17)\PaperMID\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Jesús Huchim\Desktop\PaperMID(16-11-17)\PaperMID\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Jesús Huchim\Desktop\PaperMID(16-11-17)\PaperMID\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Jesús Huchim\Desktop\PaperMID(16-11-17)\PaperMID\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Jesús Huchim\Desktop\PaperMID(16-11-17)\PaperMID\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Jesús Huchim\Desktop\PaperMID(16-11-17)\PaperMID\bin\roslyn\vbc.exe
+C:\Users\Jesús Huchim\Desktop\PaperMID(16-11-17)\PaperMID\bin\roslyn\VBCSCompiler.exe
+C:\Users\Jesús Huchim\Desktop\PaperMID(16-11-17)\PaperMID\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Jesús Huchim\Desktop\PaperMID(16-11-17)\PaperMID\bin\PaperMID.dll.config
+C:\Users\Jesús Huchim\Desktop\PaperMID(16-11-17)\PaperMID\bin\PaperMID.dll
+C:\Users\Jesús Huchim\Desktop\PaperMID(16-11-17)\PaperMID\bin\PaperMID.pdb
+C:\Users\Jesús Huchim\Desktop\PaperMID(16-11-17)\PaperMID\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Jesús Huchim\Desktop\PaperMID(16-11-17)\PaperMID\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Jesús Huchim\Desktop\PaperMID(16-11-17)\PaperMID\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Jesús Huchim\Desktop\PaperMID(16-11-17)\PaperMID\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Jesús Huchim\Desktop\PaperMID(16-11-17)\PaperMID\bin\Microsoft.AI.Web.dll
+C:\Users\Jesús Huchim\Desktop\PaperMID(16-11-17)\PaperMID\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Jesús Huchim\Desktop\PaperMID(16-11-17)\PaperMID\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Jesús Huchim\Desktop\PaperMID(16-11-17)\PaperMID\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Jesús Huchim\Desktop\PaperMID(16-11-17)\PaperMID\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Jesús Huchim\Desktop\PaperMID(16-11-17)\PaperMID\bin\System.Web.Helpers.dll
+C:\Users\Jesús Huchim\Desktop\PaperMID(16-11-17)\PaperMID\bin\System.Web.Mvc.dll
+C:\Users\Jesús Huchim\Desktop\PaperMID(16-11-17)\PaperMID\bin\System.Web.Razor.dll
+C:\Users\Jesús Huchim\Desktop\PaperMID(16-11-17)\PaperMID\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Jesús Huchim\Desktop\PaperMID(16-11-17)\PaperMID\bin\System.Web.Webpages.dll
+C:\Users\Jesús Huchim\Desktop\PaperMID(16-11-17)\PaperMID\bin\System.Web.Webpages.Razor.dll
+C:\Users\Jesús Huchim\Desktop\PaperMID(16-11-17)\PaperMID\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Jesús Huchim\Desktop\PaperMID(16-11-17)\PaperMID\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Jesús Huchim\Desktop\PaperMID(16-11-17)\PaperMID\bin\Microsoft.AI.Web.xml
+C:\Users\Jesús Huchim\Desktop\PaperMID(16-11-17)\PaperMID\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Jesús Huchim\Desktop\PaperMID(16-11-17)\PaperMID\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Jesús Huchim\Desktop\PaperMID(16-11-17)\PaperMID\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Jesús Huchim\Desktop\PaperMID(16-11-17)\PaperMID\bin\System.Web.Razor.xml
+C:\Users\Jesús Huchim\Desktop\PaperMID(16-11-17)\PaperMID\bin\System.Web.Webpages.xml
+C:\Users\Jesús Huchim\Desktop\PaperMID(16-11-17)\PaperMID\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Jesús Huchim\Desktop\PaperMID(16-11-17)\PaperMID\bin\System.Web.Webpages.Razor.xml
+C:\Users\Jesús Huchim\Desktop\PaperMID(16-11-17)\PaperMID\bin\System.Web.Helpers.xml
+C:\Users\Jesús Huchim\Desktop\PaperMID(16-11-17)\PaperMID\bin\System.Web.Mvc.xml
+C:\Users\Jesús Huchim\Desktop\PaperMID(16-11-17)\PaperMID\bin\es\System.Web.Razor.resources.dll
+C:\Users\Jesús Huchim\Desktop\PaperMID(16-11-17)\PaperMID\bin\es\System.Web.Webpages.resources.dll
+C:\Users\Jesús Huchim\Desktop\PaperMID(16-11-17)\PaperMID\bin\es\System.Web.Webpages.Deployment.resources.dll
+C:\Users\Jesús Huchim\Desktop\PaperMID(16-11-17)\PaperMID\bin\es\System.Web.Webpages.Razor.resources.dll
+C:\Users\Jesús Huchim\Desktop\PaperMID(16-11-17)\PaperMID\bin\es\System.Web.Helpers.resources.dll
+C:\Users\Jesús Huchim\Desktop\PaperMID(16-11-17)\PaperMID\bin\es\System.Web.Mvc.resources.dll
+C:\Users\Jesús Huchim\Desktop\PaperMID(16-11-17)\PaperMID\obj\Debug\PaperMID.dll
+C:\Users\Jesús Huchim\Desktop\PaperMID(16-11-17)\PaperMID\obj\Debug\PaperMID.pdb
+C:\Users\Jesús Huchim\Desktop\PaperMID(16-11-17)\PaperMID\obj\Debug\PaperMID.csprojResolveAssemblyReference.cache
+X:\Documentos\GitHub\PaperMID\PaperMID(20-11-17)\PaperMID\bin\ApplicationInsights.config
+X:\Documentos\GitHub\PaperMID\PaperMID(20-11-17)\PaperMID\bin\roslyn\csc.exe
+X:\Documentos\GitHub\PaperMID\PaperMID(20-11-17)\PaperMID\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+X:\Documentos\GitHub\PaperMID\PaperMID(20-11-17)\PaperMID\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+X:\Documentos\GitHub\PaperMID\PaperMID(20-11-17)\PaperMID\bin\roslyn\Microsoft.CodeAnalysis.dll
+X:\Documentos\GitHub\PaperMID\PaperMID(20-11-17)\PaperMID\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+X:\Documentos\GitHub\PaperMID\PaperMID(20-11-17)\PaperMID\bin\roslyn\Microsoft.CSharp.Core.targets
+X:\Documentos\GitHub\PaperMID\PaperMID(20-11-17)\PaperMID\bin\roslyn\Microsoft.VisualBasic.Core.targets
+X:\Documentos\GitHub\PaperMID\PaperMID(20-11-17)\PaperMID\bin\roslyn\System.Collections.Immutable.dll
+X:\Documentos\GitHub\PaperMID\PaperMID(20-11-17)\PaperMID\bin\roslyn\System.Reflection.Metadata.dll
+X:\Documentos\GitHub\PaperMID\PaperMID(20-11-17)\PaperMID\bin\roslyn\vbc.exe
+X:\Documentos\GitHub\PaperMID\PaperMID(20-11-17)\PaperMID\bin\roslyn\VBCSCompiler.exe
+X:\Documentos\GitHub\PaperMID\PaperMID(20-11-17)\PaperMID\bin\roslyn\VBCSCompiler.exe.config
+X:\Documentos\GitHub\PaperMID\PaperMID(20-11-17)\PaperMID\bin\PaperMID.dll.config
+X:\Documentos\GitHub\PaperMID\PaperMID(20-11-17)\PaperMID\bin\PaperMID.dll
+X:\Documentos\GitHub\PaperMID\PaperMID(20-11-17)\PaperMID\bin\PaperMID.pdb
+X:\Documentos\GitHub\PaperMID\PaperMID(20-11-17)\PaperMID\bin\Microsoft.AI.Agent.Intercept.dll
+X:\Documentos\GitHub\PaperMID\PaperMID(20-11-17)\PaperMID\bin\Microsoft.AI.DependencyCollector.dll
+X:\Documentos\GitHub\PaperMID\PaperMID(20-11-17)\PaperMID\bin\Microsoft.AI.PerfCounterCollector.dll
+X:\Documentos\GitHub\PaperMID\PaperMID(20-11-17)\PaperMID\bin\Microsoft.AI.ServerTelemetryChannel.dll
+X:\Documentos\GitHub\PaperMID\PaperMID(20-11-17)\PaperMID\bin\Microsoft.AI.Web.dll
+X:\Documentos\GitHub\PaperMID\PaperMID(20-11-17)\PaperMID\bin\Microsoft.AI.WindowsServer.dll
+X:\Documentos\GitHub\PaperMID\PaperMID(20-11-17)\PaperMID\bin\Microsoft.ApplicationInsights.dll
+X:\Documentos\GitHub\PaperMID\PaperMID(20-11-17)\PaperMID\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+X:\Documentos\GitHub\PaperMID\PaperMID(20-11-17)\PaperMID\bin\Microsoft.Web.Infrastructure.dll
+X:\Documentos\GitHub\PaperMID\PaperMID(20-11-17)\PaperMID\bin\System.Web.Helpers.dll
+X:\Documentos\GitHub\PaperMID\PaperMID(20-11-17)\PaperMID\bin\System.Web.Mvc.dll
+X:\Documentos\GitHub\PaperMID\PaperMID(20-11-17)\PaperMID\bin\System.Web.Razor.dll
+X:\Documentos\GitHub\PaperMID\PaperMID(20-11-17)\PaperMID\bin\System.Web.Webpages.Deployment.dll
+X:\Documentos\GitHub\PaperMID\PaperMID(20-11-17)\PaperMID\bin\System.Web.Webpages.dll
+X:\Documentos\GitHub\PaperMID\PaperMID(20-11-17)\PaperMID\bin\System.Web.Webpages.Razor.dll
+X:\Documentos\GitHub\PaperMID\PaperMID(20-11-17)\PaperMID\bin\Microsoft.AI.DependencyCollector.xml
+X:\Documentos\GitHub\PaperMID\PaperMID(20-11-17)\PaperMID\bin\Microsoft.AI.ServerTelemetryChannel.xml
+X:\Documentos\GitHub\PaperMID\PaperMID(20-11-17)\PaperMID\bin\Microsoft.AI.Web.xml
+X:\Documentos\GitHub\PaperMID\PaperMID(20-11-17)\PaperMID\bin\Microsoft.AI.WindowsServer.xml
+X:\Documentos\GitHub\PaperMID\PaperMID(20-11-17)\PaperMID\bin\Microsoft.ApplicationInsights.xml
+X:\Documentos\GitHub\PaperMID\PaperMID(20-11-17)\PaperMID\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+X:\Documentos\GitHub\PaperMID\PaperMID(20-11-17)\PaperMID\bin\System.Web.Razor.xml
+X:\Documentos\GitHub\PaperMID\PaperMID(20-11-17)\PaperMID\bin\System.Web.Webpages.xml
+X:\Documentos\GitHub\PaperMID\PaperMID(20-11-17)\PaperMID\bin\System.Web.Webpages.Deployment.xml
+X:\Documentos\GitHub\PaperMID\PaperMID(20-11-17)\PaperMID\bin\System.Web.Webpages.Razor.xml
+X:\Documentos\GitHub\PaperMID\PaperMID(20-11-17)\PaperMID\bin\System.Web.Helpers.xml
+X:\Documentos\GitHub\PaperMID\PaperMID(20-11-17)\PaperMID\bin\System.Web.Mvc.xml
+X:\Documentos\GitHub\PaperMID\PaperMID(20-11-17)\PaperMID\bin\es\System.Web.Razor.resources.dll
+X:\Documentos\GitHub\PaperMID\PaperMID(20-11-17)\PaperMID\bin\es\System.Web.Webpages.resources.dll
+X:\Documentos\GitHub\PaperMID\PaperMID(20-11-17)\PaperMID\bin\es\System.Web.Webpages.Deployment.resources.dll
+X:\Documentos\GitHub\PaperMID\PaperMID(20-11-17)\PaperMID\bin\es\System.Web.Webpages.Razor.resources.dll
+X:\Documentos\GitHub\PaperMID\PaperMID(20-11-17)\PaperMID\bin\es\System.Web.Helpers.resources.dll
+X:\Documentos\GitHub\PaperMID\PaperMID(20-11-17)\PaperMID\bin\es\System.Web.Mvc.resources.dll
+X:\Documentos\GitHub\PaperMID\PaperMID(20-11-17)\PaperMID\obj\Debug\PaperMID.csprojResolveAssemblyReference.cache
+X:\Documentos\GitHub\PaperMID\PaperMID(20-11-17)\PaperMID\obj\Debug\PaperMID.dll
+X:\Documentos\GitHub\PaperMID\PaperMID(20-11-17)\PaperMID\obj\Debug\PaperMID.pdb

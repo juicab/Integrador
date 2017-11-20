@@ -1,0 +1,37 @@
+﻿@model PaperMID.Models.UsuarioModel
+@using System.Data;
+@model DataTable
+@{
+    ViewBag.Title = "Usuario";
+    Layout = "~/Views/Master/_LayoutAdministrador.cshtml";
+}
+
+<h2>Registro</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Pelicula</th>
+            <th>Distribuidor</th>
+            <th>Precio</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (DataRow Row in Model.Rows)
+        {
+            <tr id="=fila_@Row["ID"]">
+                <td>@Row["ID"]</td>
+                <td>@Row["Usuario"]</td>
+                <td>@Row["Nombre"]</td>
+                <td>@Row["[Apellido Paterno]"]</td>
+                <td>@Row["[Apellido Materno]"]</td>
+                <td>@Row["[Fecha Nacimiento]"]</td>
+                <td>@Row["Teléfono"]</td>
+                <td>@Html.ActionLink("Editar", "Actualizar_Pelicula", "Pelicula", new { id = @Row["ID"] }, null)</td>
+                <td>@Html.ActionLink("Eliminar", "Eliminar", "Pelicula", new { id = @Row["ID"] }, null)</td>
+            </tr>
+        }
+    </tbody>
+    <a title="Editar" href="@Url.Action("Regi", "Pelicula")">Agregar</a>
+</table>
+

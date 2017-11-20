@@ -1,0 +1,42 @@
+﻿@model PaperMID.BO.DireccionBO
+<div class="row">
+    <div class="col-md-3">
+        <div class="form-group label-floating">
+            <label class="control-label">Calle</label>
+            @Html.TextBoxFor(x => x.CalleDir, new { @class = "form-control", @type = "text" })
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="form-group label-floating">
+            <label class="control-label">Número Interior</label>
+            @Html.TextBoxFor(x => x.NumInteDir, new { @class = "form-control", @type = "text" })
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="form-group label-floating">
+            <label class="control-label">Numero Exterior</label>
+            @Html.TextBoxFor(x => x.NumExteDir, new { @class = "form-control", @type = "text" })
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="form-group label-floating">
+            <label class="control-label">Cruzamientos</label>
+            @Html.TextBoxFor(x => x.CruzaDir, new { @class = "form-control", @type = "text" })
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-3">
+        <div class="form-group label-floating">
+            <label class="control-label">Colonia</label>
+            @Html.TextBoxFor(x => x.ColoniaDir, new { @class = "form-control", @type = "text" })
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="form-group label-floating">
+            <label class="control-label">Código Postal</label>
+            @Html.TextBoxFor(x => x.CPDir, new { @class = "form-control", @type = "text" })
+        </div>
+    </div>
+    @{ Html.RenderAction("MunicipioRegistro", "Publico");}
+</div>

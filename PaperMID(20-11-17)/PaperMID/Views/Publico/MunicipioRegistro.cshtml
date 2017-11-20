@@ -1,0 +1,10 @@
+﻿@model PaperMID.BO.DireccionBO
+
+<div class="col-md-3">
+    <div class="form-group">
+        <div class="form-group label-floating">
+            @Html.DropDownListFor(x => x.IdMunicipio1, new SelectList(Model.municipios, "IdMunicipio", "NombreMuni"), new { @class = "form-control" })
+        </div>
+    </div>
+</div>
+
