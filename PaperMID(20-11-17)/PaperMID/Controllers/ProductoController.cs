@@ -23,12 +23,13 @@ namespace PaperMID.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Agregar_Producto(String NombreProd, String DescripcionProd, String PrecioProd,
+        public ActionResult Agregar_Producto(String IdProducto,String NombreProd, String DescripcionProd, String PrecioProd,
             String DescuentoProd, String IdProveedor1, String CantidadDisponibleProd, String CantidadMinimaProd,
             String IdTipoProducto1)
         {
             oProductoBO = new BO.ProductoBO();
 
+            oProductoBO.IdProducto = Convert.ToInt32(IdProducto);
             oProductoBO.NombreProd = NombreProd;
             oProductoBO.DescripcionProd = DescripcionProd;
             oProductoBO.PrecioProd = Convert.ToDouble(PrecioProd);

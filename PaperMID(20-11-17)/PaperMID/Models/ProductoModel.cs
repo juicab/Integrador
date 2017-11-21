@@ -18,7 +18,8 @@ namespace PaperMID.Models
         public int Agregar(object Obj)
         {
             BO.ProductoBO _oProductoBO = (BO.ProductoBO)Obj;
-            SqlCommand Cmd = new SqlCommand("EXEC SP_Agregar_Producto @NombreProd,@DescripcionProd,@PrecioProd,@DescuentoProd,@CantidadDisponibleProd,@CantidadMinimaProd,@IdTipoProducto1,@IdProveedor1");
+            SqlCommand Cmd = new SqlCommand("EXEC SP_Agregar_Producto @IdProducto, @NombreProd,@DescripcionProd,@PrecioProd,@DescuentoProd,@CantidadDisponibleProd,@CantidadMinimaProd,@IdTipoProducto1,@IdProveedor1");
+            Cmd.Parameters.Add("@IdProducto", SqlDbType.Int).Value = _oProductoBO.IdProducto;
             Cmd.Parameters.Add("@NombreProd", SqlDbType.VarChar).Value = _oProductoBO.NombreProd;
             Cmd.Parameters.Add("@DescripcionProd", SqlDbType.VarChar).Value = _oProductoBO.DescripcionProd;
             Cmd.Parameters.Add("@PrecioProd", SqlDbType.Float).Value = _oProductoBO.PrecioProd;
