@@ -273,6 +273,7 @@
     <Content Include="Views\Producto\DropDownList_Proveedores.cshtml" />
     <Content Include="Views\Producto\DropDown_ListTipo_Producto.cshtml" />
     <Content Include="Views\Producto\List_Productos.cshtml" />
+    <Content Include="Views\Empresa\ActualizarEmpresa.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -283,7 +284,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Reportes\" />
-    <Folder Include="Views\Empresa\" />
     <Folder Include="Views\Foto\" />
   </ItemGroup>
   <PropertyGroup>
