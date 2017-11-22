@@ -9,12 +9,12 @@ namespace PaperMID.Controllers
 {
     public class ProductoController : Controller
     {
-        ProductoModel oProductoModel;
-        BO.ProductoBO oProductoBO;
+        ProductoModel _oProductoModel;
+        BO.ProductoBO _oProductoBO;
         // GET: Producto
         public ProductoController()
         {
-            oProductoModel = new ProductoModel();
+            _oProductoModel = new ProductoModel();
         }
         public ActionResult Producto()
         {
@@ -27,19 +27,19 @@ namespace PaperMID.Controllers
             String DescuentoProd, String IdProveedor1, String CantidadDisponibleProd, String CantidadMinimaProd,
             String IdTipoProducto1)
         {
-            oProductoBO = new BO.ProductoBO();
+            _oProductoBO = new BO.ProductoBO();
 
-            oProductoBO.IdProducto = Convert.ToInt32(IdProducto);
-            oProductoBO.NombreProd = NombreProd;
-            oProductoBO.DescripcionProd = DescripcionProd;
-            oProductoBO.PrecioProd = Convert.ToDouble(PrecioProd);
-            oProductoBO.DescuentoProd = Convert.ToDouble(DescuentoProd);
-            oProductoBO.IdProveedor1 = Convert.ToInt32(IdProveedor1);
-            oProductoBO.CantidadDisponibleProd = Convert.ToInt32(CantidadDisponibleProd);
-            oProductoBO.CantidadMinimaProd = Convert.ToInt32(CantidadMinimaProd);
-            oProductoBO.IdTipoProducto1 = Convert.ToInt32(IdTipoProducto1);
+            _oProductoBO.IdProducto = Convert.ToInt32(IdProducto);
+            _oProductoBO.NombreProd = NombreProd;
+            _oProductoBO.DescripcionProd = DescripcionProd;
+            _oProductoBO.PrecioProd = Convert.ToDouble(PrecioProd);
+            _oProductoBO.DescuentoProd = Convert.ToDouble(DescuentoProd);
+            _oProductoBO.IdProveedor1 = Convert.ToInt32(IdProveedor1);
+            _oProductoBO.CantidadDisponibleProd = Convert.ToInt32(CantidadDisponibleProd);
+            _oProductoBO.CantidadMinimaProd = Convert.ToInt32(CantidadMinimaProd);
+            _oProductoBO.IdTipoProducto1 = Convert.ToInt32(IdTipoProducto1);
 
-            oProductoModel.Agregar(oProductoBO);
+            _oProductoModel.Agregar(_oProductoBO);
 
             return RedirectToAction("Producto", "Producto");
         }
@@ -47,7 +47,7 @@ namespace PaperMID.Controllers
         public ActionResult DropDownList_Proveedores()
         {
             var ProductoBO = new BO.ProductoBO();
-            ProductoBO.Proveedores = oProductoModel.Lista_Proveedor();
+            ProductoBO.Proveedores = _oProductoModel.Lista_Proveedor();
             return PartialView(ProductoBO);
         }
 
@@ -55,25 +55,47 @@ namespace PaperMID.Controllers
         public ActionResult DropDown_ListTipo_Producto()
         {
             var ProductoBO = new BO.ProductoBO();
-            ProductoBO.TiposProducto = oProductoModel.Lista_Tipo_Producto();
+            ProductoBO.TiposProducto = _oProductoModel.Lista_Tipo_Producto();
             return PartialView(ProductoBO);
         }
 
         [ChildActionOnly]
         public ActionResult List_Productos()
         {
-            return PartialView(oProductoModel.Mostrar());
+            return PartialView(_oProductoModel.Mostrar());
         }
 
 
-        public ActionResult Actualizar_Producto()
+        public ActionResult Actualizar_Producto(String IdProducto)
         {
-            return View();
+            return View(_oProductoModel.Recuperar_Datos_Producto(IdProducto));
         }
 
-        public ActionResult Eliminar_Producto()
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Actualizar_Datos_Producto(String IdProducto, String NombreProd, String DescripcionProd, String PrecioProd,
+            String DescuentoProd, String IdProveedor1, String CantidadDisponibleProd, String CantidadMinimaProd,
+            String IdTipoProducto1)
         {
-            return View();
+            _oProductoBO = new BO.ProductoBO();
+
+            _oProductoBO.IdProducto = Convert.ToInt32(IdProducto);
+            _oProductoBO.NombreProd = NombreProd;
+            _oProductoBO.DescripcionProd = DescripcionProd;
+            _oProductoBO.PrecioProd = Convert.ToDouble(PrecioProd);
+            _oProductoBO.DescuentoProd = Convert.ToDouble(DescuentoProd);
+            _oProductoBO.IdProveedor1 = Convert.ToInt32(IdProveedor1);
+            _oProductoBO.CantidadDisponibleProd = Convert.ToInt32(CantidadDisponibleProd);
+            _oProductoBO.CantidadMinimaProd = Convert.ToInt32(CantidadMinimaProd);
+            _oProductoBO.IdTipoProducto1 = Convert.ToInt32(IdTipoProducto1);
+
+            _oProductoModel.Modificar(_oProductoBO);
+            return RedirectToAction("Producto", "Producto");
+        }
+        public ActionResult Eliminar_Producto(String IdProducto)
+        {
+            _oProductoModel.Eliminar(IdProducto);
+            return View("Producto");
         }
     }
 }

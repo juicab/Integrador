@@ -3,6 +3,6 @@
 <div class="col-md-5">
     <div class="form-group">
         <label>Tipo Producto</label><!--Obtener el valor del DropDownList por AJAX-->
-        @Html.DropDownList("IdTipoProducto1", new SelectList(Model.TiposProducto, "IdTipoProducto", "TipoProducto"), new { @class = "form-control" })
+        @Html.DropDownList("IdTipoProducto1", new SelectList(Model.TiposProducto, "IdTipoProducto", "TipoProducto"), new { @class = "form-control", @value= @Model.IdTipoProducto1 })
     </div>
 </div>

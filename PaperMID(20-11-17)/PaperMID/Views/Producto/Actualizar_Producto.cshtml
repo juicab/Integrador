@@ -1,9 +1,10 @@
 ﻿@model PaperMID.BO.ProductoBO
 
 @{
-    ViewBag.Title = "Producto";
+    ViewBag.Title = "Actualizar_Producto";
     Layout = "~/Views/Master/_LayoutAdministrador.cshtml";
 }
+
 <div class="content">
     <div class="row">
         <p></p>
@@ -13,7 +14,7 @@
     </div>
     <div class="container-fluid">
         <div class="row">
-            @using (Ajax.BeginForm("Agregar_Producto", "Producto", new AjaxOptions { HttpMethod = "POST" }, new { enctype = "multipart/form-data" }))
+            @using (Ajax.BeginForm("Actualizar_Datos_Producto", "Producto", new AjaxOptions { HttpMethod = "POST" }, new { enctype = "multipart/form-data" }))
             {
                 @Html.AntiForgeryToken()
 
@@ -28,13 +29,13 @@
                                     <div class="col-md-3">
                                         <div class="form-group">
                                             <label>Código</label>
-                                            <input type="text" class="form-control" name="IdProducto" />
+                                            <input type="text" class="form-control" name="IdProducto" value="@Model.IdProducto" />
                                         </div>
                                     </div>
                                     <div class="col-md-8">
                                         <div class="form-group">
                                             <label>Nombre Producto</label>
-                                            <input type="text" class="form-control" name="NombreProd" />
+                                            <input type="text" class="form-control" name="NombreProd" value="@Model.NombreProd" />
                                         </div>
                                     </div>
                                 </div>
@@ -42,7 +43,7 @@
                                     <div class="col-md-11">
                                         <div class="form-group">
                                             <label>Descripcion del Producto</label>
-                                            <textarea class="form-control" placeholder="Escribe aquí la descripción del producto" rows="5" style="width: 100%; height: 87px;" name="DescripcionProd"></textarea>
+                                            <textarea class="form-control" placeholder="Escribe aquí la descripción del producto" rows="5" style="width: 100%; height: 87px;" name="DescripcionProd">@Model.DescripcionProd</textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -50,13 +51,13 @@
                                     <div class="col-md-3">
                                         <div class="form-group ">
                                             <label>Precio Producto</label>
-                                            <input type="text" class="form-control" name="PrecioProd" />
+                                            <input type="text" class="form-control" name="PrecioProd" value="@Model.PrecioProd" />
                                         </div>
                                     </div>
                                     <div class="col-md-3">
                                         <div class="form-group ">
                                             <label>Descuento Producto</label>
-                                            <input type="text" class="form-control" name="DescuentoProd" />
+                                            <input type="text" class="form-control" name="DescuentoProd" value="@Model.DescuentoProd"/>
                                         </div>
                                     </div>
                                     @{ Html.RenderAction("DropDownList_Proveedores", "Producto");}
@@ -65,33 +66,28 @@
                                     <div class="col-md-3">
                                         <div class="form-group ">
                                             <label>Cantidad Disponible</label>
-                                            <input type="text" class="form-control" name="CantidadDisponibleProd" />
+                                            <input type="text" class="form-control" name="CantidadDisponibleProd" value="@Model.CantidadDisponibleProd" />
                                         </div>
                                     </div>
                                     <div class="col-md-3">
                                         <div class="form-group ">
                                             <label>Cantidad Mínima</label>
-                                            <input type="text" class="form-control" name="CantidadMinimaProd" />
+                                            <input type="text" class="form-control" name="CantidadMinimaProd" value="@Model.CantidadMinimaProd" />
                                         </div>
                                     </div>
                                     @{ Html.RenderAction("DropDown_ListTipo_Producto", "Producto");}
                                 </div>
 
                                 <div class="=row">
-                                    <button type="submit" class="btn btn-info btn-fill pull-right btn-round">Guardar</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <button type="submit" class="btn btn-info btn-fill pull-right btn-round">Editar</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 </div>
                                 <div class="clearfix"></div>
                             </form>
                         </div>
                     </div>
                 </div>
-             }
-
+            }
         </div>
     </div>
-    <div class="row">
-        <p></p>
-    </div>
-    @{ Html.RenderAction("List_Productos", "Producto");}
 </div>
 

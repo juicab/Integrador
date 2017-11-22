@@ -93,5 +93,22 @@ namespace PaperMID.Models
             }
             return List_Tipo_Producto;
         }
+
+        public BO.ProductoBO Recuperar_Datos_Producto(String IdProdcuto)
+        {
+            var _Producto = new BO.ProductoBO();
+            DataTable Datos = oConexion.TablaConnsulta(String.Format("SELECT * FROM Producto WHERE IdProducto='{0}' AND StatusProd='{1}'", Convert.ToInt32(IdProdcuto), true));
+            DataRow Row = Datos.Rows[0];
+            _Producto.IdProducto = Convert.ToInt32(Row["IdProducto"]);
+            _Producto.NombreProd = Row["NombreProd"].ToString();
+            _Producto.DescripcionProd = Row["DescripcionProd"].ToString();
+            _Producto.PrecioProd = Convert.ToDouble(Row["PrecioProd"]);
+            _Producto.DescuentoProd = Convert.ToDouble(Row["DescuentoProd"]);
+            _Producto.CantidadDisponibleProd = Convert.ToInt32(Row["CantidadDisponibleProd"]);
+            _Producto.CantidadMinimaProd = Convert.ToInt32(Row["CantidadMinimaProd"]);
+            _Producto.IdTipoProducto1 = Convert.ToInt32(Row["IdTipoProducto1"]);
+            _Producto.IdProveedor1 = Convert.ToInt32(Row["IdProveedor1"]);
+            return _Producto;
+        }
     }
 }

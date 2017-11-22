@@ -13,33 +13,30 @@
                                 <tr>
                                     <th class="text-center">Código</th>
                                     <th>Nombre</th>
-                                    <th>Precio</th>
-                                    <th>Descuento</th>
-                                    <th>Cantidad Disponible</th>
-                                    <th>Cantidad Mínima</th>
-                                    <th class="text-right">Acciones</th>
+                                    <th class="text-center">Precio</th>
+                                    <th class="text-center">Descuento</th>
+                                    <th class="text-center">Cantidad Disponible</th>
+                                    <th class="text-center">Cantidad Mínima</th>
+                                    <th class="text-center">Acciones</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach (DataRow row in Model.Rows)
                                 {
                                     <tr id="fila_@row["IdProducto"]">
-                                        <td>@row["IdProducto"]</td>
+                                        <td class="text-center">@row["IdProducto"]</td>
                                         <td>@row["NombreProd"]</td>
-                                        <td>@row["PrecioProd"]</td>
-                                        <td>@row["DescuentoProd"]</td>
-                                        <td>@row["CantidadDisponibleProd"]</td>
-                                        <td>@row["CantidadMinimaProd"]</td>
-                                        <td class="td-actions text-right">
-                                            <button type="button" rel="tooltip" title="Editar" class="btn btn-info btn-simple btn-xs">
-                                                <i class="fa fa-user">@*@Html.ActionLink(null,"","")*@</i>
-                                            </button>
-                                            <button type="button" rel="tooltip" title="Edit Profile" class="btn btn-success btn-simple btn-xs">
+                                        <td class="text-center">@row["PrecioProd"]</td>
+                                        <td class="text-center">@row["DescuentoProd"]</td>
+                                        <td class="text-center">@row["CantidadDisponibleProd"]</td>
+                                        <td class="text-center">@row["CantidadMinimaProd"]</td>
+                                        <td class="td-actions text-center">
+                                            <a type="button" rel="tooltip" title="Editar" class="btn btn-success btn-simple btn-xs" href="@Url.Action("Actualizar_Producto", "Producto", new { IdProducto = @row["IdProducto"] })">
                                                 <i class="fa fa-edit"></i>
-                                            </button>
-                                            <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
+                                            </a>
+                                            <a type="button" rel="tooltip"  title="Eliminar" class="btn btn-danger btn-simple btn-xs" href="@Url.Action("Eliminar_Producto", "Producto", new { IdProducto = @row["IdProducto"] })">
                                                 <i class="fa fa-times"></i>
-                                            </button>
+                                            </a>
                                         </td>
                                     </tr>
                                 }

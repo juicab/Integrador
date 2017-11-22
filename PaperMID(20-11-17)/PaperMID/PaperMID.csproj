@@ -196,6 +196,7 @@
     <Compile Include="Controllers\TipoProductoController.cs" />
     <Compile Include="Controllers\TipoUsuarioController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
+    <Compile Include="Controllers\VentaController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -216,6 +217,7 @@
     <Compile Include="Models\TipoProductoModel.cs" />
     <Compile Include="Models\TipoUsuarioModel.cs" />
     <Compile Include="Models\UsuarioModel.cs" />
+    <Compile Include="Models\VentaModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -274,6 +276,7 @@
     <Content Include="Views\Producto\DropDown_ListTipo_Producto.cshtml" />
     <Content Include="Views\Producto\List_Productos.cshtml" />
     <Content Include="Views\Empresa\ActualizarEmpresa.cshtml" />
+    <Content Include="Views\Producto\Actualizar_Producto.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
