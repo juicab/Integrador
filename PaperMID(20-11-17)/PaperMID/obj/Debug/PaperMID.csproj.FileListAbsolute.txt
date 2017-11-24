@@ -515,6 +515,8 @@ X:\Documentos\GitHub\Integrador\PaperMID(20-11-17)\PaperMID\bin\es\System.Web.We
 X:\Documentos\GitHub\Integrador\PaperMID(20-11-17)\PaperMID\bin\es\System.Web.Webpages.Razor.resources.dll
 X:\Documentos\GitHub\Integrador\PaperMID(20-11-17)\PaperMID\bin\es\System.Web.Helpers.resources.dll
 X:\Documentos\GitHub\Integrador\PaperMID(20-11-17)\PaperMID\bin\es\System.Web.Mvc.resources.dll
-X:\Documentos\GitHub\Integrador\PaperMID(20-11-17)\PaperMID\obj\Debug\PaperMID.csprojResolveAssemblyReference.cache
 X:\Documentos\GitHub\Integrador\PaperMID(20-11-17)\PaperMID\obj\Debug\PaperMID.dll
 X:\Documentos\GitHub\Integrador\PaperMID(20-11-17)\PaperMID\obj\Debug\PaperMID.pdb
+X:\Documentos\GitHub\Integrador\PaperMID(20-11-17)\PaperMID\bin\Newtonsoft.Json.dll
+X:\Documentos\GitHub\Integrador\PaperMID(20-11-17)\PaperMID\bin\Newtonsoft.Json.xml
+X:\Documentos\GitHub\Integrador\PaperMID(20-11-17)\PaperMID\obj\Debug\PaperMID.csprojResolveAssemblyReference.cache

@@ -10,6 +10,7 @@ namespace PaperMID.Models
 {
     public class ProductoModel : Plantilla
     {
+        public int IdTipoProducto1, IdProveedor1;
         ConexionModel oConexion;
         public ProductoModel()
         {
@@ -94,10 +95,10 @@ namespace PaperMID.Models
             return List_Tipo_Producto;
         }
 
-        public BO.ProductoBO Recuperar_Datos_Producto(String IdProdcuto)
+        public BO.ProductoBO Recuperar_Datos_Producto(String IdProducto)
         {
             var _Producto = new BO.ProductoBO();
-            DataTable Datos = oConexion.TablaConnsulta(String.Format("SELECT * FROM Producto WHERE IdProducto='{0}' AND StatusProd='{1}'", Convert.ToInt32(IdProdcuto), true));
+            DataTable Datos = oConexion.TablaConnsulta(String.Format("SELECT * FROM Producto WHERE IdProducto='{0}' AND StatusProd='{1}'", Convert.ToInt32(IdProducto), true));
             DataRow Row = Datos.Rows[0];
             _Producto.IdProducto = Convert.ToInt32(Row["IdProducto"]);
             _Producto.NombreProd = Row["NombreProd"].ToString();
@@ -107,7 +108,9 @@ namespace PaperMID.Models
             _Producto.CantidadDisponibleProd = Convert.ToInt32(Row["CantidadDisponibleProd"]);
             _Producto.CantidadMinimaProd = Convert.ToInt32(Row["CantidadMinimaProd"]);
             _Producto.IdTipoProducto1 = Convert.ToInt32(Row["IdTipoProducto1"]);
+            IdTipoProducto1= Convert.ToInt32(Row["IdTipoProducto1"]);  //Para returnar el valor en el DropDownList
             _Producto.IdProveedor1 = Convert.ToInt32(Row["IdProveedor1"]);
+            IdProveedor1=Convert.ToInt32(Row["IdProveedor1"]); //Para returnar el valor en el DropDownList
             return _Producto;
         }
     }
