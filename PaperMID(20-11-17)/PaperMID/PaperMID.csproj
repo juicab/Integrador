@@ -279,6 +279,7 @@
     <Content Include="Views\Producto\List_Productos.cshtml" />
     <Content Include="Views\Empresa\ActualizarEmpresa.cshtml" />
     <Content Include="Views\Producto\Actualizar_Producto.cshtml" />
+    <Content Include="ClassDiagram1.cd" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
