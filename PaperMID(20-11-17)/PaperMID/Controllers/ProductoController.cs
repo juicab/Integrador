@@ -115,7 +115,9 @@ namespace PaperMID.Controllers
             _oProductoModel.Eliminar(IdProducto);
             return View("Producto");
         }
-        
+        //public ActionResult DropDownList()
+        //{
 
+        //}
     }
 }

@@ -47,6 +47,30 @@ namespace PaperMID.Models
             Empresa.MisionEmpre = row["MisionEmpre"].ToString();
             Empresa.VisionEmpre = row["VisionEmpre"].ToString();
             Empresa.ValoresEmpre = row["ValoresEmpre"].ToString();
+            try
+            {
+                Empresa.ImagenMisionEmpre = (byte[])row["ImagenMisionEmpre"];
+            }
+            catch
+            {
+                Empresa.ImagenMisionEmpre = null;
+            }
+            try
+            {
+                Empresa.ImagenVisionEmpre = (byte[])row["ImagenVisionEmpre"];
+            }
+            catch
+            {
+                Empresa.ImagenVisionEmpre = null;
+            }
+            try
+            {
+                Empresa.ImagenLogoEmpre = (byte[])row["ImagenLogoEmpre"];
+            }
+            catch
+            {
+                Empresa.ImagenLogoEmpre = null;
+            }
             Empresa.CorreoEmpre = row["CorreoEmpre"].ToString();
             Empresa.TelefenoEmpre = row["TelefenoEmpre"].ToString();
             Empresa.FacebookEmpre = row["FacebookEmpre"].ToString();
