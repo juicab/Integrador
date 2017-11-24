@@ -60,7 +60,12 @@
                                             <input type="text" class="form-control" name="DescuentoProd" value="@Model.DescuentoProd"/>
                                         </div>
                                     </div>
-                                    @{ Html.RenderAction("DropDownList_Proveedores", "Producto");}
+                                    <div class="col-md-5">
+                                        <div class="form-group">
+                                            <label>Tipo Producto</label><!--Obtener el valor del DropDownList por AJAX-->
+                                            @Html.DropDownList("IdProveedor1", null, htmlAttributes: new { @class = "form-control", @value = Model.IdProveedor1 })
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-3">
@@ -75,7 +80,12 @@
                                             <input type="text" class="form-control" name="CantidadMinimaProd" value="@Model.CantidadMinimaProd" />
                                         </div>
                                     </div>
-                                    @{ Html.RenderAction("DropDown_ListTipo_Producto", "Producto");}
+                                    <div class="col-md-5">
+                                        <div class="form-group">
+                                            <label>Tipo Producto</label><!--Obtener el valor del DropDownList por AJAX-->
+                                            @Html.DropDownList("IdTipoProducto1", null, htmlAttributes: new { @class = "form-control" } )
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <div class="=row">

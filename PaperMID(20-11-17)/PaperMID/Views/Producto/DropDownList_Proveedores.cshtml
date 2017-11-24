@@ -1,8 +1,0 @@
-﻿@model PaperMID.BO.ProductoBO
-
-<div class="col-md-5">
-    <div class="form-group">
-        <label>Proveedor</label><!--Obtener el valor del DropDownList por AJAX-->
-        @Html.DropDownList("IdProveedor1", new SelectList(Model.Proveedores, "IdProveedor", "NombreProv"), new { @class = "form-control", @value= @Model.IdProveedor1 })
-    </div>
-</div>
