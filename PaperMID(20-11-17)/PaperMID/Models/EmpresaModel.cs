@@ -56,23 +56,19 @@ namespace PaperMID.Models
             return Empresa;
         }
 
-        public EmpresaBO Obtener_Direccion_Empresa(int id)
+        public DireccionBO Obtener_Direccion_Empresa(int id)
         {
             var DirEmp = new DireccionBO();
             String StrBuscar = string.Format("Select * from Direccion where IdDireccion="+id);
             DataTable Datos = oConexion.TablaConnsulta(StrBuscar);
             DataRow row = Datos.Rows[0];
             DirEmp.CalleDir =(row["IdEmpresa"]).ToString();
-            DirEmp.NombreEmpre = row["NombreEmpre"].ToString();
-            DirEmp.MisionEmpre = row["MisionEmpre"].ToString();
-            DirEmp.VisionEmpre = row["VisionEmpre"].ToString();
-            DirEmp.ValoresEmpre = row["ValoresEmpre"].ToString();
-            DirEmp.CorreoEmpre = row["CorreoEmpre"].ToString();
-            DirEmp.TelefenoEmpre = row["TelefenoEmpre"].ToString();
-            DirEmp.FacebookEmpre = row["FacebookEmpre"].ToString();
-            DirEmp.IdDireccion1 = Convert.ToInt32(row["IdDireccion1"]);
-            DirEmp.FechaRegistroEmpre = Convert.ToDateTime(row["FechaRegistroEmpre"].ToString());
-            DirEmp.StatusEmpre = Convert.ToBoolean(row["StatusEmpre"]);
+            DirEmp.NumExteDir = row["NombreEmpre"].ToString();
+            DirEmp.NumInteDir = row["MisionEmpre"].ToString();
+            DirEmp.CruzaDir = row["VisionEmpre"].ToString();
+            DirEmp.CPDir = row["ValoresEmpre"].ToString();
+            DirEmp.ColoniaDir = row["CorreoEmpre"].ToString();
+            DirEmp.IdMunicipio1 = Convert.ToInt32(row["TelefenoEmpre"]);
             return DirEmp;
         }
     }
