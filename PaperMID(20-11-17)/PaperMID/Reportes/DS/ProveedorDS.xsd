@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ProveedorDS" targetNamespace="http://tempuri.org/ProveedorDS.xsd" xmlns:mstns="http://tempuri.org/ProveedorDS.xsd" xmlns="http://tempuri.org/ProveedorDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ProveedorDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ProveedorDS" msprop:Generator_UserDSName="ProveedorDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Proveedor" msprop:Generator_TableClassName="ProveedorDataTable" msprop:Generator_TableVarName="tableProveedor" msprop:Generator_TablePropName="Proveedor" msprop:Generator_RowDeletingName="ProveedorRowDeleting" msprop:Generator_RowChangingName="ProveedorRowChanging" msprop:Generator_RowEvHandlerName="ProveedorRowChangeEventHandler" msprop:Generator_RowDeletedName="ProveedorRowDeleted" msprop:Generator_UserTableName="Proveedor" msprop:Generator_RowChangedName="ProveedorRowChanged" msprop:Generator_RowEvArgName="ProveedorRowChangeEvent" msprop:Generator_RowClassName="ProveedorRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IdProveedor" msprop:Generator_ColumnVarNameInTable="columnIdProveedor" msprop:Generator_ColumnPropNameInRow="IdProveedor" msprop:Generator_ColumnPropNameInTable="IdProveedorColumn" msprop:Generator_UserColumnName="IdProveedor" type="xs:string" minOccurs="0" />
+              <xs:element name="NombreProv" msprop:Generator_ColumnVarNameInTable="columnNombreProv" msprop:Generator_ColumnPropNameInRow="NombreProv" msprop:Generator_ColumnPropNameInTable="NombreProvColumn" msprop:Generator_UserColumnName="NombreProv" type="xs:string" minOccurs="0" />
+              <xs:element name="TelefonoProv" msprop:Generator_ColumnVarNameInTable="columnTelefonoProv" msprop:Generator_ColumnPropNameInRow="TelefonoProv" msprop:Generator_ColumnPropNameInTable="TelefonoProvColumn" msprop:Generator_UserColumnName="TelefonoProv" type="xs:string" minOccurs="0" />
+              <xs:element name="CorreoProv" msprop:Generator_ColumnVarNameInTable="columnCorreoProv" msprop:Generator_ColumnPropNameInRow="CorreoProv" msprop:Generator_ColumnPropNameInTable="CorreoProvColumn" msprop:Generator_UserColumnName="CorreoProv" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -31,9 +31,9 @@ namespace PaperMID.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Agregar_Producto(String IdProducto,String NombreProd, String DescripcionProd, String PrecioProd,
+        public ActionResult Agregar_Producto(String IdProducto, String NombreProd, String DescripcionProd, String PrecioProd,
             String DescuentoProd, String IdProveedor1, String CantidadDisponibleProd, String CantidadMinimaProd,
-            String IdTipoProducto1,HttpPostedFileBase ImagenProducto)
+            String IdTipoProducto1, HttpPostedFileBase ImagenProducto)
         {
             _oProductoBO = new BO.ProductoBO();
             _oFotoBO = new BO.FotoBO();
@@ -50,7 +50,7 @@ namespace PaperMID.Controllers
 
             _oProductoModel.Agregar(_oProductoBO);
 
-            if (ImagenProducto!=null&&ImagenProducto.ContentLength>0)
+            if (ImagenProducto != null && ImagenProducto.ContentLength > 0)
             {
                 _oFotoBO.ImagenFoto = new byte[ImagenProducto.ContentLength];
                 ImagenProducto.InputStream.Read(_oFotoBO.ImagenFoto, 0, ImagenProducto.ContentLength);
@@ -59,7 +59,7 @@ namespace PaperMID.Controllers
 
                 _oFotoModel.Agregar(_oFotoBO);
             }
-            
+
 
             return RedirectToAction("Producto", "Producto");
         }
@@ -83,9 +83,9 @@ namespace PaperMID.Controllers
             var ProductoBO = new BO.ProductoBO();
 
             //Cargar el DropDownList por ViewBag para poder usar AJAX.
-            ViewBag.IdTipoProducto1 = new SelectList(ProductoBO.TiposProducto = _oProductoModel.Lista_Tipo_Producto(), "IdTipoProducto", "TipoProducto",_oProductoModel.IdTipoProducto1);
+            ViewBag.IdTipoProducto1 = new SelectList(ProductoBO.TiposProducto = _oProductoModel.Lista_Tipo_Producto(), "IdTipoProducto", "TipoProducto", _oProductoModel.IdTipoProducto1);
             ViewBag.IdProveedor1 = new SelectList(ProductoBO.Proveedores = _oProductoModel.Lista_Proveedor(), "IdProveedor", "NombreProv");
-            
+
             return View(_oProductoModel.Recuperar_Datos_Producto(Gl_Id_Producto));
         }
 
@@ -115,10 +115,7 @@ namespace PaperMID.Controllers
             _oProductoModel.Eliminar(IdProducto);
             return View("Producto");
         }
-        [ChildActionOnly]
-        //public ActionResult DropDownList()
-        //{
+        
 
-        //}
     }
 }
