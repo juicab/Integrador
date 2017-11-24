@@ -18,7 +18,7 @@ namespace PaperMID.Models
         public int Agregar(object Obj)
         {
             BO.FotoBO BO = (BO.FotoBO)Obj;
-            SqlCommand Cmd = new SqlCommand("EXEC SP_Agregar_Foto @ImagenFoto,@PrincipalFoto,@IdProducto1);");
+            SqlCommand Cmd = new SqlCommand("EXEC SP_Agregar_Foto @ImagenFoto,@PrincipalFoto,@IdProducto1");
             Cmd.Parameters.Add("@ImagenFoto", SqlDbType.Image).Value = BO.ImagenFoto;
             Cmd.Parameters.Add("@PrincipalFoto", SqlDbType.Bit).Value = BO.PrincipalFoto;
             Cmd.Parameters.Add("@IdProducto1", SqlDbType.Int).Value = BO.IdProducto;
