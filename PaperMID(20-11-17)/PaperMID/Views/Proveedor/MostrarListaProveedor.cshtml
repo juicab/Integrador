@@ -13,6 +13,7 @@
             <div class="card">
                 <div class="header">
                     <h4 class="title">Mostrar Proveedor</h4>
+                    @Html.ActionLink("Imprimir Reporte", "ReporteProveedor", "Reportes")               
                 </div>
                 <table class="table">
                     <thead>
@@ -24,6 +25,7 @@
                         </tr>
                     </thead>
                     <tbody>
+                        
                         @foreach (DataRow row in Model.Rows)
             {
                             <tr id="fila_@row["IdProveedor"]">
