@@ -520,3 +520,5 @@ X:\Documentos\GitHub\Integrador\PaperMID(20-11-17)\PaperMID\obj\Debug\PaperMID.p
 X:\Documentos\GitHub\Integrador\PaperMID(20-11-17)\PaperMID\bin\Newtonsoft.Json.dll
 X:\Documentos\GitHub\Integrador\PaperMID(20-11-17)\PaperMID\bin\Newtonsoft.Json.xml
 X:\Documentos\GitHub\Integrador\PaperMID(20-11-17)\PaperMID\obj\Debug\PaperMID.csprojResolveAssemblyReference.cache
+C:\Users\Jesus Uicab\Documents\GitHub\Integrador\PaperMID(20-11-17)\PaperMID\bin\Newtonsoft.Json.dll
+C:\Users\Jesus Uicab\Documents\GitHub\Integrador\PaperMID(20-11-17)\PaperMID\bin\Newtonsoft.Json.xml

@@ -17,8 +17,9 @@ namespace PaperMID.Controllers
             return View(oEmpresa.Obtener_Empresa(1));
         }
 
-        public ActionResult ActuaDatosEmpre(EmpresaBO oEmpre)
+        public ActionResult ActuaDatosEmpre(EmpresaBO oEmpre, HttpPostedFileBase ImagenMision, HttpPostedFileBase ImagenVision,HttpPostedFileBase ImagenLogo)
         {
+
             oEmpresa.Modificar(oEmpre);
             ActualizarEmpresa();
             return View("ActualizarEmpresa");
