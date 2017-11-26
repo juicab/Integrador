@@ -72,7 +72,7 @@ namespace PaperMID.Controllers
         public ActionResult Actualizar_Producto(String IdProducto)
         {
             _oProductoModel.Recuperar_Datos_Producto(IdProducto); //Ejecuto este método para traer mis FK.
-
+            _oProductoModel.Recuperar_Foto_Principal_Producto(IdProducto);
             var ProductoBO = new BO.ProductoBO();
 
             //Cargar el DropDownList por ViewBag para poder usar AJAX.
