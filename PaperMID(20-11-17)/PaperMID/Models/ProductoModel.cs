@@ -19,8 +19,8 @@ namespace PaperMID.Models
         public int Agregar(object Obj)
         {
             BO.ProductoBO _oProductoBO = (BO.ProductoBO)Obj;
-            SqlCommand Cmd = new SqlCommand("EXEC SP_Agregar_Producto @IdProducto, @NombreProd,@DescripcionProd,@PrecioProd,@DescuentoProd,@CantidadDisponibleProd,@CantidadMinimaProd,@IdTipoProducto1,@IdProveedor1");
-            Cmd.Parameters.Add("@IdProducto", SqlDbType.Int).Value = _oProductoBO.IdProducto;
+            SqlCommand Cmd = new SqlCommand("EXEC SP_Agregar_Producto @CódigoProd, @NombreProd,@DescripcionProd,@PrecioProd,@DescuentoProd,@CantidadDisponibleProd,@CantidadMinimaProd,@IdTipoProducto1,@IdProveedor1");
+            Cmd.Parameters.Add("@CódigoProd", SqlDbType.VarChar).Value = _oProductoBO.CódigoProd;
             Cmd.Parameters.Add("@NombreProd", SqlDbType.VarChar).Value = _oProductoBO.NombreProd;
             Cmd.Parameters.Add("@DescripcionProd", SqlDbType.VarChar).Value = _oProductoBO.DescripcionProd;
             Cmd.Parameters.Add("@PrecioProd", SqlDbType.Float).Value = _oProductoBO.PrecioProd;
@@ -35,8 +35,8 @@ namespace PaperMID.Models
 
         public int Eliminar(object Obj)
         {
-            SqlCommand Cmd = new SqlCommand("EXEC SP_Eliminar_Producto @IdProducto");
-            Cmd.Parameters.Add("@IdProducto", SqlDbType.Int).Value = Convert.ToInt32(Obj);
+            SqlCommand Cmd = new SqlCommand("EXEC SP_Eliminar_Producto @CódigoProd");
+            Cmd.Parameters.Add("@CódigoProd", SqlDbType.VarChar).Value = Obj;
             Cmd.CommandType = CommandType.Text;
             return oConexion.EjecutarSQL(Cmd);
 
@@ -45,8 +45,8 @@ namespace PaperMID.Models
         public int Modificar(object Obj)
         {
             BO.ProductoBO _oProductoBO = (BO.ProductoBO)Obj;
-            SqlCommand Cmd = new SqlCommand("EXEC SP_Modificar_Producto @IdProducto,@NombreProd,@DescripcionProd,@PrecioProd,@DescuentoProd,@CantidadDisponibleProd,@CantidadMinimaProd,@IdTipoProducto1,@IdProveedor1");
-            Cmd.Parameters.Add("@IdProducto", SqlDbType.Int).Value = _oProductoBO.IdProducto;
+            SqlCommand Cmd = new SqlCommand("EXEC SP_Modificar_Producto @CódigoProd,@NombreProd,@DescripcionProd,@PrecioProd,@DescuentoProd,@CantidadDisponibleProd,@CantidadMinimaProd,@IdTipoProducto1,@IdProveedor1");
+            Cmd.Parameters.Add("@CódigoProd", SqlDbType.VarChar).Value = _oProductoBO.CódigoProd;
             Cmd.Parameters.Add("@NombreProd", SqlDbType.VarChar).Value = _oProductoBO.NombreProd;
             Cmd.Parameters.Add("@DescripcionProd", SqlDbType.VarChar).Value = _oProductoBO.DescripcionProd;
             Cmd.Parameters.Add("@PrecioProd", SqlDbType.Float).Value = _oProductoBO.PrecioProd;
@@ -82,7 +82,7 @@ namespace PaperMID.Models
 
         public List<TipoProductoBO> Lista_Tipo_Producto()
         {
-            string Query = ("SELECT IdTipoProducto,TipoProd FROM TipoProducto WHERE StatusTpro=1");
+            string Query = ("SELECT CódigoProd,TipoProd FROM TipoProducto WHERE StatusTpro=1");
             var Result = oConexion.TablaConnsulta(Query);
             List<TipoProductoBO> List_Tipo_Producto = new List<TipoProductoBO>();
             foreach (DataRow Tipo_Producto in Result.Rows)
@@ -98,9 +98,9 @@ namespace PaperMID.Models
         public BO.ProductoBO Recuperar_Datos_Producto(String IdProducto)
         {
             var _Producto = new BO.ProductoBO();
-            DataTable Datos = oConexion.TablaConnsulta(String.Format("SELECT * FROM Producto WHERE IdProducto='{0}' AND StatusProd='{1}'", Convert.ToInt32(IdProducto), true));
+            DataTable Datos = oConexion.TablaConnsulta(String.Format("SELECT * FROM Producto WHERE CódigoProd='{0}' AND StatusProd='{1}'", IdProducto, true));
             DataRow Row = Datos.Rows[0];
-            _Producto.IdProducto = Convert.ToInt32(Row["IdProducto"]);
+            _Producto.CódigoProd = Row["CódigoProd"].ToString();
             _Producto.NombreProd = Row["NombreProd"].ToString();
             _Producto.DescripcionProd = Row["DescripcionProd"].ToString();
             _Producto.PrecioProd = Convert.ToDouble(Row["PrecioProd"]);
@@ -113,5 +113,14 @@ namespace PaperMID.Models
             IdProveedor1=Convert.ToInt32(Row["IdProveedor1"]); //Para returnar el valor en el DropDownList
             return _Producto;
         }
+        public BO.ProductoBO Recuperar_Foto_Principal_Producto(String IdProducto)
+        {
+            var _Producto = new BO.ProductoBO();
+            DataTable Datos = oConexion.TablaConnsulta(String.Format("SELECT * FROM Foto WHERE CódigoProd='{0}' AND StatusFoto='{1}'", IdProducto, true));
+            DataRow Row = Datos.Rows[0];
+            _Producto.Foto = (byte[])Row["ImagenFoto"];
+            return _Producto;
+        }
+
     }
 }

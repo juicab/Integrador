@@ -20,7 +20,7 @@
                 <div class="col-md-11">
                     <div class="card">
                         <div class="header">
-                            <h4 class="title">Productos</h4>
+                            <h2 class="title">Productos</h2>
                         </div>
                         <div class="content">
                             <form>
@@ -47,56 +47,82 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-3">
-                                        <div class="form-group ">
-                                            <label>Precio Producto</label>
-                                            <input type="text" class="form-control" name="PrecioProd" />
+                                    <div class="col-md-7">
+                                        <h4>Detalles de Stock</h4><br />
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group ">
+                                                    <label>Precio Producto</label>
+                                                    <input type="text" class="form-control" name="PrecioProd" />
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group ">
+                                                    <label>Descuento Producto</label>
+                                                    <input type="text" class="form-control" name="DescuentoProd" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group ">
+                                                    <label>Cantidad Disponible</label>
+                                                    <input type="text" class="form-control" name="CantidadDisponibleProd" />
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group ">
+                                                    <label>Cantidad Mínima</label>
+                                                    <input type="text" class="form-control" name="CantidadMinimaProd" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label>Tipo Producto</label><!--Obtener el valor del DropDownList por AJAX-->
+                                                    @Html.DropDownList("IdProveedor1", null, htmlAttributes: new { @class = "form-control" })
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label>Tipo Producto</label><!--Obtener el valor del DropDownList por AJAX-->
+                                                    @Html.DropDownList("IdTipoProducto1", null, htmlAttributes: new { @class = "form-control" })
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-3">
-                                        <div class="form-group ">
-                                            <label>Descuento Producto</label>
-                                            <input type="text" class="form-control" name="DescuentoProd" />
-                                        </div>
-                                    </div>
-                                    <div class="col-md-5">
-                                        <div class="form-group">
-                                            <label>Tipo Producto</label><!--Obtener el valor del DropDownList por AJAX-->
-                                            @Html.DropDownList("IdProveedor1", null, htmlAttributes: new { @class = "form-control" })
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        <div class="form-group ">
-                                            <label>Cantidad Disponible</label>
-                                            <input type="text" class="form-control" name="CantidadDisponibleProd" />
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="form-group ">
-                                            <label>Cantidad Mínima</label>
-                                            <input type="text" class="form-control" name="CantidadMinimaProd" />
-                                        </div>
-                                    </div>
-                                    <div class="col-md-5">
-                                        <div class="form-group">
-                                            <label>Tipo Producto</label><!--Obtener el valor del DropDownList por AJAX-->
-                                            @Html.DropDownList("IdTipoProducto1", null, htmlAttributes: new { @class = "form-control" })
+                                    <br />
+                                    <div class="col-md-4" style="height:250px">
+                                        <div class="file-upload form-group">
+                                            <div id="Cargar">
+                                                <div class="image-upload-wrap">
+                                                    <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" name="ImagenProducto" />
+                                                    <div class="drag-text">
+                                                        <h3>Arrastre una imagen</h3>
+                                                    </div>
+                                                </div>
+                                                <br />
+                                                <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Seleccionar Imagen</button>
+                                            </div>
+                                            <div class="file-upload-content">
+                                                <div class="Cargado">
+                                                    <br />
+                                                    <img class="file-upload-image" src="#" alt="your image" style="height:170px; width:170px;" />
+                                                    <br /><br />
+                                                    @*<p style="color:black"><span class="image-title">Uploaded Image</span></p>*@
+                                                </div>
+                                                <br />
+                                                <button type="button" onclick="removeUpload()" class="remove-image">Remover </button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <br />
-                                <output id="ContenedorImg">
-                                    @*Elemento dondé se cargará la nueva imagen*@
-                                <img src="~/Style/assets/img/PreviewProfile.png" class="PreviewImagen" />
-                            </output>
-                                <br />
-                                <div class="file-loading">
-                                    <input type="file" id="files" name="ImagenProducto" />
-                                </div>
-                                <div class="=row">
-                                    <button type="submit" class="btn btn-info btn-fill pull-right btn-round">Guardar</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <div class="=row" style="padding:0,20px;">
+                                    <div class="col-md-11">
+                                        <button type="submit" class="btn btn-info btn-fill btn-block">Guardar</button>
+                                    </div>  
                                 </div>
                                 <div class="clearfix"></div>
                             </form>
@@ -104,7 +130,6 @@
                     </div>
                 </div>
              }
-
         </div>
     </div>
     <div class="row">
@@ -112,35 +137,161 @@
     </div>
     @{ Html.RenderAction("List_Productos", "Producto");}
 </div>
+
 <style>
-    .PreviewImagen {
-        height: 300px;
-        width: 300px;
-        margin: 10px 5px 0 0;
+        .file-upload {
+      background-color: #fff;
+      width: 100%; /*Modificar para adaptar al tamaño*/
+      margin: 0 auto;
+      /*padding: 20px;*/
     }
-</style>@*CSS para la Preview de la imagen*@
+
+    .file-upload-btn {
+      width: 100%;
+      margin: 0;
+      color: #fff;
+      background: #996ADB; /**/
+      border: none;
+      padding: 10px;
+      border-radius: 4px;
+      border-bottom: 4px solid  #773DCF;
+      transition: all .2s ease;
+      outline: none;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .file-upload-btn:hover {
+      background: #773DCF; /**/
+      color: #773DCF;
+      transition: all .2s ease;
+      cursor: pointer;
+    }
+
+    .file-upload-btn:active {
+      border: 0;
+      transition: all .2s ease;
+    }
+
+    .file-upload-content {
+      display: none;
+      text-align: center;
+    }
+
+    .file-upload-input {
+      position: absolute;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      outline: none;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    .image-upload-wrap {
+      margin-top: 20px;
+      border: 4px dashed #773DCF; /**/
+      position: relative;
+    }
+
+    .image-dropping,
+    .image-upload-wrap:hover {
+      background-color: #996ADB;/**/
+      border: 4px dashed #773DCF;
+    }
+
+    .image-title-wrap {
+      padding: 0 15px 15px 15px;
+      color: #222;
+    }
+
+    .drag-text {
+      text-align: center;
+    }
+
+    .drag-text h3 {
+      font-weight: 100;
+      text-transform: uppercase;
+      color: #773DCF;
+      padding: 60px 0;
+    }
+
+    .file-upload-image {
+      max-height: 200px;
+      max-width: 200px;
+      margin: auto;
+      padding: 0px; /**/
+    }
+
+    .remove-image {
+      width: 200px;
+      margin: 0;
+      color: #fff;
+      background: #996ADB;
+      border: none;
+      padding: 10px;
+      border-radius: 4px;
+      border-bottom: 4px solid #773DCF;
+      transition: all .2s ease;
+      outline: none;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .remove-image:hover {
+      background: #996ADB;
+      color: #773DCF;
+      transition: all .2s ease;
+      cursor: pointer;
+    }
+
+    .remove-image:active {
+      border: 0;
+      transition: all .2s ease;
+    }
+    .Cargado{
+        
+      margin-top: 20px;
+      border: 4px dashed #773DCF; /**/
+      position: relative;
+    }
+    </style>@*CSS para la Preview de la imagen*@
 
 <script type="text/javascript">
-    function archivo(evt) {
-    var files = evt.target.files; // FileList object
-    // Obtenemos la imagen del campo "file".
-    for (var i = 0, f; f = files[i]; i++) {
-    //Solo admitimos imágenes.
-    if (!f.type.match('image.*')) { continue; }
+        function readURL(input) {
+            if (input.files && input.files[0]) {
 
-    var reader = new FileReader();
+                var reader = new FileReader();
 
-    reader.onload = (function(theFile) {
-    return function(e) {
-    // Insertamos la imagen
-        document.getElementById("ContenedorImg").innerHTML = ['<img class="PreviewImagen" src="', e.target.result, '" title="', escape(theFile.name), '"/>'].join('');
-    };
-    })(f);
+                reader.onload = function (e) {
+                   
 
+                    $('.file-upload-image').attr('src', e.target.result);
+                    $('.file-upload-content').show(); //.file-upload-content
 
-    reader.readAsDataURL(f);
-    }
-    }
+                    $('.image-title').html(input.files[0].name);
+                    $('#Cargar').hide(); // image - upload - wrap (clase)
+                };
 
-    document.getElementById('files').addEventListener('change', archivo, false);
-</script> @*Script para la Preview de la imagen*@
+                reader.readAsDataURL(input.files[0]);
+
+            } else {
+                removeUpload();
+            }
+        }
+
+        function removeUpload() {
+           
+            $('.file-upload-content').hide(); //.file-upload-content
+            $('#Cargar').show(); // image - upload - wrap (clase)
+            $('.file-upload-input').replaceWith($('.file-upload-input').clone());
+        }
+        $('.image-upload-wrap').bind('dragover', function () {
+            $('.image-upload-wrap').addClass('image-dropping');
+        });
+        $('.image-upload-wrap').bind('dragleave', function () {
+            $('.image-upload-wrap').removeClass('image-dropping');
+        });
+
+    </script>@*Script para la Preview de la imagen*@

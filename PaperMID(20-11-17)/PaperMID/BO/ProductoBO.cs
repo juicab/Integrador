@@ -8,6 +8,7 @@ namespace PaperMID.BO
     public class ProductoBO
     {
         public int IdProducto { get; set; }
+        public string CódigoProd { get; set; }
         public string NombreProd { get; set; }
         public string DescripcionProd { get; set; }
         public double PrecioProd { get; set; }
@@ -19,6 +20,6 @@ namespace PaperMID.BO
         public DateTime FechaRegistroProd { get; set; }
         public List<ProveedorBO> Proveedores { get; set; }
         public List<TipoProductoBO> TiposProducto { get; set; }
-
+        public byte[] Foto { get; set; }
     }
 }

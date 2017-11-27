@@ -127,6 +127,7 @@
     <Content Include="Style\assets\css\bootstrap.min.css" />
     <Content Include="Style\assets\css\demo.css" />
     <Content Include="Style\assets\css\demoUsuario.css" />
+    <Content Include="Style\assets\css\knockout-file-bindings.css" />
     <Content Include="Style\assets\css\light-bootstrap-dashboard.css" />
     <Content Include="Style\assets\css\material-kit.css" />
     <Content Include="Style\assets\css\pe-icon-7-stroke.css" />
@@ -140,6 +141,7 @@
     <Content Include="Style\assets\img\mask.png" />
     <Content Include="Style\assets\img\new_logo.png" />
     <Content Include="Style\assets\img\photo-1423655156442-ccc11daa4e99.jpg" />
+    <Content Include="Style\assets\img\PreviewProducto.png" />
     <Content Include="Style\assets\img\PreviewProfile.png" />
     <Content Include="Style\assets\img\sidebar-1.jpg" />
     <Content Include="Style\assets\img\sidebar-2.jpg" />
@@ -162,6 +164,7 @@
     <Content Include="Style\assets\js\jquery.validate.min.js" />
     <Content Include="Style\assets\js\jquery.validate.unobtrusive.js" />
     <Content Include="Style\assets\js\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Style\assets\js\knockout-file-bindings.js" />
     <Content Include="Style\assets\js\light-bootstrap-dashboard.js" />
     <Content Include="Style\assets\js\material-kit.js" />
     <Content Include="Style\assets\js\material.min.js" />
