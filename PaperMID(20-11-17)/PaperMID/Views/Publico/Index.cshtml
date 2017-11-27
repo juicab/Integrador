@@ -1,4 +1,4 @@
-﻿
+﻿@model PaperMID.BO.EmpresaBO
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Master/_LayoutPublico.cshtml";
@@ -18,6 +18,53 @@
         </div>
     </div>
 </div>
+<div class="main main-raised">
+    <div class="section section-basic">
+        <div class="container">
+            <div class="title">
+                <h2><a>Quiénes Somos</a></h2>
+            </div>
+            <div class="Alina-txt">
+                <img src="~/Style/assets/img/image.png" style="float:left" class="alina-img" />Somos una empresa dedicada a proporcionar productos innovadores, nuestro objetivo es brindarle productos a mejor precio posible con el fin de satisfacer sus necesidades en papelería teniendo en cuenta que la calidad de los productos es un punto clave, así tener una satisfacción con los productos de igual forma actuamos como proveedores de productos papeleros ofreciendo un excelente servicio.
+                <p class="Alina-txt"></p>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="title">
+                <h2 ><a>Misión</a></h2>
+                <img src="~/Style/assets/img/image.png" style="float:left" class="alina-img" />@Model.MisionEmpre
+            </div>
+            <div class="Alina-txt">
+                <p class="Alina-txt"></p>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+            </div>
+        </div>
+        <div class="container">
+            <div class="title">
+                <h2><a>Visión</a></h2>
+                <img src="~/Style/assets/img/image.png" style="float:right" class="alina-img" />@Model.VisionEmpre
+            </div>
+            <div class="Alina-txt">
+                <p class="Alina-txt"></p>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+            </div>
+        </div>
 
 
 
+    </div>
+</div>

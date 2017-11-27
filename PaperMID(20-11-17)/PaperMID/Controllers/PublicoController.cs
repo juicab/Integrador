@@ -16,9 +16,9 @@ namespace PaperMID.Controllers
         BO.LoginBO oLoginBO;
   
         // GET: Inicio
-        public ActionResult Index()
+        public ActionResult Index(int id = 1)
         {
-            return View();
+            return View(oPublicoModel.Obtener_Empresa(id));
         }
         [AllowAnonymous]
         public ActionResult IniciarSesion()
@@ -84,6 +84,6 @@ namespace PaperMID.Controllers
             return PartialView(direccionBO);
         }
 
-
+        PublicoModel oPublicoModel = new PublicoModel();
     }
 }

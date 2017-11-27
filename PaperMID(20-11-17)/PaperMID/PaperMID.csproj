@@ -130,6 +130,7 @@
     <Content Include="Style\assets\css\light-bootstrap-dashboard.css" />
     <Content Include="Style\assets\css\material-kit.css" />
     <Content Include="Style\assets\css\pe-icon-7-stroke.css" />
+    <Content Include="Style\assets\css\Personalizacion.css" />
     <Content Include="Style\assets\fonts\Pe-icon-7-stroke.svg" />
     <Content Include="Style\assets\img\bg2.jpeg" />
     <Content Include="Style\assets\img\default-avatar.png" />
@@ -220,6 +221,7 @@
     <Compile Include="Models\ProductoModel.cs" />
     <Compile Include="Models\PromocionesModel.cs" />
     <Compile Include="Models\ProveedorModel.cs" />
+    <Compile Include="Models\PublicoModel.cs" />
     <Compile Include="Models\RespaldoModel.cs" />
     <Compile Include="Models\TipoProductoModel.cs" />
     <Compile Include="Models\TipoUsuarioModel.cs" />
