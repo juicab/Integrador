@@ -24,12 +24,15 @@ namespace PaperMID.Controllers
             //Cargar el DropDownList por ViewBag para poder usar AJAX.
             ViewBag.IdTipoProducto1 = new SelectList(ProductoBO.TiposProducto = _oProductoModel.Lista_Tipo_Producto(), "IdTipoProducto", "TipoProducto");
             ViewBag.IdProveedor1 = new SelectList(ProductoBO.Proveedores = _oProductoModel.Lista_Proveedor(), "IdProveedor", "NombreProv");
+
+            ViewBag.Filtro_IdTipoProducto1 = new SelectList(ProductoBO.TiposProducto = _oProductoModel.Lista_Tipo_Producto(), "IdTipoProducto", "TipoProducto");
+            ViewBag.Filtro_IdProveedor1 = new SelectList(ProductoBO.Proveedores = _oProductoModel.Lista_Proveedor(), "IdProveedor", "NombreProv");
             return View();
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Agregar_Producto(String IdProducto, String NombreProd, String DescripcionProd, String PrecioProd,
+        public ActionResult Agregar_Producto(String CódigoProd, String NombreProd, String DescripcionProd, String PrecioProd,
             String DescuentoProd, String IdProveedor1, String CantidadDisponibleProd, String CantidadMinimaProd,
             String IdTipoProducto1, HttpPostedFileBase ImagenProducto)
         {
@@ -37,7 +40,7 @@ namespace PaperMID.Controllers
             _oFotoBO = new BO.FotoBO();
             _oFotoModel = new FotoModel();
 
-            _oProductoBO.IdProducto = Convert.ToInt32(IdProducto);
+            _oProductoBO.CódigoProd = CódigoProd;
             _oProductoBO.NombreProd = NombreProd;
             _oProductoBO.DescripcionProd = DescripcionProd;
             _oProductoBO.PrecioProd = Convert.ToDouble(PrecioProd);
@@ -54,7 +57,7 @@ namespace PaperMID.Controllers
                 _oFotoBO.ImagenFoto = new byte[ImagenProducto.ContentLength];
                 ImagenProducto.InputStream.Read(_oFotoBO.ImagenFoto, 0, ImagenProducto.ContentLength);
                 _oFotoBO.PrincipalFoto = true;
-                _oFotoBO.IdProducto = Convert.ToInt32(IdProducto);
+                _oFotoBO.IdProducto = _oProductoModel.Buscar_IdProducto(CódigoProd);
 
                 _oFotoModel.Agregar(_oFotoBO);
             }
@@ -62,35 +65,41 @@ namespace PaperMID.Controllers
 
             return RedirectToAction("Producto", "Producto");
         }
-
         [ChildActionOnly]
-        public ActionResult List_Productos()
+        public ActionResult List_Productos(String Filtro_IdProveedor1, String Filtro_IdTipoProducto1)
         {
-            return PartialView(_oProductoModel.Mostrar());
+            return PartialView(_oProductoModel.Mostrar(Filtro_IdTipoProducto1, Filtro_IdTipoProducto1));
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Filtrar(String Filtro_IdProveedor1, String Filtro_IdTipoProducto1)
+        {
+            List_Productos(Filtro_IdTipoProducto1, Filtro_IdTipoProducto1);
+            return RedirectToAction("Producto", "Producto");
         }
 
-        public ActionResult Actualizar_Producto(String IdProducto)
+        public ActionResult Actualizar_Producto(String CódigoProd)
         {
-            _oProductoModel.Recuperar_Datos_Producto(IdProducto); //Ejecuto este método para traer mis FK.
-            _oProductoModel.Recuperar_Foto_Principal_Producto(IdProducto);
+            _oProductoModel.Recuperar_Datos_Producto(CódigoProd); //Ejecuto este método para traer mis FK.
+            //_oProductoModel.Recuperar_Foto_Principal_Producto(CódigoProd);
             var ProductoBO = new BO.ProductoBO();
 
             //Cargar el DropDownList por ViewBag para poder usar AJAX.
             ViewBag.IdTipoProducto1 = new SelectList(ProductoBO.TiposProducto = _oProductoModel.Lista_Tipo_Producto(), "IdTipoProducto", "TipoProducto", _oProductoModel.IdTipoProducto1);
             ViewBag.IdProveedor1 = new SelectList(ProductoBO.Proveedores = _oProductoModel.Lista_Proveedor(), "IdProveedor", "NombreProv", _oProductoModel.IdProveedor1);
 
-            return View(_oProductoModel.Recuperar_Datos_Producto(IdProducto));
+            return View(_oProductoModel.Recuperar_Datos_Producto(CódigoProd));
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Actualizar_Datos_Producto(String IdProducto, String NombreProd, String DescripcionProd, String PrecioProd,
+        public ActionResult Actualizar_Datos_Producto(String CódigoProd, String NombreProd, String DescripcionProd, String PrecioProd,
             String DescuentoProd, String IdProveedor1, String CantidadDisponibleProd, String CantidadMinimaProd,
             String IdTipoProducto1)
         {
             _oProductoBO = new BO.ProductoBO();
 
-            _oProductoBO.IdProducto = Convert.ToInt32(IdProducto);
+            _oProductoBO.CódigoProd = CódigoProd;
             _oProductoBO.NombreProd = NombreProd;
             _oProductoBO.DescripcionProd = DescripcionProd;
             _oProductoBO.PrecioProd = Convert.ToDouble(PrecioProd);
@@ -103,10 +112,10 @@ namespace PaperMID.Controllers
             _oProductoModel.Modificar(_oProductoBO);
             return RedirectToAction("Producto", "Producto");
         }
-        public ActionResult Eliminar_Producto(String IdProducto)
+        public ActionResult Eliminar_Producto(String CódigoProd)
         {
-            _oProductoModel.Eliminar(IdProducto);
-            return View("Producto");
+            _oProductoModel.Eliminar(CódigoProd);
+            return RedirectToAction("Producto", "Producto");
         }
     }
 }

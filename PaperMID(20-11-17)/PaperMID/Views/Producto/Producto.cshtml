@@ -28,7 +28,7 @@
                                     <div class="col-md-3">
                                         <div class="form-group">
                                             <label>Código</label>
-                                            <input type="text" class="form-control" name="IdProducto" />
+                                            <input type="text" class="form-control" name="CódigoProd" />
                                         </div>
                                     </div>
                                     <div class="col-md-8">
@@ -135,7 +135,56 @@
     <div class="row">
         <p></p>
     </div>
-    @{ Html.RenderAction("List_Productos", "Producto");}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-11">
+                <div class="card">
+                    <div class="header" style="text-align:center">
+                        <br />
+                        <h2 class="title">Lista de Productos</h2>
+                        <br />
+                        @*@Html.ActionLink("Imprimir Reportes De Productos", "ReporteProducto", "Reportes")*@
+                    </div>
+                    <div class="content">
+                        
+                        @using (Ajax.BeginForm("Filtrar", "Producto", new AjaxOptions { HttpMethod = "POST" }))
+                        {
+                            @Html.AntiForgeryToken()
+                            <form>
+                                <div class="row">
+                                    <div class="col-md-11">
+                                        <h5>Filtros</h5><hr />
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label>Tipo Producto</label><!--Obtener el valor del DropDownList por AJAX-->
+                                                    @Html.DropDownList("Filtro_IdProveedor1", null, htmlAttributes: new { @class = "form-control" })
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label>Tipo Producto</label><!--Obtener el valor del DropDownList por AJAX-->
+                                                    @Html.DropDownList("Filtro_IdTipoProducto1", null, htmlAttributes: new { @class = "form-control" })
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <button type="submit" class="btn btn-info btn-fill btn-block">Filtrar</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        }
+                            <br />
+                            @{ Html.RenderAction("List_Productos", "Producto");}
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <style>
@@ -295,3 +344,4 @@
         });
 
     </script>@*Script para la Preview de la imagen*@
+

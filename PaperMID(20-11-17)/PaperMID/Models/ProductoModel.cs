@@ -8,9 +8,10 @@ using PaperMID.BO;
 
 namespace PaperMID.Models
 {
-    public class ProductoModel : Plantilla
+    public class ProductoModel
     {
         public int IdTipoProducto1, IdProveedor1;
+        public string Sentencia;
         ConexionModel oConexion;
         public ProductoModel()
         {
@@ -46,6 +47,7 @@ namespace PaperMID.Models
         {
             BO.ProductoBO _oProductoBO = (BO.ProductoBO)Obj;
             SqlCommand Cmd = new SqlCommand("EXEC SP_Modificar_Producto @CódigoProd,@NombreProd,@DescripcionProd,@PrecioProd,@DescuentoProd,@CantidadDisponibleProd,@CantidadMinimaProd,@IdTipoProducto1,@IdProveedor1");
+            //Cmd.Parameters.Add("@IdProducto", SqlDbType.Int).Value = _oProductoBO.IdProducto;
             Cmd.Parameters.Add("@CódigoProd", SqlDbType.VarChar).Value = _oProductoBO.CódigoProd;
             Cmd.Parameters.Add("@NombreProd", SqlDbType.VarChar).Value = _oProductoBO.NombreProd;
             Cmd.Parameters.Add("@DescripcionProd", SqlDbType.VarChar).Value = _oProductoBO.DescripcionProd;
@@ -59,9 +61,17 @@ namespace PaperMID.Models
             return oConexion.EjecutarSQL(Cmd);
         }
 
-        public DataTable Mostrar()
+        public DataTable Mostrar(String Filtro_IdTipoProducto1,String Filtro_IdProveedor1)
         {
-            return oConexion.TablaConnsulta("SELECT * FROM Producto WHERE StatusProd=1");
+            if (Filtro_IdProveedor1!=null&&Filtro_IdTipoProducto1!=null)
+            {
+                Sentencia = String.Format("SELECT * FROM Producto WHERE StatusProd = 1 AND IdProveedor1='{0}' AND IdTipoProducto1='{1}'",Convert.ToInt32(Filtro_IdProveedor1),Convert.ToInt32(Filtro_IdTipoProducto1));
+            }
+            else
+            {
+                Sentencia = "SELECT * FROM Producto WHERE StatusProd = 1";
+            }
+            return oConexion.TablaConnsulta(Sentencia);
         }
 
         //Métodos para llenar DropDownList
@@ -82,7 +92,7 @@ namespace PaperMID.Models
 
         public List<TipoProductoBO> Lista_Tipo_Producto()
         {
-            string Query = ("SELECT CódigoProd,TipoProd FROM TipoProducto WHERE StatusTpro=1");
+            string Query = ("SELECT IdTipoProducto,TipoProd FROM TipoProducto WHERE StatusTpro=1");
             var Result = oConexion.TablaConnsulta(Query);
             List<TipoProductoBO> List_Tipo_Producto = new List<TipoProductoBO>();
             foreach (DataRow Tipo_Producto in Result.Rows)
@@ -95,10 +105,10 @@ namespace PaperMID.Models
             return List_Tipo_Producto;
         }
 
-        public BO.ProductoBO Recuperar_Datos_Producto(String IdProducto)
+        public BO.ProductoBO Recuperar_Datos_Producto(String _CódigoProd)
         {
             var _Producto = new BO.ProductoBO();
-            DataTable Datos = oConexion.TablaConnsulta(String.Format("SELECT * FROM Producto WHERE CódigoProd='{0}' AND StatusProd='{1}'", IdProducto, true));
+            DataTable Datos = oConexion.TablaConnsulta(String.Format("SELECT * FROM Vst_Producto_1 WHERE CódigoProd='{0}' AND StatusProd='{1}'", _CódigoProd, true));
             DataRow Row = Datos.Rows[0];
             _Producto.CódigoProd = Row["CódigoProd"].ToString();
             _Producto.NombreProd = Row["NombreProd"].ToString();
@@ -111,15 +121,16 @@ namespace PaperMID.Models
             IdTipoProducto1= Convert.ToInt32(Row["IdTipoProducto1"]);  //Para returnar el valor en el DropDownList
             _Producto.IdProveedor1 = Convert.ToInt32(Row["IdProveedor1"]);
             IdProveedor1=Convert.ToInt32(Row["IdProveedor1"]); //Para returnar el valor en el DropDownList
-            return _Producto;
-        }
-        public BO.ProductoBO Recuperar_Foto_Principal_Producto(String IdProducto)
-        {
-            var _Producto = new BO.ProductoBO();
-            DataTable Datos = oConexion.TablaConnsulta(String.Format("SELECT * FROM Foto WHERE CódigoProd='{0}' AND StatusFoto='{1}'", IdProducto, true));
-            DataRow Row = Datos.Rows[0];
             _Producto.Foto = (byte[])Row["ImagenFoto"];
             return _Producto;
+        }
+
+        public int Buscar_IdProducto(String _CódigoProd)
+        {
+            SqlCommand Cmd = new SqlCommand("SELECT IdProducto FROM Producto WHERE CódigoProd=@CódigoProd");
+            Cmd.Parameters.Add("@CódigoProd", SqlDbType.VarChar).Value = _CódigoProd;
+            Cmd.CommandType = CommandType.Text;
+            return oConexion.EjecutarSQL(Cmd);
         }
 
     }

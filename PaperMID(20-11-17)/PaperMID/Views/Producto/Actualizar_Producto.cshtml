@@ -27,7 +27,7 @@
                                     <div class="col-md-3">
                                         <div class="form-group">
                                             <label>Código</label>
-                                            <input type="text" class="form-control" name="IdProducto" value="@Model.CódigoProd" />
+                                            <input type="text" class="form-control" name="CódigoProd" value="@Model.CódigoProd" />
                                         </div>
                                     </div>
                                     <div class="col-md-8">
@@ -93,24 +93,10 @@
                                     </div>
                                     <br />
                                     <div class="col-md-4" style="height:250px">
-                                        <div  id="BD">
-                                            <div class="Cargado">
-                                                <br />
-                                                @if (Model.Foto != null)
-                                                {
-                                                    String Photo = "data:image/jpeg;base64," + Convert.ToBase64String((byte[])Model.Foto);
-                                                    <img class="file-upload-image" src="@Photo" alt="your image" style="height:170px; width:170px;" />
-                                                }
-                                                <br /><br />
-                                                @*<p style="color:black"><span class="image-title">Uploaded Image</span></p>*@
-                                            </div>
-                                            <br />
-                                            <button type="button" onclick="removeUpload()" class="remove-image">Remover </button>
-                                        </div>
                                         <div class="file-upload form-group">
                                             <div id="Cargar">
                                                 <div class="image-upload-wrap">
-                                                    <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" name="ImagenProducto" />
+                                                    <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" name="ImagenProducto" value="@Model.Foto" />
                                                     <div class="drag-text">
                                                         <h3>Arrastre una imagen</h3>
                                                     </div>
@@ -121,7 +107,7 @@
                                             <div class="file-upload-content">
                                                 <div class="Cargado">
                                                     <br />
-                                                    <img class="file-upload-image" src="#" alt="your image" style="height:170px; width:170px;" />
+                                                    <img class="file-upload-image" src="~/Style/assets/img/logo.png" alt="your image" style="height:170px; width:170px;" />
                                                     <br /><br />
                                                     @*<p style="color:black"><span class="image-title">Uploaded Image</span></p>*@
                                                 </div>
@@ -146,7 +132,6 @@
         </div>
     </div>
 </div>
-
 <style>
     .file-upload {
         background-color: #fff;
@@ -304,12 +289,10 @@
         });
 
 </script>@*Script para la Preview de la imagen*@
-<script type="text/javascript">
-    //Funcion que se ejecutrá al cargar la página.
+
+<script>
     $(document).ready(function () {
-        if (@Model.Foto!=null) {
-            $('#BD').show(); //Div que contiene la imagen recuperada de la BD.
-            $('#Cargar').hide(); //Div para cargar otra imagen del FileUpload.
-        }
+        // Instrucciones a ejecutar al terminar la carga
+        readURL(this);
     });
 </script>

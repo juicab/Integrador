@@ -1,50 +1,37 @@
 ﻿@using System.Data;
 @model DataTable
 
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-11">
-            <div class="card">
-                <div class="header">
-                    <h4 class="title">Lista de Productos</h4>
-                    @Html.ActionLink("Imprimir Reportes De Productos", "ReporteProducto", "Reportes")
-                </div>
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th class="text-center">Código</th>
-                                    <th>Nombre</th>
-                                    <th class="text-center">Precio</th>
-                                    <th class="text-center">Descuento</th>
-                                    <th class="text-center">Cantidad Disponible</th>
-                                    <th class="text-center">Cantidad Mínima</th>
-                                    <th class="text-center">Acciones</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach (DataRow row in Model.Rows)
-                                {
-                                    <tr id="fila_@row["CódigoProd"]">
-                                        <td class="text-center">@row["CódigoProd"]</td>
-                                        <td>@row["NombreProd"]</td>
-                                        <td class="text-center">@row["PrecioProd"]</td>
-                                        <td class="text-center">@row["DescuentoProd"]</td>
-                                        <td class="text-center">@row["CantidadDisponibleProd"]</td>
-                                        <td class="text-center">@row["CantidadMinimaProd"]</td>
-                                        <td class="td-actions text-center">
-                                            <a type="button" rel="tooltip" title="Editar" class="btn btn-success btn-simple btn-xs" href="@Url.Action("Actualizar_Producto", "Producto", new { IdProducto = @row["IdProducto"] })">
-                                                <i class="fa fa-edit"></i>
-                                            </a>
-                                            <a type="button" rel="tooltip"  title="Eliminar" class="btn btn-danger btn-simple btn-xs" href="@Url.Action("Eliminar_Producto", "Producto", new { IdProducto = @row["IdProducto"] })">
-                                                <i class="fa fa-times"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                }
-                            </tbody>
-                        </table>
-                </div>
-            </div>
-
-        </div>
-</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th class="text-center">Código</th>
+            <th>Nombre</th>
+            <th class="text-center">Precio</th>
+            <th class="text-center">Descuento</th>
+            <th class="text-center">Cantidad Disponible</th>
+            <th class="text-center">Cantidad Mínima</th>
+            <th class="text-center">Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (DataRow row in Model.Rows)
+        {
+            <tr id="fila_@row["CódigoProd"]">
+                <td class="text-center">@row["CódigoProd"]</td>
+                <td>@row["NombreProd"]</td>
+                <td class="text-center">@row["PrecioProd"]</td>
+                <td class="text-center">@row["DescuentoProd"]</td>
+                <td class="text-center">@row["CantidadDisponibleProd"]</td>
+                <td class="text-center">@row["CantidadMinimaProd"]</td>
+                <td class="td-actions text-center">
+                    <a type="button" rel="tooltip" title="Editar" class="btn btn-success btn-simple btn-xs" href="@Url.Action("Actualizar_Producto", "Producto", new { CódigoProd = @row["CódigoProd"] })">
+                        <i class="fa fa-edit"></i>
+                    </a>
+                    <a type="button" rel="tooltip" title="Eliminar" class="btn btn-danger btn-simple btn-xs" href="@Url.Action("Eliminar_Producto", "Producto", new { CódigoProd = @row["CódigoProd"] })">
+                        <i class="fa fa-times"></i>
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
