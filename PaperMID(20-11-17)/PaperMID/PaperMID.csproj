@@ -352,6 +352,51 @@
     <Content Include="Reportes\DS\UsuarioDS.xss">
       <DependentUpon>UsuarioDS.xsd</DependentUpon>
     </Content>
+    <Content Include="Style\assets\sass\light-bootstrap-dashboard.scss" />
+    <Content Include="Style\assets\sass\lbd\mixins\_buttons.scss" />
+    <Content Include="Style\assets\sass\lbd\mixins\_cards.scss" />
+    <Content Include="Style\assets\sass\lbd\mixins\_chartist.scss" />
+    <Content Include="Style\assets\sass\lbd\mixins\_icons.scss" />
+    <Content Include="Style\assets\sass\lbd\mixins\_inputs.scss" />
+    <Content Include="Style\assets\sass\lbd\mixins\_labels.scss" />
+    <Content Include="Style\assets\sass\lbd\mixins\_morphing-buttons.scss" />
+    <Content Include="Style\assets\sass\lbd\mixins\_navbars.scss" />
+    <Content Include="Style\assets\sass\lbd\mixins\_social-buttons.scss" />
+    <Content Include="Style\assets\sass\lbd\mixins\_tabs.scss" />
+    <Content Include="Style\assets\sass\lbd\mixins\_transparency.scss" />
+    <Content Include="Style\assets\sass\lbd\mixins\_vendor-prefixes.scss" />
+    <Content Include="Style\assets\sass\lbd\_alerts.scss" />
+    <Content Include="Style\assets\sass\lbd\_buttons.scss" />
+    <Content Include="Style\assets\sass\lbd\_cards.scss" />
+    <Content Include="Style\assets\sass\lbd\_carousel.scss" />
+    <Content Include="Style\assets\sass\lbd\_chartist.scss" />
+    <Content Include="Style\assets\sass\lbd\_checkbox-radio-switch.scss" />
+    <Content Include="Style\assets\sass\lbd\_collapse.scss" />
+    <Content Include="Style\assets\sass\lbd\_datepicker.scss" />
+    <Content Include="Style\assets\sass\lbd\_dropdown.scss" />
+    <Content Include="Style\assets\sass\lbd\_flexisel.scss" />
+    <Content Include="Style\assets\sass\lbd\_footers.scss" />
+    <Content Include="Style\assets\sass\lbd\_icons.scss" />
+    <Content Include="Style\assets\sass\lbd\_inputs.scss" />
+    <Content Include="Style\assets\sass\lbd\_labels.scss" />
+    <Content Include="Style\assets\sass\lbd\_media.scss" />
+    <Content Include="Style\assets\sass\lbd\_misc.scss" />
+    <Content Include="Style\assets\sass\lbd\_mixins.scss" />
+    <Content Include="Style\assets\sass\lbd\_modal.scss" />
+    <Content Include="Style\assets\sass\lbd\_morphing-buttons.scss" />
+    <Content Include="Style\assets\sass\lbd\_navbars.scss" />
+    <Content Include="Style\assets\sass\lbd\_progress-bars.scss" />
+    <Content Include="Style\assets\sass\lbd\_responsive.scss" />
+    <Content Include="Style\assets\sass\lbd\_sections.scss" />
+    <Content Include="Style\assets\sass\lbd\_sidebar-and-main-panel.scss" />
+    <Content Include="Style\assets\sass\lbd\_sliders.scss" />
+    <Content Include="Style\assets\sass\lbd\_social-buttons.scss" />
+    <Content Include="Style\assets\sass\lbd\_tables.scss" />
+    <Content Include="Style\assets\sass\lbd\_tabs-navs-pagination.scss" />
+    <Content Include="Style\assets\sass\lbd\_tags.scss" />
+    <Content Include="Style\assets\sass\lbd\_tooltips-and-popovers.scss" />
+    <Content Include="Style\assets\sass\lbd\_typography.scss" />
+    <Content Include="Style\assets\sass\lbd\_variables.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
