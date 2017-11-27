@@ -74,6 +74,12 @@ namespace PaperMID.Models
             return oConexion.TablaConnsulta(Sentencia);
         }
 
+        public DataTable MostrarRep()
+        {
+            Sentencia = "Select * from Vst_Producto_1 where StatusProd=1";
+            return oConexion.TablaConnsulta(Sentencia);
+        }
+
         //Métodos para llenar DropDownList
         public List<ProveedorBO> Lista_Proveedor()
         {

@@ -352,6 +352,7 @@
     <Content Include="Reportes\DS\UsuarioDS.xss">
       <DependentUpon>UsuarioDS.xsd</DependentUpon>
     </Content>
+    <Content Include="Views\Publico\ProductosRep.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

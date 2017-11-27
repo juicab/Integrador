@@ -34,36 +34,12 @@
                             <td>Visión de la Empresa: @Html.TextAreaFor(x => x.VisionEmpre, new { @rows = "5", @style = "width: 100%; height: 95px;" })</td>
                         </tr>
                         <tr>
+                            <td>Valores de la Empresa: @Html.TextAreaFor(x => x.ValoresEmpre, new { @rows = "5", @style = "width: 100%; height: 95px;" })</td>
+                        </tr>
+                        <tr>
                             <td colspan="2"><button class="btn-success" type="submit">Actualizar</button></td>
                         </tr>
                     </table>
-                 <div>
-                        <output id="ContenedorImgMis">
-                            @*Elemento dondé se cargará la nueva imagen*@
-                        <img src="~/Style/assets/img/PreviewProfile.png" class="PreviewImagen" />
-                    </output>
-                    <div class="file-loading">
-                        <input type="file" id="files" name="ImagenMision" />
-                    </div>
-                </div>
-                <div>
-                    <output id="ContenedorImgVis">
-                        @*Elemento dondé se cargará la nueva imagen*@
-                        <img src="~/Style/assets/img/PreviewProfile.png" class="PreviewImagen" />
-                    </output>
-                    <div class="file-loading">
-                        <input type="file" id="files" name="ImagenVision" />
-                    </div>
-                </div>
-                <div>
-                    <output id="ContenedorImgLog">
-                        @*Elemento dondé se cargará la nueva imagen*@
-                        <img src="~/Style/assets/img/PreviewProfile.png" class="PreviewImagen" />
-                    </output>
-                    <div class="file-loading">
-                        <input type="file" id="files" name="ImagenLogo" />
-                    </div>
-                </div>
 
                 }
             </div>
@@ -79,77 +55,4 @@
         margin: 10px 5px 0 0;
     }
 </style>@*CSS para la Preview de la imagen*@
-<script type="text/javascript">
-    function archivo(evt) {
-    var files = evt.target.files; // FileList object
-    // Obtenemos la imagen del campo "file".
-    for (var i = 0, f; f = files[i]; i++) {
-    //Solo admitimos imágenes.
-    if (!f.type.match('image.*')) { continue; }
 
-    var reader = new FileReader();
-
-    reader.onload = (function(theFile) {
-    return function(e) {
-    // Insertamos la imagen
-        document.getElementById("ContenedorImgMis").innerHTML = ['<img class="PreviewImagen" src="', e.target.result, '" title="', escape(theFile.name), '"/>'].join('');
-    };
-    })(f);
-
-
-    reader.readAsDataURL(f);
-    }
-    }
-
-    document.getElementById('files').addEventListener('change', archivo, false);
-</script> @*Script para la Preview de la imagen*@
-
-<script type="text/javascript">
-    function archivo(evt) {
-    var files = evt.target.files; // FileList object
-    // Obtenemos la imagen del campo "file".
-    for (var i = 0, f; f = files[i]; i++) {
-    //Solo admitimos imágenes.
-    if (!f.type.match('image.*')) { continue; }
-
-    var reader = new FileReader();
-
-    reader.onload = (function(theFile) {
-    return function(e) {
-    // Insertamos la imagen
-        document.getElementById("ContenedorImgVis").innerHTML = ['<img class="PreviewImagen" src="', e.target.result, '" title="', escape(theFile.name), '"/>'].join('');
-    };
-    })(f);
-
-
-    reader.readAsDataURL(f);
-    }
-    }
-
-    document.getElementById('files').addEventListener('change', archivo, false);
-</script> @*Script para la Preview de la imagen*@
-
-<script type="text/javascript">
-    function archivo(evt) {
-    var files = evt.target.files; // FileList object
-    // Obtenemos la imagen del campo "file".
-    for (var i = 0, f; f = files[i]; i++) {
-    //Solo admitimos imágenes.
-    if (!f.type.match('image.*')) { continue; }
-
-    var reader = new FileReader();
-
-    reader.onload = (function(theFile) {
-    return function(e) {
-    // Insertamos la imagen
-        document.getElementById("ContenedorImgLog").innerHTML = ['<img class="PreviewImagen" src="', e.target.result, '" title="', escape(theFile.name), '"/>'].join('');
-    };
-    })(f);
-
-
-    reader.readAsDataURL(f);
-    }
-    }
-
-    document.getElementById('files').addEventListener('change', archivo, false);
-</script> @*Script para la Preview de la imagen*@
