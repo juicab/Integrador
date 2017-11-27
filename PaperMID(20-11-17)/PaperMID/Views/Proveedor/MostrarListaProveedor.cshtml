@@ -1,48 +1,49 @@
 ﻿@using System.Data;
 @model DataTable
 
-<div class="content">
-    <div class="row">
-        <p></p>
-    </div>
-    <div class="row">
-        <p></p>
-    </div>
-    <div class="container-fluid">
-        <div class="col-md-11">
-            <div class="card">
-                <div class="header">
-                    <h4 class="title">Mostrar Proveedor</h4>
-                    @Html.ActionLink("Imprimir Reporte", "ReporteProveedor", "Reportes")               
-                </div>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Código</th>
-                            <th>Nombre del Proveedor</th>
-                            <th>Teléfono</th>
-                            <th>Correo Electrónico</th>
+<div class="col-md-12">
+    <div class="card">
+        <div class="header" style="text-align:center">
+            <br />
+            <h2 class="title">Lista de Proveedores</h2>
+            <br />
+        </div>
+        <div class="col-md-12">
+            <a class="btn btn-info btn-fill" href="@Url.Action("ReporteProveedor","Reportes")">Descargar Reporte <samp class="pe-7s-download"></samp></a>
+            <br />
+            <br />
+        </div>
+        <div class="content table-responsive table-full-width">
+            <table class="table table-hover table-striped">
+                <thead>
+                    <tr>
+                        <th class="text-center">Código</th>
+                        <th>Nombre del Proveedor</th>
+                        <th class="text-center">Teléfono</th>
+                        <th class="text-center">Correo Electrónico</th>
+                        <th class="text-center">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (DataRow item in Model.Rows)
+                    {
+                        <tr id="Fila_@item["IdProveedor"]">
+                            <td class="text-center">@item["IdProveedor"]</td>
+                            <td>@item["NombreProv"]</td>
+                            <td class="text-center">@item["TelefonoProv"]</td>
+                            <td class="text-center">@item["CorreoProv"]</td>
+                            <td class="td-actions text-center">
+                                <a type="button" rel="tooltip" title="Editar" class="btn btn-success btn-simple btn-xs" href="@Url.Action("Actualizar_Proveedor", "Proveedor", new { id = @item["IdProveedor"] })">
+                                    <i class="fa fa-edit"></i>
+                                </a>
+                                <a type="button" rel="tooltip" title="Eliminar" class="btn btn-danger btn-simple btn-xs" href="@Url.Action("EliminarProveedor", "Proveedor", new { id = @item["IdProveedor"] })">
+                                    <i class="fa fa-times"></i>
+                                </a>
+                            </td>
                         </tr>
-                    </thead>
-                    <tbody>
-                        
-                        @foreach (DataRow row in Model.Rows)
-            {
-                            <tr id="fila_@row["IdProveedor"]">
-                                <td>@row["IdProveedor"]</td>
-                                <td>@row["NombreProv"]</td>
-                                <td>@row["TelefonoProv"]</td>
-                                <td>@row["CorreoProv"]</td>
-                                <td>@Html.ActionLink("Editar", "Actualizar_Proveedor", "Proveedor", new { id = @row["IdProveedor"], @class = "btn btn-info btn-fill pull-right" }, null)</td>
-                                <td>@Html.ActionLink("Eliminar", "EliminarProveedor", new { id = @row["IdProveedor"], @class = "btn btn-info btn-fill pull-right" }, null)</td>
-
-                            </tr>
-
-                        }
-                    </tbody>
-                </table>
-            </div>
+                    }
+                </tbody>
+            </table>
         </div>
     </div>
 </div>
-

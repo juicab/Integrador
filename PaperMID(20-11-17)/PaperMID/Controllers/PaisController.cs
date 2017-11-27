@@ -11,45 +11,55 @@ namespace PaperMID.Controllers
     public class PaisController : Controller
     {
         // GET: Pais
-        PaisModel oPais = new PaisModel();
-
+        PaisModel _oPais;
+        BO.PaisBO _PaisBO;
+        public PaisController()
+        {
+            _oPais = new PaisModel();
+        }
         public ActionResult Pais()
         {
             return View();
         }
-        public ActionResult Agregar_Pais(PaisBO oPaisBO)
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Agregar_Pais(String NombrePais)
         {
-            oPais.Agregar(oPaisBO);
+            _PaisBO = new PaisBO();
+            _PaisBO.NombrePais = NombrePais;
+            _oPais.Agregar(_PaisBO);
             return View("Pais");
         }
         public ActionResult MostrarPais()
         {
-            return View(oPais.Mostrar());
+            return View(_oPais.Mostrar());
         }
         public ActionResult ActualizarPais(int id)
         {
-            return View(oPais.Obtener_Pais(id));
+            return View(_oPais.Obtener_Pais(id));
         }
-
-        public ActionResult ActuaDatosPais(PaisBO oPai)
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult ActuaDatosPais(String IdPais, String NombrePais)
         {
-            oPais.Modificar(oPai);
-            MostrarPais();
+            _PaisBO = new PaisBO();
+            _PaisBO.IdPais = Convert.ToInt32(IdPais);
+            _PaisBO.NombrePais = NombrePais;
+            _oPais.Modificar(_PaisBO);
             return View("Pais");
         }
 
         public ActionResult EliminarPais(string id)
         {
             int clave = int.Parse(id);
-            oPais.Eliminar(clave);
-            MostrarPais();
+            _oPais.Eliminar(clave);
             return View("Pais");
         }
 
         [ChildActionOnly]
         public ActionResult MostrarPaisParcial()
         {
-            return PartialView(oPais.Mostrar());
+            return PartialView(_oPais.Mostrar());
         }
     }
 }

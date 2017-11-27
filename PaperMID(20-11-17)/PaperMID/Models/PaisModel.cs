@@ -29,9 +29,8 @@ namespace PaperMID.Models
 
         public int Eliminar(object Obj)
         {
-            BO.PaisBO BO = (BO.PaisBO)Obj;
             SqlCommand Cmd = new SqlCommand("UPDATE Pais SET StatusPais=(@StatusPais) WHERE IdPais=(@IdPais)");
-            Cmd.Parameters.Add("@IdPais", SqlDbType.Int).Value = BO.IdPais;
+            Cmd.Parameters.Add("@IdPais", SqlDbType.Int).Value = Obj;
             Cmd.Parameters.Add("@StatusPais", SqlDbType.Bit).Value = 0; //Inactivo.
             Cmd.CommandType = CommandType.Text;
             return oConexion.EjecutarSQL(Cmd);

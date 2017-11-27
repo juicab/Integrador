@@ -21,32 +21,31 @@ namespace PaperMID.Controllers
         public ActionResult ReporteProveedor()
         {
             #region Datos dummy
-            string query = ("Select IdProveedor, NombreProv, TelefonoProv,CorreoProv from Proveedor Where StatusProv=1");
+            string query = ("SELECT IdProveedor, NombreProv, TelefonoProv, CorreoProv FROM Proveedor WHERE StatusProv=1");
             var result = Con.TablaConnsulta(query);
-            List<ProveedorBO> Proveedores = new List<ProveedorBO>();
-            foreach (DataRow proveedor in result.Rows)
+            List<ProveedorBO> Proveedor = new List<ProveedorBO>();
+            foreach (DataRow Pro in result.Rows)
             {
-                var ProvBO = new ProveedorBO();
-                ProvBO.idProveedor =Convert.ToInt32(proveedor[0].ToString());
-                ProvBO.NombreProv = proveedor[1].ToString();
-                ProvBO.TelefonoProv = proveedor[2].ToString();
-                ProvBO.CorreoProv = proveedor[3].ToString();
-                Proveedores.Add(ProvBO);
+                var ProveedorBO = new ProveedorBO();
+                ProveedorBO.idProveedor = Convert.ToInt32(Pro[0].ToString());
+                ProveedorBO.NombreProv = Pro[1].ToString();
+                ProveedorBO.TelefonoProv = Pro[2].ToString();
+                ProveedorBO.CorreoProv = Pro[3].ToString();
+                Proveedor.Add(ProveedorBO);
             }
             #endregion Datos dummy
-
-            string DirectorioReportesRelativo = "~/Reportes/Reportes/";
+            string DirRepor = "~/Reportes/Reportes/";
             string urlArchivo = string.Format("{0}.{1}", "ProveedorRepor", "rdlc");
-            string FullPathReport = string.Format("{0}{1}", this.HttpContext.Server.MapPath(DirectorioReportesRelativo), urlArchivo);
+            string FullReport = string.Format("{0}{1}", this.HttpContext.Server.MapPath(DirRepor), urlArchivo);
             ReportViewer reporte = new ReportViewer();
             reporte.Reset();
-            reporte.LocalReport.ReportPath = FullPathReport;
-            ReportDataSource DatosDS = new ReportDataSource("DSProveedor", Proveedores);
+            reporte.LocalReport.ReportPath = FullReport;
+            ReportDataSource DatosDS = new ReportDataSource("DSProveedor", Proveedor);
             reporte.LocalReport.DataSources.Add(DatosDS);
             reporte.LocalReport.Refresh();
-            byte[] file = reporte.LocalReport.Render("PDF");
+            byte[] file = reporte.LocalReport.Render("PDf");
 
-            return File(new MemoryStream(file).ToArray(), System.Net.Mime.MediaTypeNames.Application.Octet, string.Format("{0}{1}", "ReporteProveedor.", "PDF"));
+            return File(new MemoryStream(file).ToArray(), System.Net.Mime.MediaTypeNames.Application.Octet, string.Format("{0}{1}", "Reporte_DetalleVenta.", "PDF"));
         }
 
         public ActionResult ReporteUsuarioClientes()

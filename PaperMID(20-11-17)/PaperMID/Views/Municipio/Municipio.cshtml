@@ -5,62 +5,56 @@
     Layout = "~/Views/Master/_LayoutAdministrador.cshtml";
 }
 
-
-<div class="content">
+<div class="container-fluid">
     <div class="row">
-        <p></p>
-    </div>
-    <div class="row">
-        <p></p>
-    </div>
-    <div class="container-fluid">
-        <div class="row">
-            @using (Html.BeginForm("Agregar_Municipio", "Municipio", FormMethod.Post))
-            {
-                <div class="col-md-11">
-                    <div class="card">
-                        <div class="header">
-                            <h4 class="title">Estado</h4>
-                        </div>
-                        <div class="content">
-                            <form>
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        <div class="form-group">
-                                            <label>Código</label>
-                                            <input type="text" disabled class="form-control" />
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <label>Nombre del Municipio</label>
-                                            @Html.TextBoxFor(x => x.NombreMuni, new { @class = "form-control" })
-                                        </div>
-
-                                    </div>
-                                    @{
-                                        Html.RenderAction("ComboEstado", "Municipio");
-                                    }
-                                    <div>
-
-                                    </div>
-                                </div>
-                                <div class="=row">
-                                    <button type="submit" class="btn btn-info btn-fill pull-right">Eliminar</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <button type="submit" class="btn btn-info btn-fill pull-right">Modificar</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <button type="submit" class="btn btn-info btn-fill pull-right">Guardar</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <button type="submit" class="btn btn-info btn-fill pull-right">Nuevo</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                </div>
-                                <div class="clearfix"></div>
-                            </form>
-                        </div>
-                    </div>
+        <div class="col-md-12">
+            <div class="card">
+                <!--Inicio Contenido-->
+                <div class="header">
+                    <h2 class="title">Municipio</h2>
                 </div>
-                                        }
+                <div class="content">
+                    <!--Contenido Formulario-->
+                    @using (Ajax.BeginForm("Agregar_Municipio", "Municio", new AjaxOptions { HttpMethod = "POST" }))
+                    {
+                        @Html.AntiForgeryToken()
 
+                        <form>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <div class="form-group">
+                                                <label>Nombre del Municipio</label>
+                                                <input type="text" class="form-control" name="NombreMuni" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>Estado</label>
+                                                @Html.DropDownList("IdEstado1", null, htmlAttributes: new { @class = "form-control" })
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="=row" style="padding:0,20px;">
+                                <div class="col-md-12">
+                                    <!--col-md-10 col-md-offset-1-->
+                                    <button type="submit" class="btn btn-info btn-fill btn-block">Guardar</button>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </form>
+                    }
+
+                </div><!--Contenido Formulario-->
+            </div><!--Fin Contenido-->
         </div>
     </div>
 </div>
 @{ Html.RenderAction("ListaMunicipios", "Municipio");}
-
+<div class="container-fluid">
+    <!--Agregar Contenido / Evita que la tabla se salga del la logitud.-->
+</div>
 

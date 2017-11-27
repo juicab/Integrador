@@ -11,15 +11,27 @@ namespace PaperMID.Controllers
     public class MunicipioController : Controller
     {
         // GET: Municipio
-        MunicipioModel oMunicipio = new MunicipioModel();
+        MunicipioModel oMunicipio;
+        BO.MunicipioBO _MunicipioBO;
+        public MunicipioController()
+        {
+            oMunicipio = new MunicipioModel();
+        }
         public ActionResult Municipio()
         {
+            var municipioBO = new MunicipioBO();       
+            ViewBag.IdEstado1 = new SelectList(municipioBO.Estados = municipioBO.Estados = oMunicipio.ListaEstado(), "IdEstado", "NombreEdo");
             return View();
         }
-        public ActionResult Agregar_Municipio(MunicipioBO oMunicipioBO)
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Agregar_Municipio(String NombreMuni, String IdEstado1)
         {
-            oMunicipio.Agregar(oMunicipioBO);
-            return View("Municipio");
+            _MunicipioBO = new MunicipioBO();
+            _MunicipioBO.NombreMuni = NombreMuni;
+            _MunicipioBO.IdEstado1 = Convert.ToInt32(IdEstado1);
+            oMunicipio.Agregar(_MunicipioBO);
+            return RedirectToAction("Municipio", "Municipio");
         }
 
         public ActionResult ActualizarMunicipio(int id)

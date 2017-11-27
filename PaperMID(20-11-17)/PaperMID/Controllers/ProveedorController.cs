@@ -11,38 +11,58 @@ namespace PaperMID.Controllers
     public class ProveedorController : Controller
     {
         // GET: Proveedor      
-        ProveedorModel ProvMod = new ProveedorModel();
+        ProveedorModel _ProvMod;
+        BO.ProveedorBO _ProveedorBO;
+        public ProveedorController()
+        {
+            _ProvMod = new ProveedorModel();
+        }
         public ActionResult Proveedor()
         {
             return View();
         }
-
-        public ActionResult Agg_Proveedor(ProveedorBO oProvBO)
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Agregar_Proveedor(String NombreProv,String TelefonoProv,String CorreoProv)
         {
-            ProvMod.Agregar(oProvBO);
+            _ProveedorBO = new ProveedorBO();
+
+            _ProveedorBO.NombreProv = NombreProv;
+            _ProveedorBO.TelefonoProv = TelefonoProv;
+            _ProveedorBO.CorreoProv = CorreoProv;
+            _ProvMod.Agregar(_ProveedorBO);
+
             return RedirectToAction("Proveedor", "Proveedor");
         }
         public ActionResult Actualizar_Proveedor(int id)
         {
-            return View(ProvMod.Recuperar_Proveedor(id));
+            return View(_ProvMod.Recuperar_Proveedor(id));
         }
-        public ActionResult ActualizarDatos_Proveedor(ProveedorBO proBO)
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult ActualizarDatos_Proveedor(String IdProveedor, String NombreProv, String TelefonoProv, String CorreoProv)
         {
-            ProvMod.Modificar(proBO);
+            _ProveedorBO = new ProveedorBO();
+
+            _ProveedorBO.idProveedor = Convert.ToInt32(IdProveedor);
+            _ProveedorBO.NombreProv = NombreProv;
+            _ProveedorBO.TelefonoProv = TelefonoProv;
+            _ProveedorBO.CorreoProv = CorreoProv;
+
+            _ProvMod.Modificar(_ProveedorBO);
             return View("Proveedor");
         }
         public ActionResult EliminarProveedor(string id)
         {
             int Clave = int.Parse(id);
-            ProvMod.Eliminar(Clave);
+            _ProvMod.Eliminar(Clave);
             return View("Proveedor");
         }
 
         [ChildActionOnly]
         public ActionResult MostrarListaProveedor()
         {
-            return PartialView(ProvMod.Mostrar());
+            return PartialView(_ProvMod.Mostrar());
         }
-
     }
 }

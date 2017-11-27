@@ -23,7 +23,7 @@ namespace PaperMID.Models
             Cmd.Parameters.Add("@TelProv", SqlDbType.VarChar).Value = Bo.TelefonoProv;
             Cmd.Parameters.Add("@CorreoProv", SqlDbType.VarChar).Value = Bo.CorreoProv;
             Cmd.Parameters.Add("@FecRegProv", SqlDbType.DateTime).Value = DateTime.Now;
-            Cmd.Parameters.Add("@StaProv", SqlDbType.Bit).Value = 1;
+            Cmd.Parameters.Add("@StaProv", SqlDbType.Bit).Value = true;
             Cmd.CommandType = CommandType.Text;
             return Con.EjecutarSQL(Cmd);
         }

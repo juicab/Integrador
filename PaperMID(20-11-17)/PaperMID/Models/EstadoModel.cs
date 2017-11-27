@@ -11,7 +11,7 @@ namespace PaperMID.Models
     public class EstadoModel
     {
         ConexionModel oConexion;
-
+        public int IdPais1;
         public EstadoModel()
         {
             oConexion = new ConexionModel();
@@ -39,9 +39,10 @@ namespace PaperMID.Models
         public int Modificar(object Obj)
         {
             BO.EstadoBO BO = (BO.EstadoBO)Obj;
-            SqlCommand Cmd = new SqlCommand("UPDATE Estado SET NombreEdo=(@NombreEdo) WHERE IdEstado=(@IdEstado);");
+            SqlCommand Cmd = new SqlCommand("UPDATE Estado SET NombreEdo=(@NombreEdo), IdPais1=(@IdPais1) WHERE IdEstado=(@IdEstado);");
             Cmd.Parameters.Add("@IdEstado", SqlDbType.Int).Value = BO.IdEstado;
             Cmd.Parameters.Add("@NombreEdo", SqlDbType.VarChar).Value = BO.NombreEdo;
+            Cmd.Parameters.Add("@IdPais1", SqlDbType.Int).Value = BO.IdPais1;
             Cmd.CommandType = CommandType.Text;
             return oConexion.EjecutarSQL(Cmd);
         }
@@ -78,6 +79,7 @@ namespace PaperMID.Models
             Estado.FechaRegistroEdo = Convert.ToDateTime(row["FechaRegistroEdo"].ToString());
             Estado.StatusEdo = Convert.ToBoolean(row["StatusEdo"]);
             Estado.IdPais1 = Convert.ToInt32(row["IdPais1"]);
+            IdPais1= Convert.ToInt32(row["IdPais1"]);
             return Estado;
         }
 
