@@ -20,7 +20,7 @@
     <!-- CSS Files -->
     <link href="~/Style/assets/css/bootstrap.min.css" rel="stylesheet" />
     <link href="~/Style/assets/css/material-kit.css" rel="stylesheet" />
-
+    <link href="~/Style/assets/css/Personalizacion.css" rel="stylesheet" />
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link href="~/Style/assets/css/demoUsuario.css" rel="stylesheet" />
     @{
@@ -59,7 +59,7 @@
                             }
                         </div>
                         <div class="brand">
-                            Paper MID
+                            @Session["Usuario"]
                         </div>
 
 
@@ -70,13 +70,18 @@
             <div class="collapse navbar-collapse" id="navigation-index">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="components-documentation.html" target="_blank">
-                            <i class="material-icons">dashboard</i> Components
+                        <a href="@Url.Action("Index")">
+                            <i class=""></i> Inicio
                         </a>
                     </li>
                     <li>
-                        <a href="http://demos.creative-tim.com/material-kit-pro/presentation.html?ref=utp-freebie" target="_blank">
-                            <i class="material-icons">unarchive</i> Upgrade to PRO
+                        <a href="@Url.Action("Index")">
+                            <i class="pe-7s-leaf"></i> Quienes Somos
+                        </a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("ProductosRepCli")">
+                            <i class="pe-7s-leaf"></i> Productos
                         </a>
                     </li>
                     <li>

@@ -99,5 +99,16 @@ namespace PaperMID.Models
         //    DirEmp.StatusEmpre = Convert.ToBoolean(row["StatusEmpre"]);
         //    return DirEmp;
         //}
+
+        public EmpresaBO Obtener_NombreUser(int id)
+        {
+            var Empresa = new EmpresaBO();
+            String StrBuscar = string.Format("Select NombreUsu from Usuario where IdUsuario="+id);
+            DataTable Datos = oConexion.TablaConnsulta(StrBuscar);
+            DataRow row = Datos.Rows[0];
+            Empresa.nombreusuario = row["NombreUsu"].ToString();
+            return Empresa;
+        }
+
     }
 }

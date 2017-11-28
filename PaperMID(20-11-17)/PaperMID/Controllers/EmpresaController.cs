@@ -11,6 +11,7 @@ namespace PaperMID.Controllers
     public class EmpresaController : Controller
     {
         // GET: Empresa
+        
         EmpresaModel oEmpresa = new EmpresaModel();
         public ActionResult ActualizarEmpresa()
         {
