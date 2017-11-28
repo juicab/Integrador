@@ -11,7 +11,7 @@ namespace PaperMID.Models
     public class MunicipioModel:Plantilla
     {
         ConexionModel oConexion;
-
+        public int IdEstado1;
         public MunicipioModel()
         {
             oConexion = new ConexionModel();
@@ -40,9 +40,10 @@ namespace PaperMID.Models
         public int Modificar(object Obj)
         {
             BO.MunicipioBO BO = (BO.MunicipioBO)Obj;
-            SqlCommand Cmd = new SqlCommand("UPDATE Municipio SET NombreMuni=(@NombreMuni) WHERE IdMunicipio=(@IdMunicipio);");
+            SqlCommand Cmd = new SqlCommand("UPDATE Municipio SET NombreMuni=(@NombreMuni), IdEstado1=(@IdEstado1) WHERE IdMunicipio=(@IdMunicipio);");
             Cmd.Parameters.Add("@IdMunicipio", SqlDbType.Int).Value = BO.IdMunicipio;
             Cmd.Parameters.Add("@NombreMuni", SqlDbType.VarChar).Value = BO.NombreMuni;
+            Cmd.Parameters.Add("@IdEstado1", SqlDbType.Int).Value = BO.IdEstado1;
             Cmd.CommandType = CommandType.Text;
             return oConexion.EjecutarSQL(Cmd);
         }
@@ -79,6 +80,7 @@ namespace PaperMID.Models
             Municipio.FechaRegistroMuni = Convert.ToDateTime(row["FechaRegistroMuni"].ToString());
             Municipio.StatusMuni = Convert.ToBoolean(row["StatusMuni"]);
             Municipio.IdEstado1 = Convert.ToInt32(row["IdEstado1"]);
+            IdEstado1 = Convert.ToInt32(row["IdEstado1"]);
             return Municipio;
         }
 

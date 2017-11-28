@@ -11,26 +11,38 @@ namespace PaperMID.Controllers
     public class TipoProductoController : Controller
     {
         // GET: TipoProducto
-        TipoProductoModel tProdMod = new TipoProductoModel();
-
+        TipoProductoModel tProdMod;
+        BO.TipoProductoBO _TProductoBO;
+        public TipoProductoController()
+        {
+            tProdMod = new TipoProductoModel();
+        }
         public ActionResult TipoProducto()
         {
             return View();
         }
-        public ActionResult Agregar_TProd(TipoProductoBO oTprod)
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Agregar_TProd(String TipoProducto)
         {
-            tProdMod.Agregar(oTprod);
+            _TProductoBO = new TipoProductoBO();
+            _TProductoBO.TipoProducto = TipoProducto;
+            tProdMod.Agregar(_TProductoBO);
             return RedirectToAction("TipoProducto", "TipoProducto");
         }
         public ActionResult Actualizar_TPro(int id)
         {
             return View(tProdMod.RecuperarTipo(id));
         }
-        public ActionResult Actualizar_DatosTPro(TipoProductoBO OTprod)
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Actualizar_DatosTPro(String IdTipoProducto, String TipoProducto)
         {
-            tProdMod.Modificar(OTprod);
-            TipoProducto();
-            return View("TipoProducto");
+            _TProductoBO = new TipoProductoBO();
+            _TProductoBO.IdTipoProducto = Convert.ToInt32(IdTipoProducto);
+            _TProductoBO.TipoProducto = TipoProducto;
+            tProdMod.Modificar(_TProductoBO);
+            return RedirectToAction("TipoProducto", "TipoProducto");
         }
         [ChildActionOnly]
         public ActionResult MostrarTProd()
@@ -42,7 +54,7 @@ namespace PaperMID.Controllers
             int clave = int.Parse(id);
             tProdMod.Eliminar(clave);
             TipoProducto();
-            return View("TipoProducto");
+            return RedirectToAction("TipoProducto", "TipoProducto");
         }
     }
 }

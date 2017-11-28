@@ -26,10 +26,10 @@
                             <td class="text-center">@item["NombreMuni"]</td>
                             <td class="text-center">@item["NombreEdo"]</td>
                             <td class="td-actions text-center">
-                                <a type="button" rel="tooltip" title="Editar" class="btn btn-success btn-simple btn-xs" href="@Url.Action("ActualizarMunicipio", "Estado", new { id = @item["IdMunicipio"] })">
+                                <a type="button" rel="tooltip" title="Editar" class="btn btn-success btn-simple btn-xs" href="@Url.Action("ActualizarMunicipio", "Municipio", new { id = @item["IdMunicipio"] })">
                                     <i class="fa fa-edit"></i>
                                 </a>
-                                <a type="button" rel="tooltip" title="Eliminar" class="btn btn-danger btn-simple btn-xs" href="@Url.Action("EliminarMuni", "Estado", new { id = @item["IdMunicipio"] })">
+                                <a type="button" rel="tooltip" title="Eliminar" class="btn btn-danger btn-simple btn-xs" href="@Url.Action("EliminarMuni", "Municipio", new { id = @item["IdMunicipio"] })">
                                     <i class="fa fa-times"></i>
                                 </a>
                             </td>

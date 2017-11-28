@@ -36,20 +36,28 @@ namespace PaperMID.Controllers
 
         public ActionResult ActualizarMunicipio(int id)
         {
+            oMunicipio.Obtener_Municipio(id);
+            var municipioBO = new MunicipioBO();
+            ViewBag.IdEstado1 = new SelectList(municipioBO.Estados = municipioBO.Estados = oMunicipio.ListaEstado(), "IdEstado", "NombreEdo",oMunicipio.IdEstado1);
             return View(oMunicipio.Obtener_Municipio(id));
         }
-
-        public ActionResult ActuaDatosMuni(MunicipioBO oMuni)
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult ActuaDatosMuni(String IdMunicipio, String NombreMuni, String IdEstado1)
         {
-            oMunicipio.Modificar(oMuni);
-            return View("Municipio");
+            _MunicipioBO = new MunicipioBO();
+            _MunicipioBO.IdMunicipio = Convert.ToInt32(IdMunicipio);
+            _MunicipioBO.NombreMuni = NombreMuni;
+            _MunicipioBO.IdEstado1 = Convert.ToInt32(IdEstado1);
+            oMunicipio.Modificar(_MunicipioBO);
+            return RedirectToAction("Municipio", "Municipio");
         }
 
         public ActionResult EliminarMuni(string id)
         {
             int clave = int.Parse(id);
             oMunicipio.Eliminar(clave);
-            return View("Municipio");
+            return RedirectToAction("Municipio", "Municipio");
         }
 
         [ChildActionOnly]
