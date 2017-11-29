@@ -14,6 +14,8 @@ namespace PaperMID.Controllers
         PromocionesModel PromoModel = new PromocionesModel();
         public ActionResult Promociones()
         {
+            var PromoBo = new PromocionesBO();
+            ViewBag.IdProveedor1 = new SelectList(PromoBo.Proveedores = PromoModel.ListaProveedor(), "IdProveedor", "NombreProv");
             return View();
         }
         public ActionResult Agg_Promocion(PromocionesBO oPromBo)

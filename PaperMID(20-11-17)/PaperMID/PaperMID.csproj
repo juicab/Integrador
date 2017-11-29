@@ -397,6 +397,7 @@
     <Content Include="Style\assets\sass\lbd\_tooltips-and-popovers.scss" />
     <Content Include="Style\assets\sass\lbd\_typography.scss" />
     <Content Include="Style\assets\sass\lbd\_variables.scss" />
+    <Content Include="Views\TipoUsuario\ActualizarTipoUsuario.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

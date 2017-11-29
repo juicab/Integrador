@@ -12,26 +12,38 @@ namespace PaperMID.Controllers
     public class TipoUsuarioController : Controller
     {
         // GET: TipoProducto
-        TipoUsuarioModel oTuserModel = new TipoUsuarioModel();
-
+        TipoUsuarioModel oTuserModel;
+        BO.TipoUsuarioBO _TipoBO;
+        public TipoUsuarioController()
+        {
+            oTuserModel = new TipoUsuarioModel();
+        }
         public ActionResult TipoUsuario()
         {
             return View();
         }
-        public ActionResult AgregarTipoUsuario(TipoUsuarioBO oTUser)
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult AgregarTipoUsuario(String TipoUsu)
         {
-            oTuserModel.Agregar(oTUser);
+            _TipoBO = new TipoUsuarioBO();
+            _TipoBO.TipoUsu = TipoUsu;
+            oTuserModel.Agregar(_TipoBO);
             return RedirectToAction("TipoUsuario", "TipoUsuario");
         }
         public ActionResult ActualizarTipoUsuario(int id)
         {
             return View(oTuserModel.RecuperarTipo(id));
         }
-        public ActionResult ActualizarDatosTUser(TipoUsuarioBO OTUser)
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult ActualizarDatosTUser(String IdTipoUsuario, String TipoUsu)
         {
-            oTuserModel.Modificar(OTUser);
-            TipoUsuario();
-            return View("TipoUsuario");
+            _TipoBO = new TipoUsuarioBO();
+            _TipoBO.IdTipoUsuario = Convert.ToInt32(IdTipoUsuario);
+            _TipoBO.TipoUsu = TipoUsu;
+            oTuserModel.Modificar(_TipoBO);
+            return RedirectToAction("TipoUsuario", "TipoUsuario");
         }
         [ChildActionOnly]
         public ActionResult MostrarTUser()
@@ -42,8 +54,7 @@ namespace PaperMID.Controllers
         {
             int clave = int.Parse(id);
             oTuserModel.Eliminar(clave);
-            TipoUsuario();
-            return View("TipoUsuario");
+            return RedirectToAction("TipoUsuario", "TipoUsuario");
         }
     }
 }
