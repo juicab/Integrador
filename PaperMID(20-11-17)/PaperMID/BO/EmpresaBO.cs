@@ -21,5 +21,7 @@ namespace PaperMID.BO
         public int IdDireccion1 { get; set; }
         public DateTime FechaRegistroEmpre { get; set; }
         public Boolean StatusEmpre { get; set; }
+
+        public string nombreusuario { get; set; }
     }
 }

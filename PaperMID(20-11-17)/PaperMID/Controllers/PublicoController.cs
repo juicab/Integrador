@@ -85,5 +85,10 @@ namespace PaperMID.Controllers
         }
 
         PublicoModel oPublicoModel = new PublicoModel();
+        ProductoModel oProductoModel = new ProductoModel();
+        public ActionResult ProductosRep(ProductoBO oProducto)
+        {
+            return View(oProductoModel.MostrarRep());
+        }
     }
 }

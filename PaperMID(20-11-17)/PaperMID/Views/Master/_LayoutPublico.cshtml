@@ -52,13 +52,18 @@
             <div class="collapse navbar-collapse" id="navigation-index">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="components-documentation.html" target="_blank">
+                        <a href="@Url.Action("Index")">
                             <i class=""></i> Inicio
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="@Url.Action("Index")">
                             <i class="pe-7s-leaf"></i> Quienes Somos
+                        </a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("ProductosRep")">
+                            <i class="pe-7s-leaf"></i> Productos
                         </a>
                     </li>
                     <li>
@@ -80,6 +85,7 @@
     </nav>
     <!-- End Navbar -->
     <div>
+
         @RenderBody()
     </div>
     <footer class="footer">

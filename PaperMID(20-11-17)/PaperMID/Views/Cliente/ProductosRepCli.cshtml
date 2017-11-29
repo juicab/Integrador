@@ -1,0 +1,64 @@
+﻿@using System.Data;
+@model DataTable
+@{
+    ViewBag.Title = "ProductosRepCli";
+    Layout = "~/Views/Master/_LayoutCliente.cshtml";
+}
+<div class="wrapper">
+    <div class="header header-filter" style="background-image: url('../Style/assets/img/fondo2.jpg'); background-size: cover; background-position: top center;">
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <div class="container">
+            <div class="row">
+                <div class="">
+                    <div class="card card-signup">
+                        <div class="form" id="DivLogin">
+                            <div class="content">
+                                <div>
+                                    <h2 style="text-align:center">Productos</h2>
+                                </div>
+                                @* Aqui empieza el repeater *@
+                                @foreach (DataRow row in Model.Rows)
+                                {
+
+                                    <article class="embed-responsive-item col-lg-4 card__thumb">
+                                        <header class="card__thumb">
+                                            <a href="#">
+                                                @{
+                                                    String Photo = "data:image/jpeg;base64," + Convert.ToBase64String((byte[])row["ImagenFoto"]);
+                                                    <img src="@Photo" alt="Creative Tim Logo" rel="tooltip" title="@row["DescripcionProd"]" data-placement="bottom" data-html="true" style="width:300px; height:300px;">
+                                                }
+                                            </a>
+                                        </header>
+                                        <div class="card__body">
+                                            <h2 class="card__title"><a href="#">@row["NombreProd"]</a></h2>
+                                            <div class="card__subtitle">$<b>@row["PrecioProd"]</b> MXN </div>
+                                        </div>
+                                        <footer class="card__footer"></footer>
+                                        @using (Ajax.BeginForm("Actualizar_Estatus_Aprobado_a_Desaprobado", "Admin_principal_", new { id = @row["IdProducto"] }, new AjaxOptions()
+                                        { HttpMethod = "POST" }))
+                                        {@Html.AntiForgeryToken() <button class="btn btn-info btn-round">
+                                            <i class="material-icons">add</i> Comprar
+                                        </button>}
+                                        <div>
+                                            <br />
+                                            <br />
+                                            <br />
+                                        </div>
+                                    </article>
+                                                    }
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
