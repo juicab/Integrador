@@ -20,7 +20,7 @@ namespace PaperMID.Models
         String Heredia = "Data Source=FSOCIETY; Initial Catalog=Integrador; Integrated Security=True";
         public SqlConnection EstablecerConexion()
         {
-            Con = new SqlConnection(Uicab);
+            Con = new SqlConnection(Heredia);
             return Con;
         }
 

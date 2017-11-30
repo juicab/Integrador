@@ -4,188 +4,135 @@
     ViewBag.Title = "Producto";
     Layout = "~/Views/Master/_LayoutAdministrador.cshtml";
 }
-<div class="content">
+<div class="container-fluid">
     <div class="row">
-        <p></p>
-    </div>
-    <div class="row">
-        <p></p>
-    </div>
-    <div class="container-fluid">
-        <div class="row">
-            @using (Ajax.BeginForm("Agregar_Producto", "Producto", new AjaxOptions { HttpMethod = "POST" }, new { enctype = "multipart/form-data" }))
-            {
-                @Html.AntiForgeryToken()
+        <div class="col-md-12">
+            <div class="card">
+                <!--Inicio Contenido-->
+                <div class="header">
+                    <h2 class="title">Producto</h2>
+                </div>
+                <div class="content">
+                    <!--Contenido Formulario-->
+                    @using (Ajax.BeginForm("Agregar_Producto", "Producto", new AjaxOptions { HttpMethod = "POST" }, new { enctype = "multipart/form-data" }))
+                    {
+                        @Html.AntiForgeryToken()
 
-                <div class="col-md-11">
-                    <div class="card">
-                        <div class="header">
-                            <h2 class="title">Productos</h2>
-                        </div>
-                        <div class="content">
-                            <form>
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        <div class="form-group">
-                                            <label>Código</label>
-                                            <input type="text" class="form-control" name="CódigoProd" />
-                                        </div>
-                                    </div>
-                                    <div class="col-md-8">
-                                        <div class="form-group">
-                                            <label>Nombre Producto</label>
-                                            <input type="text" class="form-control" name="NombreProd" />
-                                        </div>
+                        <form>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>Código</label>
+                                        <input type="text" class="form-control" name="CódigoProd" />
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-md-11">
-                                        <div class="form-group">
-                                            <label>Descripcion del Producto</label>
-                                            <textarea class="form-control" placeholder="Escribe aquí la descripción del producto" rows="5" style="width: 100%; height: 87px;" name="DescripcionProd"></textarea>
-                                        </div>
+                                <div class="col-md-8">
+                                    <div class="form-group">
+                                        <label>Nombre Producto</label>
+                                        <input type="text" class="form-control" name="NombreProd" />
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-md-7">
-                                        <h4>Detalles de Stock</h4><br />
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="form-group ">
-                                                    <label>Precio Producto</label>
-                                                    <input type="text" class="form-control" name="PrecioProd" />
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="form-group ">
-                                                    <label>Descuento Producto</label>
-                                                    <input type="text" class="form-control" name="DescuentoProd" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="form-group ">
-                                                    <label>Cantidad Disponible</label>
-                                                    <input type="text" class="form-control" name="CantidadDisponibleProd" />
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="form-group ">
-                                                    <label>Cantidad Mínima</label>
-                                                    <input type="text" class="form-control" name="CantidadMinimaProd" />
-                                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-11">
+                                    <div class="form-group">
+                                        <label>Descripcion del Producto</label>
+                                        <textarea class="form-control" placeholder="Escribe aquí la descripción del producto" rows="5" style="width: 100%; height: 87px;" name="DescripcionProd"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-7">
+                                    <h4>Detalles de Stock</h4><br />
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group ">
+                                                <label>Precio Producto</label>
+                                                <input type="text" class="form-control" name="PrecioProd" />
                                             </div>
                                         </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label>Tipo Producto</label><!--Obtener el valor del DropDownList por AJAX-->
-                                                    @Html.DropDownList("IdProveedor1", null, htmlAttributes: new { @class = "form-control" })
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label>Tipo Producto</label><!--Obtener el valor del DropDownList por AJAX-->
-                                                    @Html.DropDownList("IdTipoProducto1", null, htmlAttributes: new { @class = "form-control" })
-                                                </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group ">
+                                                <label>Descuento Producto</label>
+                                                <input type="text" class="form-control" name="DescuentoProd" />
                                             </div>
                                         </div>
                                     </div>
-                                    <br />
-                                    <div class="col-md-4" style="height:250px">
-                                        <div class="file-upload form-group">
-                                            <div id="Cargar">
-                                                <div class="image-upload-wrap">
-                                                    <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" name="ImagenProducto" />
-                                                    <div class="drag-text">
-                                                        <h3>Arrastre una imagen</h3>
-                                                    </div>
-                                                </div>
-                                                <br />
-                                                <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Seleccionar Imagen</button>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group ">
+                                                <label>Cantidad Disponible</label>
+                                                <input type="text" class="form-control" name="CantidadDisponibleProd" />
                                             </div>
-                                            <div class="file-upload-content">
-                                                <div class="Cargado">
-                                                    <br />
-                                                    <img class="file-upload-image" src="#" alt="your image" style="height:170px; width:170px;" />
-                                                    <br /><br />
-                                                    @*<p style="color:black"><span class="image-title">Uploaded Image</span></p>*@
-                                                </div>
-                                                <br />
-                                                <button type="button" onclick="removeUpload()" class="remove-image">Remover </button>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group ">
+                                                <label>Cantidad Mínima</label>
+                                                <input type="text" class="form-control" name="CantidadMinimaProd" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>Tipo Producto</label><!--Obtener el valor del DropDownList por AJAX-->
+                                                @Html.DropDownList("IdProveedor1", null, htmlAttributes: new { @class = "form-control" })
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>Tipo Producto</label><!--Obtener el valor del DropDownList por AJAX-->
+                                                @Html.DropDownList("IdTipoProducto1", null, htmlAttributes: new { @class = "form-control" })
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <br />
-                                <div class="=row" style="padding:0,20px;">
-                                    <div class="col-md-11">
-                                        <button type="submit" class="btn btn-info btn-fill btn-block">Guardar</button>
-                                    </div>  
-                                </div>
-                                <div class="clearfix"></div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-             }
-        </div>
-    </div>
-    <div class="row">
-        <p></p>
-    </div>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-11">
-                <div class="card">
-                    <div class="header" style="text-align:center">
-                        <br />
-                        <h2 class="title">Lista de Productos</h2>
-                        <br />
-                        @Html.ActionLink("Imprimir Reportes De Productos", "ReporteProducto", "Reportes")
-                    </div>
-                    <div class="content">
-                        
-                        @using (Ajax.BeginForm("Filtrar", "Producto", new AjaxOptions { HttpMethod = "POST" }))
-                        {
-                            @Html.AntiForgeryToken()
-                            <form>
-                                <div class="row">
-                                    <div class="col-md-11">
-                                        <h5>Filtros</h5><hr />
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                <div class="form-group">
-                                                    <label>Tipo Producto</label><!--Obtener el valor del DropDownList por AJAX-->
-                                                    @Html.DropDownList("Filtro_IdProveedor1", null, htmlAttributes: new { @class = "form-control" })
+                                <div class="col-md-4" style="height:250px">
+                                    <div class="file-upload form-group">
+                                        <div id="Cargar">
+                                            <div class="image-upload-wrap">
+                                                <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" name="ImagenProducto" />
+                                                <div class="drag-text">
+                                                    <h3>Arrastre una imagen</h3>
                                                 </div>
                                             </div>
-                                            <div class="col-md-4">
-                                                <div class="form-group">
-                                                    <label>Tipo Producto</label><!--Obtener el valor del DropDownList por AJAX-->
-                                                    @Html.DropDownList("Filtro_IdTipoProducto1", null, htmlAttributes: new { @class = "form-control" })
-                                                </div>
+                                            <br />
+                                            <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Seleccionar Imagen</button>
+                                        </div>
+                                        <div class="file-upload-content">
+                                            <div class="Cargado">
+                                                <br />
+                                                <img class="file-upload-image" src="#" alt="your image" style="height:170px; width:170px;" />
+                                                <br /><br />
+                                                @*<p style="color:black"><span class="image-title">Uploaded Image</span></p>*@
                                             </div>
-                                            <div class="col-md-4">
-                                                <div class="form-group">
-                                                    <button type="submit" class="btn btn-info btn-fill btn-block">Filtrar</button>
-                                                </div>
-                                            </div>
+                                            <br />
+                                            <button type="button" onclick="removeUpload()" class="remove-image">Remover </button>
                                         </div>
                                     </div>
                                 </div>
-                            </form>
-                        }
+                            </div>
                             <br />
-                            @{ Html.RenderAction("List_Productos", "Producto");}
-                        
-                    </div>
-                </div>
-            </div>
+                            <div class="=row" style="padding:0,20px;">
+                                <div class="col-md-11">
+                                    <button type="submit" class="btn btn-info btn-fill btn-block">Guardar</button>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </form>
+                    }
+
+                </div><!--Contenido Formulario-->
+            </div><!--Fin Contenido-->
         </div>
     </div>
 </div>
+@{ Html.RenderAction("List_Productos", "Producto");}
+<div class="container-fluid">
+    <!--Agregar Contenido / Evita que la tabla se salga del la logitud.-->
+</div>
+
 
 <style>
         .file-upload {

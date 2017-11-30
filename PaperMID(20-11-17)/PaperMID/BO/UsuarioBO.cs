@@ -15,10 +15,10 @@ namespace PaperMID.BO
         public string NombreUsu { get; set; }
         public string ApellidoPaternoUsu { get; set; }
         public string ApellidoMaternoUsu { get; set; }
-        public DateTime FechaNacimientoUsu { get; set; }
+        public string FechaNacimientoUsu { get; set; }
         public string TelefonoUsu { get; set; }
         public string CorreoUsu { get; set; }
-        public DateTime FechaRegistroUsu { get; set; }
+        public string FechaRegistroUsu { get; set; }
         public int IdTipoUsuario1 { get; set; }
         public int IdDireccion2 { get; set; }
         public Boolean StatusUsu { get; set; }

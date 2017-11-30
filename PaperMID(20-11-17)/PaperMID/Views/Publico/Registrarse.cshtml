@@ -13,7 +13,7 @@
                 <div class="row">
                     <h2 class="text-center">Registrarse</h2>
                     <br /><br />
-                    @using (Html.BeginForm("Agregar", "Usuario", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                    @using (Html.BeginForm("Agregar_Usuario", "Usuario", FormMethod.Post, new { enctype = "multipart/form-data" }))
                     {
                         @Html.AntiForgeryToken()
 

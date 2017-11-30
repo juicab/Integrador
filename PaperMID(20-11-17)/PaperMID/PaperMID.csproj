@@ -169,6 +169,41 @@
     <Content Include="Style\assets\js\material-kit.js" />
     <Content Include="Style\assets\js\material.min.js" />
     <Content Include="Style\assets\js\nouislider.min.js" />
+    <Content Include="Style\Front\assets\css\demo.css" />
+    <Content Include="Style\Front\assets\css\gsdk.css" />
+    <Content Include="Style\Front\assets\img\apple-icon.png" />
+    <Content Include="Style\Front\assets\img\bg.jpg" />
+    <Content Include="Style\Front\assets\img\blurred-black-cover.jpeg" />
+    <Content Include="Style\Front\assets\img\carousel_blue.png" />
+    <Content Include="Style\Front\assets\img\carousel_green.png" />
+    <Content Include="Style\Front\assets\img\carousel_orange.png" />
+    <Content Include="Style\Front\assets\img\carousel_red.png" />
+    <Content Include="Style\Front\assets\img\cover_4.jpg" />
+    <Content Include="Style\Front\assets\img\cover_4_blur.jpg" />
+    <Content Include="Style\Front\assets\img\dulau.jpg" />
+    <Content Include="Style\Front\assets\img\favicon.png" />
+    <Content Include="Style\Front\assets\img\fondo.jpg" />
+    <Content Include="Style\Front\assets\img\mask.png" />
+    <Content Include="Style\Front\assets\img\mockup.png" />
+    <Content Include="Style\Front\assets\img\new_logo.png" />
+    <Content Include="Style\Front\assets\img\tim_80x80.png" />
+    <Content Include="Style\Front\assets\js\custom.js" />
+    <Content Include="Style\Front\assets\js\get-shit-done.js" />
+    <Content Include="Style\Front\assets\js\gsdk-bootstrapswitch.js" />
+    <Content Include="Style\Front\assets\js\gsdk-checkbox.js" />
+    <Content Include="Style\Front\assets\js\gsdk-radio.js" />
+    <Content Include="Style\Front\assets\js\jquery-ui-1.10.4.custom.min.js" />
+    <Content Include="Style\Front\bootstrap3\css\bootstrap-theme.css" />
+    <Content Include="Style\Front\bootstrap3\css\bootstrap-theme.min.css" />
+    <Content Include="Style\Front\bootstrap3\css\bootstrap.css" />
+    <Content Include="Style\Front\bootstrap3\css\bootstrap.min.css" />
+    <Content Include="Style\Front\bootstrap3\css\font-awesome.css" />
+    <Content Include="Style\Front\bootstrap3\fonts\fontawesome-webfont.svg" />
+    <Content Include="Style\Front\bootstrap3\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Style\Front\bootstrap3\js\bootstrap.js" />
+    <Content Include="Style\Front\bootstrap3\js\bootstrap.min.js" />
+    <Content Include="Style\Front\jquery\jquery-1.10.2.js" />
+    <Content Include="Style\Front\jquery\jquery-ui.custom.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -211,6 +246,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\ClienteModel.cs" />
     <Compile Include="Models\ConexionModel.cs" />
     <Compile Include="Models\DireccionModel.cs" />
     <Compile Include="Models\EmpresaModel.cs" />
@@ -398,6 +434,45 @@
     <Content Include="Style\assets\sass\lbd\_typography.scss" />
     <Content Include="Style\assets\sass\lbd\_variables.scss" />
     <Content Include="Views\TipoUsuario\ActualizarTipoUsuario.cshtml" />
+    <Content Include="Views\Cliente\ProductosRepCli.cshtml" />
+    <Content Include="Views\Promociones\ListarPromociones.cshtml" />
+    <Content Include="Views\Publico\ProductosRep.cshtml" />
+    <Content Include="Views\Usuario\List_Usuarios.cshtml" />
+    <Content Include="Views\Usuario\Actualizar_Usuario.cshtml" />
+    <Content Include="Views\Usuario\Obtener_Dic_Usuario.cshtml" />
+    <Content Include="Style\Front\assets\sass\gsdk.scss" />
+    <Content Include="Style\Front\assets\sass\gsdk\mixins\_buttons.scss" />
+    <Content Include="Style\Front\assets\sass\gsdk\mixins\_inputs.scss" />
+    <Content Include="Style\Front\assets\sass\gsdk\mixins\_labels.scss" />
+    <Content Include="Style\Front\assets\sass\gsdk\mixins\_navbars.scss" />
+    <Content Include="Style\Front\assets\sass\gsdk\mixins\_tabs.scss" />
+    <Content Include="Style\Front\assets\sass\gsdk\mixins\_transparency.scss" />
+    <Content Include="Style\Front\assets\sass\gsdk\mixins\_vendor-prefixes.scss" />
+    <Content Include="Style\Front\assets\sass\gsdk\_alerts.scss" />
+    <Content Include="Style\Front\assets\sass\gsdk\_buttons.scss" />
+    <Content Include="Style\Front\assets\sass\gsdk\_carousel.scss" />
+    <Content Include="Style\Front\assets\sass\gsdk\_checkbox-radio-switch.scss" />
+    <Content Include="Style\Front\assets\sass\gsdk\_collapse.scss" />
+    <Content Include="Style\Front\assets\sass\gsdk\_dropdown.scss" />
+    <Content Include="Style\Front\assets\sass\gsdk\_inputs.scss" />
+    <Content Include="Style\Front\assets\sass\gsdk\_labels-and-progress-bars.scss" />
+    <Content Include="Style\Front\assets\sass\gsdk\_misc.scss" />
+    <Content Include="Style\Front\assets\sass\gsdk\_mixins.scss" />
+    <Content Include="Style\Front\assets\sass\gsdk\_modal.scss" />
+    <Content Include="Style\Front\assets\sass\gsdk\_navbars.scss" />
+    <Content Include="Style\Front\assets\sass\gsdk\_responsive.scss" />
+    <Content Include="Style\Front\assets\sass\gsdk\_sliders.scss" />
+    <Content Include="Style\Front\assets\sass\gsdk\_tabs-navs-pagination.scss" />
+    <Content Include="Style\Front\assets\sass\gsdk\_tooltips.scss" />
+    <Content Include="Style\Front\assets\sass\gsdk\_typography.scss" />
+    <Content Include="Style\Front\assets\sass\gsdk\_variables.scss" />
+    <Content Include="Style\Front\bootstrap3\fonts\fontawesome-webfont.eot" />
+    <Content Include="Style\Front\bootstrap3\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Style\Front\bootstrap3\fonts\fontawesome-webfont.woff" />
+    <Content Include="Style\Front\bootstrap3\fonts\FontAwesome.otf" />
+    <Content Include="Style\Front\bootstrap3\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Style\Front\bootstrap3\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Style\Front\bootstrap3\fonts\glyphicons-halflings-regular.woff" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -407,6 +482,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Style\Front\assets\js\presentation-page\" />
     <Folder Include="Views\Foto\" />
     <Folder Include="Views\Reportes\" />
   </ItemGroup>

@@ -1,37 +1,206 @@
 ﻿@model PaperMID.Models.UsuarioModel
-@using System.Data;
-@model DataTable
 @{
     ViewBag.Title = "Usuario";
     Layout = "~/Views/Master/_LayoutAdministrador.cshtml";
 }
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <!--Inicio Contenido-->
+                <div class="header">
+                    <h2 class="title">Usuario</h2>
+                </div>
+                <div class="content">
+                    <!--Contenido Formulario-->
+                    @using (Ajax.BeginForm("Agregar_Usuario_Administrador", "Usuario", new AjaxOptions { HttpMethod = "POST" }, new { enctype = "multipart/form-data" }))
+                    {
+                        @Html.AntiForgeryToken()
 
-<h2>Registro</h2>
-<table class="table">
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>Pelicula</th>
-            <th>Distribuidor</th>
-            <th>Precio</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (DataRow Row in Model.Rows)
-        {
-            <tr id="=fila_@Row["ID"]">
-                <td>@Row["ID"]</td>
-                <td>@Row["Usuario"]</td>
-                <td>@Row["Nombre"]</td>
-                <td>@Row["[Apellido Paterno]"]</td>
-                <td>@Row["[Apellido Materno]"]</td>
-                <td>@Row["[Fecha Nacimiento]"]</td>
-                <td>@Row["Teléfono"]</td>
-                <td>@Html.ActionLink("Editar", "Actualizar_Pelicula", "Pelicula", new { id = @Row["ID"] }, null)</td>
-                <td>@Html.ActionLink("Eliminar", "Eliminar", "Pelicula", new { id = @Row["ID"] }, null)</td>
-            </tr>
-        }
-    </tbody>
-    <a title="Editar" href="@Url.Action("Regi", "Pelicula")">Agregar</a>
-</table>
+                        <form>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>Nombre</label>
+                                                <input class="form-control" type="text" name="NombreUsu" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>Apellido Paterno</label>
+                                                <input class="form-control" type="text" name="ApellidoPaternoUsu" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>Apellido Materno</label>
+                                                <input class="form-control" type="text" name="ApellidoMaternoUsu" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>Correo</label>
+                                                <input class="form-control" type="email" name="CorreoUsu" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>Teléfono</label>
+                                                <input class="form-control" type="tel" name="TelefonoUsu" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>Fecha de Nacimiento</label>
+                                                <input class="form-control" type="text" name="FechaNacimientoUsu" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label>Calle</label>
+                                                <input class="form-control" type="text" name="CalleDir" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label>Cruzamientos</label>
+                                                <input class="form-control" type="text" name="CruzaDir" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label>Colonia</label>
+                                                <input class="form-control" type="text" name="ColoniaDir" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label>Código Postal</label>
+                                                <input class="form-control" type="text" name="CPDir" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>Número Interior</label>
+                                                <input class="form-control" type="text" name="NumInteDir" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>Número Exterior</label>
+                                                <input class="form-control" type="text" name="NumExteDir" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>Municipio</label>
+                                                @Html.DropDownList("IdMunicipio1", null, htmlAttributes: new { @class = "form-control" })
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>Usuario</label>
+                                                <input class="form-control" type="text" name="Usuario" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>Contraseña</label>
+                                                <input class="form-control" type="password" name="ContraseñaUsu" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>Confirmar Contraseña</label>
+                                                <input class="form-control" type="password" name="ConfirmarContraseñaUsu" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br />
+                            <output id="ContenedorImg">
+                                @*Elemento dondé se cargará la nueva imagen*@
+                            <img src="~/Style/assets/img/PreviewProfile.png" class="PreviewImagen" />
+                        </output>
+                        <br />
+                        <div class="file-loading">
+                            <input type="file" id="files" name="ImagenUsu" />
+                        </div>
+                            <div class="=row" style="padding:0,20px;">
+                                <div class="col-md-12">
+                                    <!--col-md-10 col-md-offset-1-->
+                                    <button type="submit" class="btn btn-info btn-fill btn-block">Guardar</button>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </form>
+                    }
 
+                </div><!--Contenido Formulario-->
+            </div><!--Fin Contenido-->
+        </div>
+    </div>
+</div>
+@{ Html.RenderAction("List_Usuarios", "Usuario");}
+<div class="container-fluid">
+    <!--Agregar Contenido / Evita que la tabla se salga del la logitud.-->
+</div>
+<style>
+    .PreviewImagen {
+        height: 200px;
+        width: 200px;
+        margin: 10px 5px 0 0;
+    }
+</style>@*CSS para la Preview de la imagen*@
+
+<script type="text/javascript">
+    function archivo(evt) {
+    var files = evt.target.files; // FileList object
+    // Obtenemos la imagen del campo "file".
+    for (var i = 0, f; f = files[i]; i++) {
+    //Solo admitimos imágenes.
+    if (!f.type.match('image.*')) { continue; }
+
+    var reader = new FileReader();
+
+    reader.onload = (function(theFile) {
+    return function(e) {
+    // Insertamos la imagen
+        document.getElementById("ContenedorImg").innerHTML = ['<img class="PreviewImagen" src="', e.target.result, '" title="', escape(theFile.name), '"/>'].join('');
+    };
+    })(f);
+
+
+    reader.readAsDataURL(f);
+    }
+    }
+
+    document.getElementById('files').addEventListener('change', archivo, false);
+</script> @*Script para la Preview de la imagen*@

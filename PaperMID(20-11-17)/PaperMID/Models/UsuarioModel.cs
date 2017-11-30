@@ -9,7 +9,7 @@ namespace PaperMID.Models
     public class UsuarioModel : Plantilla
     {
         private String hashkey = "*hg849gh84th==3tg7-534d=_";
-
+        public int IdDireccion2;
         ConexionModel oConexion;
         BO.MéthodesBO oMéthodesBO;
         public UsuarioModel()
@@ -23,10 +23,17 @@ namespace PaperMID.Models
             Cmd.CommandType = CommandType.Text;
             return oConexion.EjecutarSQL(Cmd);
         }
+        public int Buscar_Datos_Direccion(String IdUsuario)
+        {
+            SqlCommand Cmd = new SqlCommand("SELECT IdDireccion2 FROM Usuario WHERE IdUsuario=(@IdUsuario)");
+            Cmd.Parameters.Add("@IdUsuario", SqlDbType.Int).Value = Convert.ToInt32(IdUsuario);
+            Cmd.CommandType = CommandType.Text;
+            return oConexion.EjecutarSQL(Cmd);
+        }
         public int Agregar(object Obj)
         {
             BO.UsuarioBO oBO = (BO.UsuarioBO)Obj;
-            SqlCommand Cmd = new SqlCommand("INSERT INTO Usuario ([Usuario],[ContraseñaUsu],[ImagenUsu],[NombreUsu],[ApellidoPaternoUsu],[ApellidoMaternoUsu],[FechaNacimientoUsu],[TelefonoUsu],[CorreoUsu],[FechaRegistroUsu],[IdTipoUsuario1],[IdDireccion2],[StatusUsu],[SHA512]) OUTPUT INSERTED.IdUsuario VALUES(@Usuario, @ContraseñaUsu,@ImagenUsu, @NombreUsu, @ApellidoPaternoUsu, @ApellidoMaternoUsu,@FechaNacimientoUsu, @TelefonoUsu, @CorreoUsu, @FechaRegistroUsu, @IdTipoUsuario1,@IdDireccion2, @StatusUsu, @SHA512);");
+            SqlCommand Cmd = new SqlCommand("EXEC SP_Agregar_Usuario @Usuario, @ContraseñaUsu,@ImagenUsu, @NombreUsu, @ApellidoPaternoUsu, @ApellidoMaternoUsu,@FechaNacimientoUsu, @TelefonoUsu, @CorreoUsu, @IdTipoUsuario1,@IdDireccion2, @SHA512");
             Cmd.Parameters.Add("@Usuario", SqlDbType.VarChar).Value = oBO.Usuario;
             Cmd.Parameters.Add("@ContraseñaUsu", SqlDbType.VarChar).Value = oMéthodesBO.Encriptar(oBO.ContraseñaUsu);
             Cmd.Parameters.Add("@ImagenUsu", SqlDbType.Image).Value = oBO.ImagenUsu;
@@ -36,10 +43,8 @@ namespace PaperMID.Models
             Cmd.Parameters.Add("@FechaNacimientoUsu", SqlDbType.Date).Value = oBO.FechaNacimientoUsu;
             Cmd.Parameters.Add("@TelefonoUsu", SqlDbType.VarChar).Value = oBO.TelefonoUsu;
             Cmd.Parameters.Add("@CorreoUsu", SqlDbType.VarChar).Value = oBO.CorreoUsu;
-            Cmd.Parameters.Add("@FechaRegistroUsu", SqlDbType.DateTime).Value = DateTime.Now;
             Cmd.Parameters.Add("@IdTipoUsuario1", SqlDbType.Int).Value = 2;
             Cmd.Parameters.Add("@IdDireccion2", SqlDbType.Int).Value = Buscar_Direccion();
-            Cmd.Parameters.Add("@StatusUsu", SqlDbType.Bit).Value = true;
             Cmd.Parameters.Add("@SHA512", SqlDbType.VarChar).Value = oMéthodesBO.CreateSHAHash(oBO.Usuario,oBO.ContraseñaUsu, hashkey);
             Cmd.CommandType = CommandType.Text;
             return oConexion.EjecutarSQL(Cmd);
@@ -47,19 +52,73 @@ namespace PaperMID.Models
 
         public int Eliminar(object Obj)
         {
-            BO.UsuarioBO oBO = (BO.UsuarioBO)Obj;
-            SqlCommand Cmd = new SqlCommand("");
+            SqlCommand Cmd = new SqlCommand("EXEC SP_Eliminar_Usuario @IdUsuario");
+            Cmd.Parameters.Add("@IdUsuario", SqlDbType.Int).Value = Convert.ToInt32(Obj);
+            Cmd.CommandType = CommandType.Text;
             return oConexion.EjecutarSQL(Cmd);
         }
 
         public int Modificar(object Obj)
         {
-            throw new NotImplementedException();
+            BO.UsuarioBO oBO = (BO.UsuarioBO)Obj;
+            SqlCommand Cmd = new SqlCommand("EXEC SP_Modificar_Usuario @IdUsuario, @Usuario, @ContraseñaUsu,@ImagenUsu, @NombreUsu, @ApellidoPaternoUsu, @ApellidoMaternoUsu,@FechaNacimientoUsu, @TelefonoUsu, @CorreoUsu, @IdTipoUsuario1,@IdDireccion2, @SHA512");
+            Cmd.Parameters.Add("@IdUsuario", SqlDbType.Int).Value = oBO.IdUsuario;
+            Cmd.Parameters.Add("@Usuario", SqlDbType.VarChar).Value = oBO.Usuario;
+            Cmd.Parameters.Add("@ContraseñaUsu", SqlDbType.VarChar).Value = oMéthodesBO.Encriptar(oBO.ContraseñaUsu);
+            Cmd.Parameters.Add("@ImagenUsu", SqlDbType.Image).Value = oBO.ImagenUsu;
+            Cmd.Parameters.Add("@NombreUsu", SqlDbType.VarChar).Value = oBO.NombreUsu;
+            Cmd.Parameters.Add("@ApellidoPaternoUsu", SqlDbType.VarChar).Value = oBO.ApellidoPaternoUsu;
+            Cmd.Parameters.Add("@ApellidoMaternoUsu", SqlDbType.VarChar).Value = oBO.ApellidoMaternoUsu;
+            Cmd.Parameters.Add("@FechaNacimientoUsu", SqlDbType.Date).Value = oBO.FechaNacimientoUsu;
+            Cmd.Parameters.Add("@TelefonoUsu", SqlDbType.VarChar).Value = oBO.TelefonoUsu;
+            Cmd.Parameters.Add("@CorreoUsu", SqlDbType.VarChar).Value = oBO.CorreoUsu;
+            Cmd.Parameters.Add("@IdTipoUsuario1", SqlDbType.Int).Value = oBO.IdTipoUsuario1;
+            Cmd.Parameters.Add("@IdDireccion2", SqlDbType.Int).Value = Buscar_Direccion();
+            Cmd.Parameters.Add("@SHA512", SqlDbType.VarChar).Value = oMéthodesBO.CreateSHAHash(oBO.Usuario, oBO.ContraseñaUsu, hashkey);
+            Cmd.CommandType = CommandType.Text;
+            return oConexion.EjecutarSQL(Cmd);
         }
 
         public DataTable Mostrar()
         {
-            throw new NotImplementedException();
+            return oConexion.TablaConnsulta("SELECT * FROM Usuario WHERE IdUsuario <>1;");
+        }
+        public BO.UsuarioBO Obtener_Usuario(String IdUsuario)
+        {
+            var _Usuario = new BO.UsuarioBO();
+            String StrBuscar = string.Format("SELECT * FROM Usuario WHERE IdUsuario='{0}'",Convert.ToInt32(IdUsuario));
+            DataTable Datos = oConexion.TablaConnsulta(StrBuscar);
+            DataRow row = Datos.Rows[0];
+            _Usuario.IdUsuario = Convert.ToInt32(row["IdUsuario"]);
+            _Usuario.Usuario = row["Usuario"].ToString();
+            //_Usuario.ContraseñaUsu = oMéthodesBO.Encriptar(row["ContraseñaUsu"].ToString());
+            _Usuario.ImagenUsu = (byte[])row["ImagenUsu"];
+            _Usuario.NombreUsu = row["NombreUsu"].ToString();
+            _Usuario.ApellidoPaternoUsu = row["ApellidoPaternoUsu"].ToString();
+            _Usuario.ApellidoMaternoUsu = row["ApellidoMaternoUsu"].ToString();
+            _Usuario.FechaNacimientoUsu = row["FechaNacimientoUsu"].ToString();
+            _Usuario.TelefonoUsu = row["TelefonoUsu"].ToString();
+            _Usuario.CorreoUsu = row["CorreoUsu"].ToString();
+            _Usuario.IdTipoUsuario1 = Convert.ToInt32(row["IdTipoUsuario1"].ToString());
+            _Usuario.IdDireccion2 = Convert.ToInt32(row["IdDireccion2"]);
+            IdDireccion2 = Convert.ToInt32(row["IdDireccion2"]);
+            return _Usuario;
+        }
+        public BO.DireccionBO Obtener_Direccion_Usuario()
+        {
+            var _Direccion = new BO.DireccionBO();
+            String StrBuscar = String.Format("SELECT * FROM Direccion WHERE IdDireccion='{0}'",IdDireccion2);
+            DataTable Datos = oConexion.TablaConnsulta(StrBuscar);
+            DataRow Row = Datos.Rows[0];
+            _Direccion.IdDireccion = Convert.ToInt32(Row["IdDireccion"].ToString());
+            _Direccion.CalleDir = Row["CalleDir"].ToString();
+            _Direccion.ColoniaDir = Row["ColoniaDir"].ToString();
+            _Direccion.CPDir = Row["CPDir"].ToString();
+            _Direccion.CruzaDir = Row["CruzaDir"].ToString();
+            _Direccion.NumExteDir = Row["NumExteDir"].ToString();
+            _Direccion.NumInteDir = Row["NumInteDir"].ToString();
+            _Direccion.IdMunicipio1 = Convert.ToInt32(Row["IdMunicipio1"].ToString());
+            return _Direccion;
         }
     }
 }

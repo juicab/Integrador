@@ -5,40 +5,65 @@ using System.Web;
 using System.Web.Mvc;
 using PaperMID.BO;
 using PaperMID.Models;
+using System.Globalization;
 
 namespace PaperMID.Controllers
 {
     public class PromocionesController : Controller
     {
         // GET: Promociones
-        PromocionesModel PromoModel = new PromocionesModel();
+        PromocionesModel PromoModel;
+        BO.PromocionesBO _PromoBO;
+        public PromocionesController()
+        {
+            PromoModel = new PromocionesModel();
+        }
         public ActionResult Promociones()
         {
             var PromoBo = new PromocionesBO();
-            ViewBag.IdProveedor1 = new SelectList(PromoBo.Proveedores = PromoModel.ListaProveedor(), "IdProveedor", "NombreProv");
+            ViewBag.IdProve = new SelectList(PromoBo.Proveedores = PromoModel.ListaProveedor(), "IdProveedor", "NombreProv");
             return View();
         }
-        public ActionResult Agg_Promocion(PromocionesBO oPromBo)
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Agg_Promocion(String NombrePromo, String IdProve,String DescripcionPromo, String FechaInicioPromo,String FechaFinPromo)
         {
-            PromoModel.Agregar(oPromBo);
+            _PromoBO = new PromocionesBO();
+            _PromoBO.NombrePromo = NombrePromo;
+            _PromoBO.IdProve = Convert.ToInt32(IdProve);
+            _PromoBO.DescripcionPromo = DescripcionPromo;
+            _PromoBO.FechaInicioPromo = FechaInicioPromo;
+            _PromoBO.FechaFinPromo = FechaFinPromo;
+            PromoModel.Agregar(_PromoBO);
             return RedirectToAction("Promociones", "Promociones");
         }
 
         public ActionResult ActualizarPromocion(int id)
         {
+            var PromoBo = new PromocionesBO();
+            PromoModel.RecuperarPromo(id);
+            ViewBag.IdProve = new SelectList(PromoBo.Proveedores = PromoModel.ListaProveedor(), "IdProveedor", "NombreProv", PromoModel.IdProveedor1);
             return View(PromoModel.RecuperarPromo(id));
         }
-        public ActionResult ActualizarDatosProm(PromocionesBO PromoBO)
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult ActualizarDatosProm(String IdPromo,String NombrePromo, String IdProve, String DescripcionPromo, String FechaInicioPromo, String FechaFinPromo)
         {
-            PromoModel.Modificar(PromoBO);
-            Promociones();
-            return View("Promociones");
+            _PromoBO = new PromocionesBO();
+            _PromoBO.IdPromo = Convert.ToInt32(IdPromo);
+            _PromoBO.NombrePromo = NombrePromo;
+            _PromoBO.IdProve = Convert.ToInt32(IdProve);
+            _PromoBO.DescripcionPromo = DescripcionPromo;
+            _PromoBO.FechaInicioPromo = FechaInicioPromo;
+            _PromoBO.FechaFinPromo = FechaFinPromo;
+            PromoModel.Modificar(_PromoBO);
+            return RedirectToAction("Promociones", "Promociones");
         }
         public ActionResult EliminarPromo(string id)
         {
             int Clave = int.Parse(id);
             PromoModel.Eliminar(Clave);
-            return View("Promociones");
+            return RedirectToAction("Promociones", "Promociones");
         }
 
         [ChildActionOnly]

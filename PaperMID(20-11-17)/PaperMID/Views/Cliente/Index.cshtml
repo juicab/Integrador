@@ -3,7 +3,85 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Master/_LayoutCliente.cshtml";
 }
-<div class="wrapper">
+<div id="extras">
+    <div class="space"></div>
+    <div class="row">
+        <div class="col-md-7 col-md-offset-0 col-sm-10 col-sm-offset-1">
+            <div class="text-center">
+                <br /><br /><br />
+                <img src="~/Style/assets/img/image.png" alt="Rounded Image" class="img-rounded img-responsive img-dog">
+            </div>
+        </div>
+        <div class="col-md-5 col-sm-12">
+            <h1 class="text-center">
+                Quiénes Somos
+            </h1>
+            <hr>
+            <p style="text-align:center;">
+            Somos una empresa dedicada a proporcionar productos innovadores, nuestro objetivo es brindarle productos a mejor precio posible con el fin de satisfacer sus necesidades en papelería teniendo en cuenta que la calidad de los productos es un punto clave, así tener una satisfacción con los productos de igual forma actuamos como proveedores de productos papeleros ofreciendo un excelente servicio.
+            </p>
+        </div>
+    </div>
+</div>
+<div id="extras">
+    <div class="space"></div>
+    <div class="row">
+        <div class="col-md-5 col-sm-12">
+            <h1 class="text-center">
+                Misión
+            </h1>
+            <hr>
+            <p style="text-align:center;">
+                @Model.MisionEmpre
+            </p>
+        </div>
+        <div class="col-md-7 col-md-offset-0 col-sm-10 col-sm-offset-1">
+            <div class="text-center">
+                <img src="~/Style/assets/img/mision.jpg" alt="Rounded Image" class="img-rounded img-responsive img-dog">
+            </div>
+        </div>
+    </div>
+</div>
+<div id="extras">
+    <div class="space"></div>
+    <div class="row">
+        <div class="col-md-7 col-md-offset-0 col-sm-10 col-sm-offset-1">
+            <div class="text-center">
+                <img src="~/Style/assets/img/vision.jpg" alt="Rounded Image" class="img-rounded img-responsive img-dog">
+            </div>
+        </div>
+        <div class="col-md-5 col-sm-12">
+            <h1 class="text-center">
+                Visión
+            </h1>
+            <hr>
+          <p style="text-align:center;">
+              @Model.VisionEmpre
+          </p>
+        </div>
+    </div>
+</div>
+<div id="extras">
+    <div class="space"></div>
+    <div class="row">
+        <div class="col-md-5 col-sm-12">
+            <h1 class="text-center">
+                Valores
+            </h1>
+            <hr>
+            <p style="text-align:center;">
+                @Model.ValoresEmpre
+            </p>
+        </div>
+        <div class="col-md-7 col-md-offset-0 col-sm-10 col-sm-offset-1">
+            <div class="text-center">
+                <img src="~/Style/assets/img/valo.jpg" alt="Rounded Image" class="img-rounded img-responsive img-dog">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="space-30"></div>
+@*<div class="wrapper">
     <div class="header header-filter" style="background-image: url('../Style/assets/img/fondo.jpg');">
         <div class="container">
             <div class="row">
@@ -26,33 +104,7 @@
 
                 <img src="~/Style/assets/img/image.png" style="float:left" class="alina-img" /><h3><a>Quiénes Somos</a></h3>Somos una empresa dedicada a proporcionar productos innovadores, nuestro objetivo es brindarle productos a mejor precio posible con el fin de satisfacer sus necesidades en papelería teniendo en cuenta que la calidad de los productos es un punto clave, así tener una satisfacción con los productos de igual forma actuamos como proveedores de productos papeleros ofreciendo un excelente servicio.
             </div>
-        </div>
-
-        <div class="container">
-            <div class="title">
-
-
-            </div>
-            <div class="Alina-txt">
-                <img src="~/Style/assets/img/mision.jpg" style="float:right" class="alina-img" /><h3><a>Misión</a></h3> @Model.MisionEmpre
-            </div>
-        </div>
-        <div class="container">
-            <div class="Alina-txt">
-                <img src="~/Style/assets/img/vision.jpg" style="float:left" class="alina-img" /><h3><a>Visión</a></h3>  @Model.VisionEmpre
-            </div>
-        </div>
-        <div class="container">
-            <div class="title">
-
-            </div>
-            <div class="Alina-txt">
-                <img src="~/Style/assets/img/valo.jpg" style="float:right" class="alina-img" /><h3><a>Valores</a></h3> @Model.ValoresEmpre
-            </div>
-        </div>
-
-
-    </div>
-</div>
+        </div> 
+</div>*@
 
 

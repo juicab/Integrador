@@ -1,0 +1,43 @@
+﻿@using System.Data;
+@model DataTable
+<div class="col-md-12">
+    <div class="card">
+        <div class="header" style="text-align:center">
+            <br />
+            <h2 class="title">Lista de Promociones</h2>
+            <br />
+        </div>
+        <div class="content table-responsive table-full-width">
+            <table class="table table-hover table-striped">
+                <thead>
+                    <tr>
+                        <th class="text-center">Código</th>
+                        <th class="text-center">Nombre de la Promoción</th>
+                        <th class="text-center">Fecha Inicio</th>
+                        <th class="text-center">Fecha Fin</th>
+                        <th class="text-center">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (DataRow item in Model.Rows)
+                    {
+                        <tr id="Fila_@item["IdPromocion"]">
+                            <td class="text-center">@item["IdPromocion"]</td>
+                            <td class="text-center">@item["NombrePromo"]</td>
+                            <td class="text-center">@item["FechaInicioPromo"]</td>
+                            <td class="text-center">@item["FechaFinPromo"]</td>
+                            <td class="td-actions text-center">
+                                <a type="button" rel="tooltip" title="Editar" class="btn btn-success btn-simple btn-xs" href="@Url.Action("ActualizarPromocion", "Promociones", new { id = @item["IdPromocion"] })">
+                                    <i class="fa fa-edit"></i>
+                                </a>
+                                <a type="button" rel="tooltip" title="Eliminar" class="btn btn-danger btn-simple btn-xs" href="@Url.Action("EliminarPromo", "Promociones", new { id = @item["IdPromocion"] })">
+                                    <i class="fa fa-times"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

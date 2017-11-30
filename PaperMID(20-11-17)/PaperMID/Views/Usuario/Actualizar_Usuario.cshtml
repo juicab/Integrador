@@ -1,0 +1,119 @@
+﻿@model PaperMID.BO.UsuarioBO
+@{
+    ViewBag.Title = "Actualizar_Usuario";
+    Layout = "~/Views/Master/_LayoutAdministrador.cshtml";
+}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <!--Inicio Contenido-->
+                <div class="header">
+                    <h2 class="title">Usuario</h2>
+                </div>
+                <div class="content">
+                    <!--Contenido Formulario-->
+                    @using (Ajax.BeginForm("Agregar_Usuario_Administrador", "Usuario", new AjaxOptions { HttpMethod = "POST" }, new { enctype = "multipart/form-data" }))
+                    {
+                        @Html.AntiForgeryToken()
+
+                        <form>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>Nombre</label>
+                                                <input class="form-control" type="text" name="NombreUsu" value="@Model.NombreUsu" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>Apellido Paterno</label>
+                                                <input class="form-control" type="text" name="ApellidoPaternoUsu" value="@Model.ApellidoPaternoUsu" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>Apellido Materno</label>
+                                                <input class="form-control" type="text" name="ApellidoMaternoUsu" value="@Model.ApellidoMaternoUsu" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>Correo</label>
+                                                <input class="form-control" type="email" name="CorreoUsu" value="@Model.CorreoUsu" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>Teléfono</label>
+                                                <input class="form-control" type="tel" name="TelefonoUsu" value="@Model.TelefonoUsu" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>Fecha de Nacimiento</label>
+                                                <input class="form-control" type="text" name="FechaNacimientoUsu" value="@Model.FechaNacimientoUsu" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!---->
+                            @{ Html.RenderAction("Obtener_Dic_Usuario", "Usuario");}
+                            <!---->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>Usuario</label>
+                                                <input class="form-control" type="text" name="Usuario" value="@Model.Usuario" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>Contraseña</label>
+                                                <input class="form-control" type="password" name="ContraseñaUsu" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>Confirmar Contraseña</label>
+                                                <input class="form-control" type="password" name="ConfirmarContraseñaUsu" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br />
+                            <output id="ContenedorImg">
+                                @*Elemento dondé se cargará la nueva imagen*@
+                                <img src="~/Style/assets/img/PreviewProfile.png" class="PreviewImagen" />
+                            </output>
+                            <br />
+                            <div class="file-loading">
+                                <input type="file" id="files" name="ImagenUsu" />
+                            </div>
+                            <div class="=row" style="padding:0,20px;">
+                                <div class="col-md-12">
+                                    <!--col-md-10 col-md-offset-1-->
+                                    <button type="submit" class="btn btn-info btn-fill btn-block">Guardar</button>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </form>
+                    }
+
+                </div><!--Contenido Formulario-->
+            </div><!--Fin Contenido-->
+        </div>
+    </div>
+</div>

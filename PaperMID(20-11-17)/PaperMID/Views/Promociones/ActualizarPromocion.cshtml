@@ -1,8 +1,84 @@
-﻿
+﻿@model PaperMID.BO.PromocionesBO
 @{
     ViewBag.Title = "ActualizarPromocion";
     Layout = "~/Views/Master/_LayoutAdministrador.cshtml";
 }
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <!--Inicio Contenido-->
+                <div class="header">
+                    <h2 class="title">Promociones</h2>
+                </div>
+                <div class="content">
+                    <!--Contenido Formulario-->
+                    @using (Ajax.BeginForm("ActualizarDatosProm", "Promociones", new AjaxOptions { HttpMethod = "POST" }))
+                    {
+                        @Html.AntiForgeryToken()
 
-<h2>ActualizarPromocion</h2>
+                        <form>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>Código</label>
+                                                <input type="hidden" name="IdPromo" value="@Model.IdPromo" /><!--Input oculto/Sirve para recuperar el ID-->
+                                                <input type="text" class="form-control" disabled value="@Model.IdPromo" /><!--Disable / no manda datos a ActionResult-->
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>Nombre Promoción</label>
+                                                <input type="text" class="form-control" name="NombrePromo" value="@Model.NombrePromo" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>Proveedor</label>
+                                                @Html.DropDownList("IdProve", null, htmlAttributes: new { @class = "form-control" })
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Descripcion Promoción</label>
+                                                <textarea class="form-control" placeholder="Escribe aquí la descripción de la promoción" rows="5" style="width: 100%; height: 87px;" name="DescripcionPromo">@Model.DescripcionPromo</textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="col-md-6">
+                                                <div class="form-group ">
+                                                    <label>Fecha Inicio De La Promoción</label>
+                                                    <input class="datepicker form-control" type="text" name="FechaInicioPromo" value="@Model.FechaInicioPromo" />
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group ">
+                                                    <label>Fecha Final De La Promoción</label>
+                                                    <input class="datepicker form-control" type="text" name="FechaFinPromo" value="@Model.FechaFinPromo" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="=row" style="padding:0,20px;">
+                                <div class="col-md-12">
+                                    <!--col-md-10 col-md-offset-1-->
+                                    <button type="submit" class="btn btn-info btn-fill btn-block">Editar</button>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </form>
+                    }
+                </div><!--Contenido Formulario-->
+            </div><!--Fin Contenido-->
+        </div>
+    </div>
+</div>
 

@@ -1,0 +1,49 @@
+﻿@using System.Data
+@model DataTable
+<div class="col-md-12">
+    <div class="card">
+        <div class="header" style="text-align:center">
+            <br />
+            <h2 class="title">Lista de Usuarios</h2>
+            <br />
+        </div>
+        <div class="content table-responsive table-full-width">
+            <table class="table table-hover table-striped">
+                <thead>
+                    <tr>
+                        <th class="text-center">Código</th>
+                        <th>Usuario</th>
+                        <th>Nombre</th>
+                        <th>Apellido Paterno</th>
+                        <th>Apellido Materno</th>
+                        <th>Teléfono</th>
+                        <th>Correo</th>
+                        <th class="text-center">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (DataRow item in Model.Rows)
+                    {
+                        <tr id="Fila_@item["IdUsuario"]">
+                            <td class="text-center">@item["IdUsuario"]</td>
+                            <td>@item["Usuario"]</td>
+                            <td>@item["NombreUsu"]</td>>
+                            <td>@item["ApellidoPaternoUsu"]</td>
+                            <td>@item["ApellidoMaternoUsu"]</td>
+                            <td>@item["TelefonoUsu"]</td>
+                            <td>@item["CorreoUsu"]</td>
+                            <td class="td-actions text-center">
+                                <a type="button" rel="tooltip" title="Editar" class="btn btn-success btn-simple btn-xs" href="@Url.Action("Actualizar_Usuario", "Usuario", new { IdUsuario = @item["IdUsuario"] })">
+                                    <i class="fa fa-edit"></i>
+                                </a>
+                                <a type="button" rel="tooltip" title="Eliminar" class="btn btn-danger btn-simple btn-xs" href="@Url.Action("Eliminar_Usuario", "Usuario", new { IdUsuario = @item["IdUsuario"] })">
+                                    <i class="fa fa-times"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
