@@ -1,49 +1,47 @@
 ﻿@using System.Data;
 @model DataTable
-
-<div class="col-md-12">
-    <div class="card">
-        <div class="header" style="text-align:center">
-            <br />
-            <h2 class="title">Lista de Proveedores</h2>
-            <br />
-        </div>
-        <div class="col-md-12">
-            <a class="btn btn-info btn-fill" href="@Url.Action("ReporteProveedor","Reportes")">Descargar Reporte <samp class="pe-7s-download"></samp></a>
-            <br />
-            <br />
-        </div>
-        <div class="content table-responsive table-full-width">
-            <table class="table table-hover table-striped">
-                <thead>
-                    <tr>
-                        <th class="text-center">Código</th>
-                        <th>Nombre del Proveedor</th>
-                        <th class="text-center">Teléfono</th>
-                        <th class="text-center">Correo Electrónico</th>
-                        <th class="text-center">Acciones</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (DataRow item in Model.Rows)
-                    {
-                        <tr id="Fila_@item["IdProveedor"]">
-                            <td class="text-center">@item["IdProveedor"]</td>
-                            <td>@item["NombreProv"]</td>
-                            <td class="text-center">@item["TelefonoProv"]</td>
-                            <td class="text-center">@item["CorreoProv"]</td>
-                            <td class="td-actions text-center">
-                                <a type="button" rel="tooltip" title="Editar" class="btn btn-success btn-simple btn-xs" href="@Url.Action("Actualizar_Proveedor", "Proveedor", new { id = @item["IdProveedor"] })">
-                                    <i class="fa fa-edit"></i>
-                                </a>
-                                <a type="button" rel="tooltip" title="Eliminar" class="btn btn-danger btn-simple btn-xs" href="@Url.Action("EliminarProveedor", "Proveedor", new { id = @item["IdProveedor"] })">
-                                    <i class="fa fa-times"></i>
-                                </a>
-                            </td>
-                        </tr>
-                    }
-                </tbody>
-            </table>
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title">Lista Proveedores</h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <table id="example2" class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Código</th>
+                                <th>Nombre del Proveedor</th>
+                                <th class="text-center">Teléfono</th>
+                                <th class="text-center">Correo Electrónico</th>
+                                <th class="text-center">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (DataRow item in Model.Rows)
+                            {
+                                <tr id="Fila_@item["IdProveedor"]">
+                                    <td class="text-center">@item["IdProveedor"]</td>
+                                    <td>@item["NombreProv"]</td>
+                                    <td class="text-center">@item["TelefonoProv"]</td>
+                                    <td class="text-center">@item["CorreoProv"]</td>
+                                    <td class="td-actions text-center">
+                                        <a type="button" rel="tooltip" title="Editar" class="btn btn-success btn-simple btn-xs" href="@Url.Action("Actualizar_Proveedor", "Proveedor", new { id = @item["IdProveedor"] })">
+                                            <i class="fa fa-edit"></i>
+                                        </a>
+                                        <a type="button" rel="tooltip" title="Eliminar" class="btn btn-danger btn-simple btn-xs" href="@Url.Action("EliminarProveedor", "Proveedor", new { id = @item["IdProveedor"] })">
+                                            <i class="fa fa-times"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                <!-- /.box-body -->
+            </div>
         </div>
     </div>
-</div>
+</section>

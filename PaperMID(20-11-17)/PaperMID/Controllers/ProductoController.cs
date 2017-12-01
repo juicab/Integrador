@@ -62,7 +62,6 @@ namespace PaperMID.Controllers
                 _oFotoModel.Agregar(_oFotoBO);
             }
 
-
             return RedirectToAction("Producto", "Producto");
         }
         [ChildActionOnly]

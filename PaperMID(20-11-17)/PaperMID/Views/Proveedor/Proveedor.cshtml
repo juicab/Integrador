@@ -4,64 +4,56 @@
     ViewBag.Title = "Proveedor";
     Layout = "~/Views/Master/_LayoutAdministrador.cshtml";
 }
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="card">
-                <!--Inicio Contenido-->
-                <div class="header">
-                    <h2 class="title">Proveedor</h2>
-                </div>
-                <div class="content">
-                    <!--Contenido Formulario-->
+<section class="content-header">
+    <h1>
+        Proveedores
+    </h1>
+</section>
+<section class="content container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box box-primary">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Datos</h3>
+                    </div>
                     @using (Ajax.BeginForm("Agregar_Proveedor", "Proveedor", new AjaxOptions { HttpMethod = "POST" }))
                     {
                         @Html.AntiForgeryToken()
 
-                        <form>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label>Nombre del Proveedor</label>
-                                                <input type="text" class="form-control" name="NombreProv" />
-                                            </div>
+                        <form role="form">
+                            <div class="box-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label>Nombre del Proveedor</label>
+                                            <input type="text" class="form-control" name="NombreProv" />
                                         </div>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-md-5">
-                                            <div class="form-group">
-                                                <label>Teléfono</label>
-                                                <input type="text" class="form-control" name="TelefonoProv" />
-                                            </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <div class="form-group">
+                                            <label>Teléfono</label>
+                                            <input type="text" class="form-control" name="TelefonoProv" />
                                         </div>
-                                        <div class="col-md-7">
-                                            <div class="form-group">
-                                                <label>Correo Electronico</label>
-                                                <input type="text" class="form-control" name="CorreoProv" />
-                                            </div>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <div class="form-group">
+                                            <label>Correo Electronico</label>
+                                            <input type="text" class="form-control" name="CorreoProv" />
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="=row" style="padding:0,20px;">
-                                <div class="col-md-12">
-                                    <!--col-md-10 col-md-offset-1-->
-                                    <button type="submit" class="btn btn-info btn-fill btn-block">Guardar</button>
-                                </div>
+                            <!-- /.box-body -->
+                            <div class="box-footer">
+                                <button type="submit" class="btn btn-info pull-right">Guardar</button>
                             </div>
-                            <div class="clearfix"></div>
                         </form>
                     }
-
-                </div><!--Contenido Formulario-->
-            </div><!--Fin Contenido-->
+                    
+                </div>
+            </div>
         </div>
-    </div>
-</div>
+</section>
 @{ Html.RenderAction("MostrarListaProveedor", "Proveedor");}
-<div class="container-fluid">
-    <!--Agregar Contenido / Evita que la tabla se salga del la logitud.-->
-</div>
-

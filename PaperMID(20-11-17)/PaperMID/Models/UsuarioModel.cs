@@ -120,5 +120,20 @@ namespace PaperMID.Models
             _Direccion.IdMunicipio1 = Convert.ToInt32(Row["IdMunicipio1"].ToString());
             return _Direccion;
         }
+
+        public List<BO.TipoUsuarioBO> Lista_Tipo_Usuario()
+        {
+            string Query = ("SELECT IdTipoUsuario,TipoUsu FROM TipoUsuario WHERE StatusTuser=1 AND IdTipoUsuario<>2;");
+            var Result = oConexion.TablaConnsulta(Query);
+            List<BO.TipoUsuarioBO> List_Tipo_Producto = new List<BO.TipoUsuarioBO>();
+            foreach (DataRow Tipo_Producto in Result.Rows)
+            {
+                var oTipoUsuarioBO = new BO.TipoUsuarioBO();
+                oTipoUsuarioBO.IdTipoUsuario= int.Parse(Tipo_Producto[0].ToString());
+                oTipoUsuarioBO.TipoUsu= Tipo_Producto[1].ToString();
+                List_Tipo_Producto.Add(oTipoUsuarioBO);
+            }
+            return List_Tipo_Producto;
+        }
     }
 }

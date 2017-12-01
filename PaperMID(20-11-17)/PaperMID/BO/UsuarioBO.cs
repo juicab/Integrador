@@ -23,5 +23,7 @@ namespace PaperMID.BO
         public int IdDireccion2 { get; set; }
         public Boolean StatusUsu { get; set; }
         public string SHA512 { get; set; }
+
+        public List<TipoUsuarioBO> TiposUsuario { get; set; }
     }
 }

@@ -3,96 +3,118 @@
     ViewBag.Title = "Usuario";
     Layout = "~/Views/Master/_LayoutAdministrador.cshtml";
 }
-<div class="container-fluid">
+<section class="content-header">
+    <h1>
+        Usuarios
+    </h1>
+</section>
+<section class="content container-fluid">
     <div class="row">
         <div class="col-md-12">
-            <div class="card">
-                <!--Inicio Contenido-->
-                <div class="header">
-                    <h2 class="title">Usuario</h2>
+            <div class="box box-primary">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Datos</h3>
                 </div>
-                <div class="content">
-                    <!--Contenido Formulario-->
-                    @using (Ajax.BeginForm("Agregar_Usuario_Administrador", "Usuario", new AjaxOptions { HttpMethod = "POST" }, new { enctype = "multipart/form-data" }))
-                    {
-                        @Html.AntiForgeryToken()
+                @using (Ajax.BeginForm("Agregar_Usuario_Administrador", "Usuario", new AjaxOptions { HttpMethod = "POST" }, new { enctype = "multipart/form-data" }))
+                {
+                    @Html.AntiForgeryToken()
 
-                        <form>
+                    <form role="form">
+                        <div class="box-body">
                             <div class="row">
-                                <div class="col-md-12">
+                                <div class="col-md-8">
                                     <div class="row">
-                                        <div class="col-md-4">
+                                        <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Nombre</label>
                                                 <input class="form-control" type="text" name="NombreUsu" />
                                             </div>
                                         </div>
-                                        <div class="col-md-4">
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
                                             <div class="form-group">
                                                 <label>Apellido Paterno</label>
                                                 <input class="form-control" type="text" name="ApellidoPaternoUsu" />
                                             </div>
                                         </div>
-                                        <div class="col-md-4">
+                                        <div class="col-md-6">
                                             <div class="form-group">
                                                 <label>Apellido Materno</label>
                                                 <input class="form-control" type="text" name="ApellidoMaternoUsu" />
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
                                     <div class="row">
-                                        <div class="col-md-4">
+                                        <div class="col-md-6">
                                             <div class="form-group">
                                                 <label>Correo</label>
                                                 <input class="form-control" type="email" name="CorreoUsu" />
                                             </div>
                                         </div>
-                                        <div class="col-md-4">
+                                        <div class="col-md-6">
                                             <div class="form-group">
                                                 <label>Teléfono</label>
                                                 <input class="form-control" type="tel" name="TelefonoUsu" />
                                             </div>
                                         </div>
-                                        <div class="col-md-4">
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
                                             <div class="form-group">
                                                 <label>Fecha de Nacimiento</label>
                                                 <input class="form-control" type="text" name="FechaNacimientoUsu" />
                                             </div>
                                         </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>Tipo Usuario</label>
+                                                @Html.DropDownList("IdTipoUsuario1", null, htmlAttributes: new { @class = "form-control" })
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="=row">
+                                    <div class="col-md-4">
+                                        <br />
+                                        <div style="text-align:center; border:1px dashed #3c8dbc;">
+                                            <output id="ContenedorImg">
+                                                @*Elemento dondé se cargará la nueva imagen*@
+                                                <img src="~/Style/Back/dist/img/PreviewProducto.png" class="PreviewImagen" />
+                                            </output>
+                                            <br />
+                                        </div>
+                                        <br />
+                                        <div class="file-loading">
+                                            <input type="file" id="files" name="ImagenUsu" />
+                                        </div>
+                                        <br />
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-md-12">
-                                    <div class="row">
-                                        <div class="col-md-3">
-                                            <div class="form-group">
-                                                <label>Calle</label>
-                                                <input class="form-control" type="text" name="CalleDir" />
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="form-group">
-                                                <label>Cruzamientos</label>
-                                                <input class="form-control" type="text" name="CruzaDir" />
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="form-group">
-                                                <label>Colonia</label>
-                                                <input class="form-control" type="text" name="ColoniaDir" />
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="form-group">
-                                                <label>Código Postal</label>
-                                                <input class="form-control" type="text" name="CPDir" />
-                                            </div>
-                                        </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>Calle</label>
+                                        <input class="form-control" type="text" name="CalleDir" />
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>Cruzamientos</label>
+                                        <input class="form-control" type="text" name="CruzaDir" />
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>Colonia</label>
+                                        <input class="form-control" type="text" name="ColoniaDir" />
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>Código Postal</label>
+                                        <input class="form-control" type="text" name="CPDir" />
                                     </div>
                                 </div>
                             </div>
@@ -121,57 +143,38 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-md-12">
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label>Usuario</label>
-                                                <input class="form-control" type="text" name="Usuario" />
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label>Contraseña</label>
-                                                <input class="form-control" type="password" name="ContraseñaUsu" />
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label>Confirmar Contraseña</label>
-                                                <input class="form-control" type="password" name="ConfirmarContraseñaUsu" />
-                                            </div>
-                                        </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Usuario</label>
+                                        <input class="form-control" type="text" name="Usuario" />
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Contraseña</label>
+                                        <input class="form-control" type="password" name="ContraseñaUsu" />
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Confirmar Contraseña</label>
+                                        <input class="form-control" type="password" name="ConfirmarContraseñaUsu" />
                                     </div>
                                 </div>
                             </div>
-                            <br />
-                            <output id="ContenedorImg">
-                                @*Elemento dondé se cargará la nueva imagen*@
-                            <img src="~/Style/assets/img/PreviewProfile.png" class="PreviewImagen" />
-                        </output>
-                        <br />
-                        <div class="file-loading">
-                            <input type="file" id="files" name="ImagenUsu" />
                         </div>
-                            <div class="=row" style="padding:0,20px;">
-                                <div class="col-md-12">
-                                    <!--col-md-10 col-md-offset-1-->
-                                    <button type="submit" class="btn btn-info btn-fill btn-block">Guardar</button>
-                                </div>
-                            </div>
-                            <div class="clearfix"></div>
-                        </form>
-                    }
+                        <!-- /.box-body -->
+                        <div class="box-footer">
+                            <button type="submit" class="btn btn-info pull-right">Guardar</button>
+                        </div>
+                    </form>
+                }
 
-                </div><!--Contenido Formulario-->
-            </div><!--Fin Contenido-->
+            </div>
         </div>
     </div>
-</div>
+</section>
 @{ Html.RenderAction("List_Usuarios", "Usuario");}
-<div class="container-fluid">
-    <!--Agregar Contenido / Evita que la tabla se salga del la logitud.-->
-</div>
 <style>
     .PreviewImagen {
         height: 200px;

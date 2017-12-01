@@ -25,6 +25,10 @@ namespace PaperMID.Controllers
             var direccionBO = new BO.DireccionBO();           
             //Cargar el DropDownList por ViewBag para poder usar AJAX.
             ViewBag.IdMunicipio1 = new SelectList(direccionBO.municipios = oDireccionModel.ListaMunicipios(), "IdMunicipio", "NombreMuni");
+            var UsuarioBO = new BO.UsuarioBO();
+            //Cargar el DropDownList por ViewBag para poder usar AJAX.
+            ViewBag.IdTipoUsuario1 = new SelectList(UsuarioBO.TiposUsuario = oModel.Lista_Tipo_Usuario(), "IdTipoUsuario", "TipoUsu");
+
             return View();
         }
         [HttpPost]
