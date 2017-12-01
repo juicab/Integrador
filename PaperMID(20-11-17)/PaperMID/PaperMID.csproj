@@ -171,6 +171,7 @@
     <Content Include="Style\assets\js\nouislider.min.js" />
     <Content Include="Style\Front\assets\css\demo.css" />
     <Content Include="Style\Front\assets\css\gsdk.css" />
+    <Content Include="Style\Front\assets\css\Personalizacion.css" />
     <Content Include="Style\Front\assets\img\apple-icon.png" />
     <Content Include="Style\Front\assets\img\bg.jpg" />
     <Content Include="Style\Front\assets\img\blurred-black-cover.jpeg" />
@@ -204,6 +205,9 @@
     <Content Include="Style\Front\bootstrap3\js\bootstrap.min.js" />
     <Content Include="Style\Front\jquery\jquery-1.10.2.js" />
     <Content Include="Style\Front\jquery\jquery-ui.custom.min.js" />
+    <Content Include="Style\login\css\style.css" />
+    <Content Include="Style\login\img\fondo.jpg" />
+    <Content Include="Style\login\js\index.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -231,6 +235,7 @@
     <Compile Include="Controllers\EmpresaController.cs" />
     <Compile Include="Controllers\EstadoController.cs" />
     <Compile Include="Controllers\FotoController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\MetodoPagoController.cs" />
     <Compile Include="Controllers\MunicipioController.cs" />
     <Compile Include="Controllers\PaisController.cs" />
@@ -473,6 +478,9 @@
     <Content Include="Style\Front\bootstrap3\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Style\Front\bootstrap3\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Style\Front\bootstrap3\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Style\login\scss\style.scss" />
+    <Content Include="Views\Login\Login.cshtml" />
+    <Content Include="Views\Login\Registrar.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
