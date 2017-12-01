@@ -27,6 +27,7 @@
     <script src="~/Style/Front/assets/js/gsdk-radio.js"></script>
     <script src="~/Style/Front/assets/js/gsdk-bootstrapswitch.js"></script>
     <script src="~/Style/Front/assets/js/get-shit-done.js"></script>
+    <link href="~/Style/Front/assets/css/Personalizacion.css" rel="stylesheet" />
     @{
         if (Session["IdUsuario"] != null)
         {
@@ -66,11 +67,11 @@
                                     }
                                     
                                 </div>
-                                <div class="brand" style="text-align:center;">
+                                <div class="brand" style="text-align:justify;">
                                     @if (Session["Usuario"]!=null)
                                     {
                                         String Usuario = Session["Usuario"].ToString();
-                                        <p>&nbsp;@Usuario</p>
+                                        <p>Bienvenido&nbsp;@Usuario</p>
                                     }
                                     else
                                     {
@@ -86,22 +87,22 @@
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav navbar-right">
                             <li>
-                                <a href="@Url.Action("Index")">
+                                <a href="@Url.Action("Index")", class="btn btn-round btn-warning btn-fill" style="font-family:'Bookman Old Style'; font-size:16px;" >  
                                     <i class=""></i> Inicio
                                 </a>
                             </li>
                             <li>
-                                <a href="@Url.Action("Index")">
-                                    <i class="pe-7s-leaf"></i> Quienes Somos
+                                <a href="@Url.Action("Index")", class="btn btn-round btn-success btn-fill"style="font-family:'Bookman Old Style'; font-size:16px;">
+                                    <i class=""></i> Quiénes Somos
                                 </a>
                             </li>
                             <li>
-                                <a href="@Url.Action("ProductosRepCli")">
-                                    <i class="pe-7s-leaf"></i> Productos
+                                <a href="@Url.Action("ProductosRepCli")", class="btn btn-round btn-info btn-fill"style="font-family:'Bookman Old Style'; font-size:16px;">
+                                    <i class=""></i> Productos
                                 </a>
                             </li>
                             <li>
-                                <a href="@Url.Action("Logout", "Publico")" class="btn btn-round btn-default">
+                                <a href="@Url.Action("Logout", "Publico")", class="btn btn-round btn-danger btn-fill"style="font-family:'Bookman Old Style'; font-size:16px;">
                                     <i class="material-icons"></i>Cerrar Sesión
                                 </a>
                             </li>
@@ -112,15 +113,38 @@
             </nav>
         </div><!--  end container-->
 
-        <div class='blurred-container'>
-            <div class="motto">
-                <div>Get</div>
-                <div class="border no-right-border">Sh</div><div class="border">it</div>
-                <div>Done</div>
+
+        <div id="carousel blurred-container">
+            <div id="carousel-example-generic" class="carousel slide blurred-container" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="~/Style/Front/assets/img/car1.png" alt="Awesome Image">
+                    </div>
+                    <div class="item">
+                        <img src="~/Style/Front/assets/img/car2.png" alt="Awesome Image">
+                    </div>
+                    <div class="item">
+                        <img src="~/Style/Front/assets/img/car3.jpg" alt="Awesome Image">
+                    </div>
+                </div>
+
+                <!-- Controls -->
+                <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                    <span class="fa fa-angle-left"></span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                    <span class="fa fa-angle-right"></span>
+                </a>
             </div>
-            <div class="img-src" style="background-image: url('../Style/Front/assets/img/cover_4.jpg')"></div>
-            <div class='img-src blur' style="background-image: url('../Style/Front/assets/img/cover_4_blur.jpg')"></div>
-        </div>
+        </div> <!-- end carousel -->
 
     </div>
     <div class="main">
@@ -144,7 +168,7 @@
                 </div>
                 <div class="row">
                     <div class="credits">
-                        &copy; 2016 Get Shit Done Kit, made with <i class="fa fa-heart heart" alt="love"></i> for a better web.
+                        &copy; 2017 Proyecto Integrador con <i class="fa fa-heart heart" alt="love"></i>
                     </div>
                 </div>
             </div>

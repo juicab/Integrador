@@ -28,8 +28,8 @@
                         <footer class="card__footer" style="width:80%;">
                             @using (Ajax.BeginForm("Actualizar_Estatus_Aprobado_a_Desaprobado", "Admin_principal_", new { id = @row["IdProducto"] }, new AjaxOptions()
                             { HttpMethod = "POST" }))
-                            {@Html.AntiForgeryToken() <button class="btn btn-info btn-round pull-right">
-                                <i class="glyphicon glyphicon-plus"> Agregar</i>
+                            {@Html.AntiForgeryToken() <button class="btn btn-primary btn-round">
+                                <i class="glyphicon glyphicon-shopping-cart"> Agregar</i>
                             </button>}
                         </footer>
                     </article>

@@ -7,12 +7,6 @@
 }
 
 <div class="wrapper">
-    <div class="header header-filter" style="background-image: url('../Style/assets/img/fondo2.jpg'); background-size: cover; background-position: top center;">
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
         <br />
         <br />
         <div class="container">
@@ -39,14 +33,15 @@
                                         </header>
                                         <div class="card__body">
                                             <h2 class="card__title"><a href="#">@row["NombreProd"]</a></h2>
+
                                             <div class="card__subtitle">$<b>@row["PrecioProd"]</b> MXN </div>
                                         </div>
                                         <footer class="card__footer">
                                         </footer>
                                         @using (Ajax.BeginForm("Actualizar_Estatus_Aprobado_a_Desaprobado", "Admin_principal_", new { id = @row["IdProducto"] }, new AjaxOptions()
                                         { HttpMethod = "POST" }))
-                                        {@Html.AntiForgeryToken() <button class="btn btn-info btn-round">
-                                                                      <i class="material-icons">add</i> Comprar
+                                        {@Html.AntiForgeryToken() 
+                                            <button class="btn btn-primary btn-round"><i class="glyphicon glyphicon-shopping-cart"> Agregar</i>
                                         </button>}
                                         <div>
                                             <br />
@@ -63,7 +58,7 @@
         </div>
     </div>
 </div>
-</div>
+
 
 
 
